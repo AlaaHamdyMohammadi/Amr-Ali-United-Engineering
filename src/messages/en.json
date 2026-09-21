@@ -1,0 +1,228 @@
+{
+  "nav": {
+    "brand": "AmrAli",
+    "brandSub": "United Engineering",
+    "about": "About Us",
+    "services": "Services",
+    "servicesMenu": {
+      "residential": "Residential Construction",
+      "commercial": "Commercial Fit-outs",
+      "industrial": "Industrial Facilities",
+      "consulting": "Engineering Consulting"
+    },
+    "projects": "Projects",
+    "sectors": "Sectors",
+    "articles": "Articles",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "eyebrow": "Amr Ali Company",
+    "headline": "Build your home\nwith trusted hands",
+    "sub": "Residential, Commercial, Industrial",
+    "cta": "Request a quote"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Building homes, schools, and offices that last",
+    "lead": "We are a collective of engineers, site managers, and craftsmen delivering structurally sound, beautifully finished spaces across Egypt.",
+    "approachTitle": "Our approach is rooted in precision and accountability.",
+    "approachBody": "We believe the best buildings are the ones that outlast their blueprints. By pairing rigorous structural engineering with careful site supervision, we deliver spaces that are as durable as they are livable. Whether you're building a family home or breaking ground on a new facility, we help you build something that lasts.",
+    "yearsValue": "12+",
+    "yearsLabel": "Years of Experience",
+    "projectsValue": "500+",
+    "projectsLabel": "Projects Delivered",
+    "cta": "Learn more",
+    "trustedBy": "Trusted by teams at"
+  },
+  "sectors": {
+    "title": "Engineering permanent solutions for six vital sectors",
+    "sub": "From deep foundation pour to architectural final hand-over, we translate blueprints into enduring public and private spaces. Our specialized teams match rigorous engineering precision with structural utility.",
+    "cta": "Explore Sector Specification",
+    "items": {
+      "residential": {
+        "title": "Residential Development",
+        "body": "Custom turnkey villas, smart luxury compounds, and architectural masterpieces designed for premium generational living.",
+        "points": [
+          "Luxury Compound Design",
+          "Custom Residential Villas",
+          "Smart-Home Engineering Integrations"
+        ]
+      },
+      "commercial": {
+        "title": "Commercial & Administrative",
+        "body": "Turnkey grade-A corporate towers, modern workspaces, and corporate headquarters built for collaboration and energy efficiency.",
+        "points": [
+          "Grade-A Offices",
+          "Co-working Ecosystems",
+          "Turnkey Commercial Fit-outs"
+        ]
+      },
+      "industrial": {
+        "title": "Industrial & Logistics",
+        "body": "State-of-the-art warehouses, factories, and heavy infrastructure built to precise technical, logistics, and seismic load requirements.",
+        "points": [
+          "Cold-Chain Storage Facilities",
+          "Precision Assembly Plants",
+          "High-Load Infrastructure Logistics"
+        ]
+      },
+      "medical": {
+        "title": "Medical & Healthcare",
+        "body": "High-spec hospitals, clinical research complexes, and laboratories designed around cleanroom protocols and life-safety systems.",
+        "points": [
+          "Smart Hospital Wings",
+          "Cleanroom Laboratories",
+          "Specialized Diagnostics Facilities"
+        ]
+      },
+      "educational": {
+        "title": "Educational Ecosystems",
+        "body": "Modern schools, interactive libraries, and research universities configured for inspiring visual environments and structural safety.",
+        "points": [
+          "Next-Gen K-12 Campuses",
+          "Dynamic Lecture Theaters",
+          "Advanced Technical Labs"
+        ]
+      },
+      "restaurants": {
+        "title": "Restaurants & Hospitality",
+        "body": "Bespoke high-end culinary concepts, experiential hotels, and retail destinations emphasizing fine finish detailing and utility flows.",
+        "points": [
+          "Bespoke Fine Dining Fitouts",
+          "Experiential Retail Units",
+          "Heavy-Duty Commercial Kitchens"
+        ]
+      }
+    }
+  },
+  "stats": {
+    "clientsLabel": "Trust Worthy",
+    "clientsValue": "+165,489",
+    "clientsSub": "Clients",
+    "rateLabel": "Reliable",
+    "rateValue": "98%",
+    "rateSub": "Connection Rate",
+    "infraLabel": "Scalable",
+    "infraValue": "+254",
+    "infraSub": "Infrastructures",
+    "awardsLabel": "Quality",
+    "awardsValue": "560",
+    "awardsSub": "Awards Won"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "seeAll": "See all projects",
+    "learnMore": "Learn more",
+    "items": {
+      "learnMore": "Learn more",
+      "buildings": {
+        "title": "Buildings and Apartments",
+        "body": "Multi-unit residential towers engineered for durability, delivered on schedule and finished to a turnkey standard."
+      },
+      "interiors": {
+        "title": "Home Interiors",
+        "body": "Warm, livable interiors that pair structural work with joinery, lighting, and finishing details."
+      },
+      "restaurants": {
+        "title": "Restaurants and Cafes",
+        "body": "Full fit-outs for dining spaces, from commercial kitchen infrastructure to front-of-house finishing."
+      },
+      "offices": {
+        "title": "Offices and Workspaces",
+        "body": "Workspace fit-outs balancing open collaboration areas with the technical infrastructure teams rely on."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": {
+      "t1": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
+      "t2": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
+      "t3": "From the first site visit to hand-over, communication was clear and every milestone was met on time."
+    },
+    "author": "Khaled Omar"
+  },
+  "footer": {
+    "servicesTitle": "Services",
+    "services": {
+      "residential": "Residentials",
+      "commercial": "Commercial",
+      "medical": "Medical",
+      "restaurants": "Restaurants & Cafes"
+    },
+    "helpTitle": "Help",
+    "help": {
+      "about": "About us",
+      "contact": "Contact us",
+      "terms": "Terms & Condition"
+    },
+    "priceTitle": "Price Request",
+    "priceSub": "Our team will respond to you within 24 hours!",
+    "emailPlaceholder": "example@gmail.com",
+    "rights": "All rights reserved \u00a9 AmrAli 2026."
+  },
+  "aboutPage": {
+    "tabs": {
+      "companyProfile": "Company Profile",
+      "ourApproach": "Our Approach",
+      "ourHistory": "Our History",
+      "boardOfDirectors": "Board of Directors",
+      "boardCommittees": "Board Comitees",
+      "executiveTeam": "Excutive Team"
+    },
+    "companyProfile": {
+      "title": "About AmrAli Company",
+      "lead": "AmrAli United Engineering has delivered residential, commercial, and industrial projects across Egypt for over a decade, combining structural precision with dependable site management.",
+      "points": [
+        "Full-service engineering, from design to hand-over",
+        "In-house structural and MEP teams",
+        "ISO-aligned site safety protocols",
+        "Fixed-price, fixed-timeline contracts"
+      ],
+      "body1": "Every project starts with a detailed feasibility and structural review, so surprises get caught on paper instead of on site.",
+      "body2": "We stay involved past hand-over with a maintenance window on every build, because a finished building is still our responsibility.",
+      "whyTitle": "Why AmrAli",
+      "whyBody1": "We control quality by keeping core trades in-house rather than fully subcontracting, so the crew on-site is the same crew accountable for the result.",
+      "whyBody2": "Our project managers report progress weekly with photos and a schedule variance — no waiting until hand-over to find out where things stand.",
+      "whyBody3": "Clients typically stay with us across multiple projects, which is the metric we actually optimize for."
+    }
+  },
+  "servicesPage": {
+    "heroTitle": "Our services",
+    "learnMore": "Learn more",
+    "items": {
+      "generalContracting": {
+        "title": "General Contracting",
+        "body": "End-to-end site management, from groundbreaking to final inspection, under one accountable team."
+      },
+      "homeInteriors": {
+        "title": "Home Interiors",
+        "body": "Interior fit-outs that pair structural work with joinery, lighting, and finishing details."
+      },
+      "restaurants": {
+        "title": "Restaurants and Cafes",
+        "body": "Full fit-outs for dining spaces, from commercial kitchen infrastructure to front-of-house finishing."
+      },
+      "offices": {
+        "title": "Offices and workspaces",
+        "body": "Workspace fit-outs balancing collaboration areas with the technical infrastructure teams rely on."
+      },
+      "buildings": {
+        "title": "Buildings and Apartments",
+        "body": "Multi-unit residential towers engineered for durability, delivered on schedule and finished to a turnkey standard."
+      },
+      "homeInteriors2": {
+        "title": "Home Interiors",
+        "body": "Interior fit-outs that pair structural work with joinery, lighting, and finishing details."
+      },
+      "restaurants2": {
+        "title": "Restaurants and Cafes",
+        "body": "Full fit-outs for dining spaces, from commercial kitchen infrastructure to front-of-house finishing."
+      },
+      "offices2": {
+        "title": "Offices and workspaces",
+        "body": "Workspace fit-outs balancing collaboration areas with the technical infrastructure teams rely on."
+      }
+    }
+  }
+}
