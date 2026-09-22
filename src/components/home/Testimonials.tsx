@@ -1,66 +1,136 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { Carousel } from "antd";
-import type { CarouselRef } from "antd/es/carousel";
+import userReview from "@/assets/userReview.jpg";
+import quote1 from "@/assets/quotation 1.svg";
+import quote2 from "@/assets/quotation 2.svg";
 import { useTranslations } from "next-intl";
-import { Quote } from "lucide-react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
-const testimonialKeys = ["t1", "t2", "t3"] as const;
+const testimonialKeys = ["t1", "t2", "t3", "t4", "t5", "t6"] as const;
 
 export default function Testimonials() {
   const t = useTranslations("testimonials");
-  const carouselRef = useRef<CarouselRef>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
+  // Click-and-drag scrolling — native overflow-x-auto only responds to
+  // touch/trackpad by default, not a mouse click-drag.
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const startScrollLeftRef = useRef(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  function onPointerDown(e: React.PointerEvent) {
+    const el = scrollerRef.current;
+    if (!el) return;
+    isDraggingRef.current = true;
+    setIsDragging(true);
+    startXRef.current = e.clientX;
+    startScrollLeftRef.current = el.scrollLeft;
+    el.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMove(e: React.PointerEvent) {
+    const el = scrollerRef.current;
+    if (!el || !isDraggingRef.current) return;
+    const delta = e.clientX - startXRef.current;
+    el.scrollLeft = startScrollLeftRef.current - delta;
+  }
+
+  function endDrag(e: React.PointerEvent) {
+    const el = scrollerRef.current;
+    if (isDraggingRef.current) el?.releasePointerCapture(e.pointerId);
+    isDraggingRef.current = false;
+    setIsDragging(false);
+  }
+
+  // Approximate which card is centered in view, for the progress bar below.
+  function handleScroll() {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / testimonialKeys.length;
+    const index = Math.round(el.scrollLeft / cardWidth);
+    setActive(Math.min(Math.max(index, 0), testimonialKeys.length - 1));
+  }
+
+  function goTo(index: number) {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / testimonialKeys.length;
+    el.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+  }
+
   return (
-    <section className="section bg-navy-950 py-20 lg:py-28">
-      <div className="container-page">
-        <h2 className="mb-10 font-display text-3xl font-extrabold text-white sm:text-4xl">
+    <section className="section bg-linear-to-bl from-[#B37B3A] to-[#D8964A] py-30 lg:py-20">
+      <div className="container-page flex flex-col gap-12">
+        <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
           {t("title")}
         </h2>
 
-        <Carousel
-          ref={carouselRef}
-          dots={false}
-          slidesToShow={3}
-          slidesToScroll={1}
-          afterChange={setActive}
-          responsive={[
-            { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 640, settings: { slidesToShow: 1 } },
-          ]}
+        <div
+          ref={scrollerRef}
+          onScroll={handleScroll}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={endDrag}
+          onPointerLeave={endDrag}
+          className={`flex gap-5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+            isDragging ? "cursor-grabbing select-none" : "cursor-grab"
+          }`}
+          style={{ scrollSnapType: isDragging ? "none" : "x mandatory" }}
         >
           {testimonialKeys.map((key) => (
-            <div key={key} className="px-2.5">
-              <div className="flex h-full flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-white/[0.04] p-7">
-                <div className="flex items-start justify-between gap-4">
-                  <p className="text-white/80">{t(`items.${key}`)}</p>
-                  <Quote size={28} className="shrink-0 text-white/15" />
+            <div
+              key={key}
+              className="w-full shrink-0 sm:w-[400px] lg:w-[672px]"
+              style={{ scrollSnapAlign: "start" }}
+            >
+              <div className="relative flex h-full flex-col justify-between gap-10 overflow-hidden rounded-3xl bg-[#EA9D4233] border border-[#EDEDED] p-5 sm:px-20 sm:pt-[96px] sm:pb-12 shadow-md shadow-navy-900/5">
+                {/* Decorative quote marks — sit behind the content, cropped
+                    by the card's own rounded corners via overflow-hidden
+                    above. Purely visual, so they're aria-hidden. */}
+                <Image
+                  src={quote1}
+                  alt=""
+                  aria-hidden
+                  className="pointer-events-none absolute left-9 top-17 h-16 w-auto opacity-90"
+                />
+                <Image
+                  src={quote2}
+                  alt=""
+                  aria-hidden
+                  className="pointer-events-none absolute right-8 bottom-28 h-20 w-auto opacity-90"
+                />
+
+                <div className="relative z-10 flex items-start justify-between gap-4">
+                  <p className="text-white text-sm sm:text-xl font-semibold">
+                    {t(`items.${key}`)}
+                  </p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-clay-600 text-xs font-bold text-white">
-                    {t("author").slice(0, 1)}
-                  </span>
-                  <span className="text-sm font-semibold text-white">
-                    {t("author")}
-                  </span>
+                <div className="relative z-10 flex items-center gap-2">
+                  <Image
+                    src={userReview}
+                    alt="userReview"
+                    className="flex size-12 items-center justify-center rounded-full"
+                  />
+                  <span className="font-bold text-sm sm:text-base text-white">{t("author")}</span>
                 </div>
               </div>
             </div>
           ))}
-        </Carousel>
+        </div>
 
-        <div className="mt-8 flex gap-2">
+        <div className="flex gap-2">
           {testimonialKeys.map((key, i) => (
             <button
               key={key}
               aria-label={`Go to slide ${i + 1}`}
-              onClick={() => carouselRef.current?.goTo(i)}
+              onClick={() => goTo(i)}
               className="h-1 rounded-full transition-all"
               style={{
-                width: i === active ? 32 : 16,
-                background: i === active ? "#ea7317" : "rgba(255,255,255,0.25)",
+                width: i === active ? 204 : 76,
+                background: i === active ? "#072469" : "#ffffff",
               }}
             />
           ))}

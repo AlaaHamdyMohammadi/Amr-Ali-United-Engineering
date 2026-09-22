@@ -6,7 +6,7 @@ import type { ButtonProps as AntButtonProps } from "antd";
 import { twMerge } from "tailwind-merge";
 import { useRouter } from "@/i18n/navigation";
 
-export type MainButtonPreset = "solid" | "navLink" | "toggle" | "floatingIcon";
+export type MainButtonPreset = "solid" | "navLink" | "toggle" | "floatingIcon" | "Link";
 
 // One shared className string per "type of button" you actually reuse
 // across the app — add a new key here instead of repeating a long
@@ -30,6 +30,9 @@ const presetClasses: Record<MainButtonPreset, string> = {
   // hamburger trigger, or any other floating icon action.
   floatingIcon:
     "!flex !h-14 !w-14 !items-center !justify-center !border-none !bg-white !shadow-lg !shadow-black/10",
+
+  Link: 
+    "!flex   !gap-1 !border-none !bg-transparent !px-0 !font-semibold !shadow-none font-bold! text-base! !text-clay-700 hover:!text-clay-650",  
 };
 
 export interface MainButtonProps extends AntButtonProps {

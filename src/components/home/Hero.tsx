@@ -35,8 +35,8 @@ export default function Hero() {
       >
         <div className="absolute inset-y-0 left-1/2 w-px bg-white/25" />
         <div className="absolute inset-y-0 left-3/4 w-px bg-white/25" />
-        <div className="absolute inset-x-0 top-[38%] h-px bg-white/25" />
-        <div className="absolute inset-x-0 top-[76%] h-px bg-white/25" />
+        <div className="absolute inset-x-0 top-[37%] h-px bg-white/25" />
+        <div className="absolute inset-x-0 top-[77%] h-px bg-white/25" />
       </div>
 
       <div className="container-page relative flex min-h-160 flex-col justify-end gap-8 pb-20  lg:min-h-180 lg:pb-42">

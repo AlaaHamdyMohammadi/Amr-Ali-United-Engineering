@@ -23,10 +23,10 @@
   },
   "about": {
     "eyebrow": "About Us",
-    "title": "Building homes, schools, and offices that last",
-    "lead": "We are a collective of engineers, site managers, and craftsmen delivering structurally sound, beautifully finished spaces across Egypt.",
-    "approachTitle": "Our approach is rooted in precision and accountability.",
-    "approachBody": "We believe the best buildings are the ones that outlast their blueprints. By pairing rigorous structural engineering with careful site supervision, we deliver spaces that are as durable as they are livable. Whether you're building a family home or breaking ground on a new facility, we help you build something that lasts.",
+    "title": "Building Homes, Schools, and Offices that lasts",
+    "lead": "We are a collective of designers, engineers, and thinkers dedicated to crafting intuitive, beautiful, and scalable solutions for modern businesses. Our mission is to bridge the gap between technology and human connection.",
+    "approachTitle": "Our approach is rooted in empathy and precision.",
+    "approachBody": "We believe that the best products are those that feel invisible. By combining rigorous research with a deep understanding of human behavior, we design systems that are both powerful and effortless to use. Whether you're a startup looking to launch or an enterprise looking to scale, we help you build products that people love.",
     "yearsValue": "12+",
     "yearsLabel": "Years of Experience",
     "projectsValue": "500+",
@@ -35,7 +35,7 @@
     "trustedBy": "Trusted by teams at"
   },
   "sectors": {
-    "title": "Engineering permanent solutions for six vital sectors",
+    "title": "Engineering permanent solutions for seven vital sectors",
     "sub": "From deep foundation pour to architectural final hand-over, we translate blueprints into enduring public and private spaces. Our specialized teams match rigorous engineering precision with structural utility.",
     "cta": "Explore Sector Specification",
     "items": {
@@ -113,23 +113,39 @@
     "title": "Our Projects",
     "seeAll": "See all projects",
     "learnMore": "Learn more",
+    "sector": "Sector:",
+    "section": "Section:",
+    "location": "Location:",
+    "year": "Year:",
     "items": {
       "learnMore": "Learn more",
       "buildings": {
-        "title": "Buildings and Apartments",
-        "body": "Multi-unit residential towers engineered for durability, delivered on schedule and finished to a turnkey standard."
+        "title": "Buildings",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
       },
       "interiors": {
         "title": "Home Interiors",
-        "body": "Warm, livable interiors that pair structural work with joinery, lighting, and finishing details."
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
       },
-      "restaurants": {
-        "title": "Restaurants and Cafes",
-        "body": "Full fit-outs for dining spaces, from commercial kitchen infrastructure to front-of-house finishing."
+      "apartments": {
+        "title": "Apartments",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
       },
-      "offices": {
-        "title": "Offices and Workspaces",
-        "body": "Workspace fit-outs balancing open collaboration areas with the technical infrastructure teams rely on."
+      "villas": {
+        "title": "Villas",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
       }
     }
   },
@@ -138,7 +154,10 @@
     "items": {
       "t1": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
       "t2": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
-      "t3": "From the first site visit to hand-over, communication was clear and every milestone was met on time."
+      "t3": "From the first site visit to hand-over, communication was clear and every milestone was met on time.",
+      "t4": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
+      "t5": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
+      "t6": "From the first site visit to hand-over, communication was clear and every milestone was met on time."
     },
     "author": "Khaled Omar"
   },

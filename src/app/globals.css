@@ -8,17 +8,28 @@
   --color-navy-900: #0a1533;
   --color-navy-800: #101f47;
   --color-navy-700: #16295c;
+  --color-navy-750: #072469;
   --color-navy-600: #041338;
+  --color-navy-650: #1E1B4B;
 
   --color-mist-50: #eef1fc;
   --color-mist-100: #e5e9fb;
   --color-mist-200: #E3E3E3;
 
   --color-clay-500: #F89622;
+  --color-clay-550: #E59434;
   --color-clay-600: #ea7317;
+  --color-clay-650: #CD7105;
+  --color-clay-700: #D27200;
 
 
+
+  --color-gray-50: #EBEBEB;
   --color-gray-100: #6D7A99;
+  --color-gray-200: #475569;
+  --color-gray-300: #A0B8D7;
+  --color-gray-400: #6C6C6C;
+  --color-gray-450: #E3EAFF;
 
   --color-ink-900: #0b1730;
 }
@@ -101,4 +112,12 @@ body {
 
 .ant-btn:not(:disabled):not(.ant-btn-disabled):hover{
   background-color: transparent !important;
+}
+
+.ant-input{
+  border-radius: 8px !important;
+  background-color: #F8F8F8 !important;
+  border: 1px solid #E8E8E8 !important;
+  color: #0b1730 !important;
+  font-size: 14px !important;
 }
