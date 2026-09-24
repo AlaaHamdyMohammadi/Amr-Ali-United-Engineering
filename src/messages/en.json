@@ -65,33 +65,6 @@
           "Precision Assembly Plants",
           "High-Load Infrastructure Logistics"
         ]
-      },
-      "medical": {
-        "title": "Medical & Healthcare",
-        "body": "High-spec hospitals, clinical research complexes, and laboratories designed around cleanroom protocols and life-safety systems.",
-        "points": [
-          "Smart Hospital Wings",
-          "Cleanroom Laboratories",
-          "Specialized Diagnostics Facilities"
-        ]
-      },
-      "educational": {
-        "title": "Educational Ecosystems",
-        "body": "Modern schools, interactive libraries, and research universities configured for inspiring visual environments and structural safety.",
-        "points": [
-          "Next-Gen K-12 Campuses",
-          "Dynamic Lecture Theaters",
-          "Advanced Technical Labs"
-        ]
-      },
-      "restaurants": {
-        "title": "Restaurants & Hospitality",
-        "body": "Bespoke high-end culinary concepts, experiential hotels, and retail destinations emphasizing fine finish detailing and utility flows.",
-        "points": [
-          "Bespoke Fine Dining Fitouts",
-          "Experiential Retail Units",
-          "Heavy-Duty Commercial Kitchens"
-        ]
       }
     }
   },
@@ -181,6 +154,7 @@
     "rights": "All rights reserved \u00a9 AmrAli 2026."
   },
   "aboutPage": {
+    "title": "About Us",
     "tabs": {
       "companyProfile": "Company Profile",
       "ourApproach": "Our Approach",
@@ -213,6 +187,52 @@
         "sectorButton": "Explore Sector Specification"
       },
       "certificates": "Certificates"
+    }
+  },
+  "sectorPage":{
+    "title": "Our Sectors",
+    "body": "In Amr Ali, We believe that the best products are those that feel invisible. By combining rigorous research with a deep understanding of human behavior, we design systems that are both powerful and effortless to use. Whether you're a startup looking to launch or an enterprise looking to scale, we help you build products that people love.",
+    "learnMore": "Learn more",
+    "sectionsTitle": "Sections",
+    "seeProjects": "See projects",
+    "sections": {
+      "buildings": "Buildings",
+      "homeInteriors": "Home Interiors",
+      "apartments": "Apartments",
+      "villas1": "Villas",
+      "villas2": "Villas",
+      "villas3": "Villas"
+    },
+    "items": {
+      "residential": {
+        "title": "Residential Development",
+        "body": "Custom turnkey villas, smart luxury compounds, and architectural masterpieces designed for premium generational living.",
+        "tag": "32 Section",
+        "points": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales",
+          "Lorem ipsum dolor sit amet",
+          "consectetur adipiscing elit",
+          "Cras sodales"
+        ],
+        "body1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam. Sed sagittis sollicitudin",
+        "body2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+      },
+      "commercial": {
+        "title": "Commercial & Administrative",
+        "body": "Turnkey grade-A corporate towers, modern workspaces, and corporate headquarters built for collaboration and energy efficiency.",
+        "tag": "32 Section",
+        "points": ["...", "...", "...", "..."],
+        "body1": "...",
+        "body2": "..."
+      },
+      "industrial": {
+        "title": "Industrial & Logistics",
+        "body": "State-of-the-art warehouses, factories, and heavy infrastructure built to precise technical, logistics, and seismic load requirements.",
+        "tag": "32 Section",
+        "points": ["...", "...", "...", "..."],
+        "body1": "...",
+        "body2": "..."
+      }
     }
   },
   "servicesPage": {

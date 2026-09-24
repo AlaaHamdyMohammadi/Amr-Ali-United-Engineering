@@ -1,19 +1,19 @@
-import aboutHeroImg from "@/assets/aboutImg.png";
+import sectorHeroImg from "@/assets/sectorImg.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export default function AboutHero() {
-  const t = useTranslations("aboutPage");
+export default function SectorHero() {
+  const t = useTranslations("sectorPage");
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
       <Image
-        src={aboutHeroImg}
+        src={sectorHeroImg}
         alt=""
         fill
         priority
         sizes="100vw"
         quality={100}
-        className="animate-hero-zoom"
+        className="animate-hero-zoom object-cover"
       />
 
       <div

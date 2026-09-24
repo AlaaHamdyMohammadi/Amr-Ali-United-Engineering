@@ -30,7 +30,7 @@ export default function ServicesHero() {
         }}
       />
 
-      <div className="container-page relative flex min-h-[320px] flex-col justify-end pb-10 pt-36 lg:min-h-[360px]">
+      <div className="container-page relative flex min-h-[320px] flex-col justify-end pb-10 pt-36 lg:min-h-[460px]">
         <h1 className="font-display text-4xl font-extrabold text-white sm:text-5xl">
           {t("heroTitle")}
         </h1>
