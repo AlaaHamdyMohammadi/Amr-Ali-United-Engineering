@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import CompanyProfile from "./tabs/CompanyProfile";
 import PlaceholderTab from "./tabs/PlaceholderTab";
+import Breadcrumbs from "../ui/Breadcrumbs";
 
 
 const TAB_IDS = [
@@ -13,6 +14,7 @@ const TAB_IDS = [
   "boardOfDirectors",
   "boardCommittees",
   "executiveTeam",
+  "ourPartners",
 ] as const;
 
 type TabId = (typeof TAB_IDS)[number];
@@ -27,6 +29,7 @@ const TAB_CONTENT: Record<TabId, React.ComponentType> = {
   boardOfDirectors: PlaceholderTab,
   boardCommittees: PlaceholderTab,
   executiveTeam: PlaceholderTab,
+  ourPartners: PlaceholderTab,
 };
 
 export default function AboutTabs() {
@@ -38,17 +41,17 @@ export default function AboutTabs() {
   return (
     <section className="section">
       {/* Tab bar */}
-      <div className="flex bg-navy-900">
+      <div className="flex bg-linear-to-l from-[#E0851A] to-[#885417]">
         {/* <span className="hidden w-1.5 shrink-0 bg-clay-500 sm:block" /> */}
-        <div className="flex gap-1 overflow-x-auto px-0 sm:px-12">
+        <div className="flex gap-6 overflow-x-auto px-0 sm:px-12">
           {TAB_IDS.map((id) => (
             <button
               key={id}
               onClick={() => setActive(id)}
-              className="shrink-0 px-5 py-4 text-sm font-semibold transition-colors"
+              className="shrink-0 p-5 text-lg font-bold transition-colors"
               style={{
-                background: active === id ? "#eef1fc" : "transparent",
-                color: active === id ? "#0b1730" : "rgba(255,255,255,0.65)",
+                background: active === id ? "#E9EFFF" : "transparent",
+                color: active === id ? "#303030" : "#ffffff",
               }}
             >
               {t(id)}
@@ -56,12 +59,14 @@ export default function AboutTabs() {
           ))}
         </div>
       </div>
+      {/* Breadcrumb Here */}
+      <div className="px-4 py-6 sm:px-12">
+        <Breadcrumbs />
+      </div>
 
       {/* Active tab's content */}
-      <div className="bg-mist-50 py-16 lg:py-20">
-        <div className="container-page">
+      <div className="bg-mist-50">
           <ActiveContent />
-        </div>
       </div>
     </section>
   );

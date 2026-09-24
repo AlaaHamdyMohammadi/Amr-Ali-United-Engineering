@@ -11,6 +11,7 @@ import { routing } from "@/i18n/routing";
 import { antdTheme } from "@/lib/theme";
 import "../globals.css";
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
 
 const CairoFont = Cairo({
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
               direction={isRtl ? "rtl" : "ltr"}
               locale={isRtl ? arEG : enUS}
             >
+              <Header />
               {children}
               <Footer />
             </ConfigProvider>

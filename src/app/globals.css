@@ -32,6 +32,8 @@
   --color-gray-450: #E3EAFF;
 
   --color-ink-900: #0b1730;
+
+  --color-heading: #303030;
 }
 
 html[lang='ar'] * {
