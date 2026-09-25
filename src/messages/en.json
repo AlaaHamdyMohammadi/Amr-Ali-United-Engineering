@@ -235,6 +235,54 @@
       }
     }
   },
+  "projectPage": {
+    "title": "Projects",
+    "sector": "Sector:",
+    "section": "Section:",
+    "location": "Location:",
+    "year": "Year:",
+    "items": {
+      "learnMore": "Learn more",
+      "buildings": {
+        "title": "Buildings",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      },
+      "interiors": {
+        "title": "Home Interiors",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      },
+      "apartments": {
+        "title": "Apartments",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      },
+      "villas": {
+        "title": "Villas",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      }
+    },
+    "seeProjects": "See projects",
+    "filters": {
+      "sector": "Sector",
+      "section": "Section",
+      "location": "Location",
+      "year": "Year",
+      "status": "Status",
+      "reset": "Reset Filter",
+      "noResults": "No projects match your filters."
+    }
+  },
   "servicesPage": {
     "heroTitle": "Our services",
     "learnMore": "Learn more",

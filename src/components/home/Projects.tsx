@@ -39,7 +39,7 @@ export default function Projects() {
 
         <div
           ref={scrollerRef}
-          className="flex flex-col sm:flex-row gap-6 "
+          className="grid grid-cols-1 sm:grid-cols-4 gap-6 "
           style={{ scrollSnapType: "x mandatory" }}
         >
           {projectKeys.map((key) => (
