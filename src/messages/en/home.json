@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "brand": "AmrAli",
+    "brandSub": "United Engineering",
+    "about": "About Us",
+    "services": "Services",
+    "servicesMenu": {
+      "residential": "Residential Construction",
+      "commercial": "Commercial Fit-outs",
+      "industrial": "Industrial Facilities",
+      "consulting": "Engineering Consulting"
+    },
+    "projects": "Projects",
+    "sectors": "Sectors",
+    "articles": "Articles",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "eyebrow": "Amr Ali Company",
+    "headline": "Build your home\nwith trusted hands",
+    "sub": "Residential, Commercial, Industrial",
+    "cta": "Request a quote"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Building Homes, Schools, and Offices that lasts",
+    "lead": "We are a collective of designers, engineers, and thinkers dedicated to crafting intuitive, beautiful, and scalable solutions for modern businesses. Our mission is to bridge the gap between technology and human connection.",
+    "approachTitle": "Our approach is rooted in empathy and precision.",
+    "approachBody": "We believe that the best products are those that feel invisible. By combining rigorous research with a deep understanding of human behavior, we design systems that are both powerful and effortless to use. Whether you're a startup looking to launch or an enterprise looking to scale, we help you build products that people love.",
+    "yearsValue": "12+",
+    "yearsLabel": "Years of Experience",
+    "projectsValue": "500+",
+    "projectsLabel": "Projects Delivered",
+    "cta": "Learn more",
+    "trustedBy": "Trusted by teams at"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "seeAll": "See all projects",
+    "learnMore": "Learn more",
+    "sector": "Sector:",
+    "section": "Section:",
+    "location": "Location:",
+    "year": "Year:",
+    "items": {
+      "learnMore": "Learn more",
+      "buildings": {
+        "title": "Buildings",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      },
+      "interiors": {
+        "title": "Home Interiors",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      },
+      "apartments": {
+        "title": "Apartments",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      },
+      "villas": {
+        "title": "Villas",
+        "sectorTitle": "Residential Development",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2019 - 2020"
+      }
+    }
+  },
+  "sectors": {
+    "title": "Engineering permanent solutions for seven vital sectors",
+    "sub": "From deep foundation pour to architectural final hand-over, we translate blueprints into enduring public and private spaces. Our specialized teams match rigorous engineering precision with structural utility.",
+    "cta": "Explore Sector Specification",
+    "items": {
+      "residential": {
+        "title": "Residential Development",
+        "body": "Custom turnkey villas, smart luxury compounds, and architectural masterpieces designed for premium generational living.",
+        "points": [
+          "Luxury Compound Design",
+          "Custom Residential Villas",
+          "Smart-Home Engineering Integrations"
+        ]
+      },
+      "commercial": {
+        "title": "Commercial & Administrative",
+        "body": "Turnkey grade-A corporate towers, modern workspaces, and corporate headquarters built for collaboration and energy efficiency.",
+        "points": [
+          "Grade-A Offices",
+          "Co-working Ecosystems",
+          "Turnkey Commercial Fit-outs"
+        ]
+      },
+      "industrial": {
+        "title": "Industrial & Logistics",
+        "body": "State-of-the-art warehouses, factories, and heavy infrastructure built to precise technical, logistics, and seismic load requirements.",
+        "points": [
+          "Cold-Chain Storage Facilities",
+          "Precision Assembly Plants",
+          "High-Load Infrastructure Logistics"
+        ]
+      }
+    }
+  },
+  "stats": {
+    "clientsLabel": "Trust Worthy",
+    "clientsValue": "+165,489",
+    "clientsSub": "Clients",
+    "rateLabel": "Reliable",
+    "rateValue": "98%",
+    "rateSub": "Connection Rate",
+    "infraLabel": "Scalable",
+    "infraValue": "+254",
+    "infraSub": "Infrastructures",
+    "awardsLabel": "Quality",
+    "awardsValue": "560",
+    "awardsSub": "Awards Won"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": {
+      "t1": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
+      "t2": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
+      "t3": "From the first site visit to hand-over, communication was clear and every milestone was met on time.",
+      "t4": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
+      "t5": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
+      "t6": "From the first site visit to hand-over, communication was clear and every milestone was met on time."
+    },
+    "author": "Khaled Omar"
+  }
+}

@@ -1,13 +1,16 @@
+
+
 import { sectorImages, type SectorId } from "@/lib/sectors";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import BlurText from "../TextAnimations/BlurText";
 
 export default async function SectorDetailHero({
   sectorId,
 }: {
   sectorId: SectorId;
 }) {
-  const t = await getTranslations("sectorPage.items");
+  const t = await getTranslations("sectors.items");
 
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
@@ -17,7 +20,7 @@ export default async function SectorDetailHero({
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="animate-hero-zoom object-cover"
       />
 
       <div
@@ -26,9 +29,14 @@ export default async function SectorDetailHero({
       />
 
       <div className="container-page relative flex min-h-[320px] flex-col justify-end pb-10 pt-36 lg:min-h-[460px]">
-        <h1 className="font-display text-4xl font-extrabold text-white sm:text-5xl">
-          {t(`${sectorId}.title`)}
-        </h1>
+        
+        <BlurText
+          text={t(`${sectorId}.title`)}
+          delay={30}
+          animateBy="words"
+          direction="top"
+          className="font-display text-4xl font-medium text-white sm:text-[80px]"
+        />
       </div>
     </section>
   );

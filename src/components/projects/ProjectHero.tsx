@@ -1,9 +1,10 @@
 import projectHeroImg from "@/assets/projectImg.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import BlurText from "../TextAnimations/BlurText";
 
 export default function ProjectHero() {
-  const t = useTranslations("projectPage");
+  const t = useTranslations("projects");
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
       <Image
@@ -22,9 +23,14 @@ export default function ProjectHero() {
       />
 
       <div className="container-page relative flex min-h-[320px] flex-col justify-end pb-10 pt-36 lg:min-h-[460px]">
-        <h1 className="font-display text-4xl font-medium text-white sm:text-[80px]">
-          {t(`title`)}
-        </h1>
+        
+        <BlurText
+          text={t("title")}
+          delay={30}
+          animateBy="words"
+          direction="top"
+          className="font-display text-4xl font-medium text-white sm:text-[80px]"
+        />
       </div>
     </section>
   );

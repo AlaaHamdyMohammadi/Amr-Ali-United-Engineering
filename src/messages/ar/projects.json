@@ -1,0 +1,48 @@
+{
+  "title": "المشاريع",
+  "sector": "القطاع:",
+  "section": "القسم:",
+  "location": "الموقع:",
+  "year": "السنة:",
+  "items": {
+    "learnMore": "اعرف المزيد",
+    "buildings": {
+      "title": "المباني",
+      "sectorTitle": "التطوير السكني",
+      "sectionTitle": "المباني",
+      "locationTitle": "التجمع الخامس - القاهرة",
+      "yearTitle": "2019 - 2020"
+    },
+    "interiors": {
+      "title": "التصميم الداخلي للمنازل",
+      "sectorTitle": "التطوير السكني",
+      "sectionTitle": "المباني",
+      "locationTitle": "التجمع الخامس - القاهرة",
+      "yearTitle": "2019 - 2020"
+    },
+    "apartments": {
+      "title": "الشقق",
+      "sectorTitle": "التطوير السكني",
+      "sectionTitle": "المباني",
+      "locationTitle": "التجمع الخامس - القاهرة",
+      "yearTitle": "2019 - 2020"
+    },
+    "villas": {
+      "title": "الفيلات",
+      "sectorTitle": "التطوير السكني",
+      "sectionTitle": "المباني",
+      "locationTitle": "التجمع الخامس - القاهرة",
+      "yearTitle": "2019 - 2020"
+    }
+  },
+  "seeProjects": "عرض المشاريع",
+  "filters": {
+    "sector": "القطاع",
+    "section": "القسم",
+    "location": "الموقع",
+    "year": "السنة",
+    "status": "الحالة",
+    "reset": "إعادة تعيين الفلتر",
+    "noResults": "لا توجد مشاريع تطابق الفلاتر المحددة."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "About Us",
+  "tabs": {
+    "companyProfile": "Company Profile",
+    "ourApproach": "Our Approach",
+    "ourHistory": "Our History",
+    "boardOfDirectors": "Board of Directors",
+    "boardCommittees": "Board Comitees",
+    "executiveTeam": "Excutive Team",
+    "ourPartners": "Our Partners"
+  },
+  "companyProfile": {
+    "title": "About AmrAli Company",
+    "lead": "AmrAli United Engineering has delivered residential, commercial, and industrial projects across Egypt for over a decade, combining structural precision with dependable site management.",
+    "points": [
+      "Full-service engineering, from design to hand-over",
+      "In-house structural and MEP teams",
+      "ISO-aligned site safety protocols",
+      "Fixed-price, fixed-timeline contracts"
+    ],
+    "body1": "Every project starts with a detailed feasibility and structural review, so surprises get caught on paper instead of on site.",
+    "body2": "We stay involved past hand-over with a maintenance window on every build, because a finished building is still our responsibility.",
+    "whyTitle": "Why AmrAli",
+    "whyBody1": "We control quality by keeping core trades in-house rather than fully subcontracting, so the crew on-site is the same crew accountable for the result.",
+    "whyBody2": "Our project managers report progress weekly with photos and a schedule variance — no waiting until hand-over to find out where things stand.",
+    "whyBody3": "Clients typically stay with us across multiple projects, which is the metric we actually optimize for.",
+    "sectorSection": {
+      "title": "Our Sectors",
+      "p1": "Commercial & Administrative",
+      "p2": "Industrial & Logistics",
+      "p3": "Residential Development",
+      "sectorButton": "Explore Sector Specification"
+    },
+    "certificates": "Certificates"
+  }
+}

@@ -1,17 +1,16 @@
 "use client";
 
-import sectorHeroImg from "@/assets/sectorImg.png";
+import serviceHeroImg from "@/assets/serviceImg.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";
 
-
-export default function SectorHero() {
-  const t = useTranslations("sectors");
+export default function ServiceHero() {
+  const t = useTranslations("services");
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
       <Image
-        src={sectorHeroImg}
+        src={serviceHeroImg}
         alt=""
         fill
         priority

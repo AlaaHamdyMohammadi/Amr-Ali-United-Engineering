@@ -8,6 +8,8 @@ import sector2 from "@/assets/sector2.png";
 import sector3 from "@/assets/sector3.png";
 import Image, { type StaticImageData } from "next/image";
 import MainButton from "../ui/MainButton";
+import ScrollReveal from "../TextAnimations/scrollRevealText";
+import { motion } from "motion/react";
 
 const sectorKeys = ["residential", "commercial", "industrial"] as const;
 
@@ -17,8 +19,26 @@ const images: Record<(typeof sectorKeys)[number], StaticImageData> = {
   industrial: sector3,
 };
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 export default function SectorContent() {
-  const t = useTranslations("sectorPage");
+  const t = useTranslations("sectors");
   const locale = useLocale();
   const Arrow = locale === "ar" ? ArrowLeft : ArrowRight;
 
@@ -29,24 +49,45 @@ export default function SectorContent() {
         <Breadcrumbs />
       </div>
       <div className="container-page flex flex-col gap-12 pt-10 pb-20">
-        <p className="text-gray-200 text-base sm:text-xl font-bold">
+        <ScrollReveal
+          textClassName="text-gray-200 text-base sm:text-xl font-bold"
+          baseOpacity={0.5}
+          enableBlur
+          baseRotation={3}
+          blurStrength={6}
+        >
           {t(`body`)}
-        </p>
+        </ScrollReveal>
 
-        <div className="flex flex-col gap-12">
+        <motion.div
+          className="flex flex-col gap-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {sectorKeys.map((key) => (
-            <div
+            <motion.div
               key={key}
+              variants={cardVariants}
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="flex flex-col overflow-hidden rounded-3xl border border-[#EBEBEB] bg-white shadow-[0_2px_16px_2px_rgba(0,0,0,0.06)] sm:flex-row gap-6 items-center"
             >
-              <div className="relative aspect-4/3 w-full shrink-0 sm:aspect-auto sm:w-[633px] sm:h-[283px] ">
-                <Image
-                  src={images[key]}
-                  alt={t(`items.${key}.title`)}
-                  fill
-                  sizes="(min-width: 640px) 330px, 100vw"
-                  className="object-cover rounded-3xl"
-                />
+              <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden rounded-3xl sm:aspect-auto sm:w-[633px] sm:h-[283px]">
+                <motion.div
+                  className="h-full w-full"
+                  whileHover={{ scale: 1.06 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  <Image
+                    src={images[key]}
+                    alt={t(`items.${key}.title`)}
+                    fill
+                    sizes="(min-width: 640px) 330px, 100vw"
+                    className="object-cover"
+                  />
+                </motion.div>
               </div>
 
               <div className="flex flex-1 flex-col justify-between gap-6 p-6">
@@ -54,7 +95,7 @@ export default function SectorContent() {
                   <h3 className="text-xl sm:text-[32px] font-bold text-navy-750">
                     {t(`items.${key}.title`)}
                   </h3>
-                  <p className=" text-[#4A4A4A] text-sm sm:text-base">
+                  <p className="text-[#4A4A4A] text-sm sm:text-base">
                     {t(`items.${key}.body`)}
                   </p>
                 </div>
@@ -63,15 +104,15 @@ export default function SectorContent() {
                   <span className="font-bold text-black text-sm sm:text-base">
                     {t(`items.${key}.tag`)}
                   </span>
-                  <MainButton className="h-8!" href={`/sectors/${key}`}>
+                  <MainButton className="h-8! hover:bg-clay-700!" href={`/sectors/${key}`}>
                     {t("learnMore")}
                     <Arrow size={16} />
                   </MainButton>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

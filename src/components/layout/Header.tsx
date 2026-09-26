@@ -11,7 +11,7 @@ import LogoImg from "@/assets/amrAliLogo.png";
 import MainButton from "@/components/ui/MainButton";
 
 export default function Header() {
-  const t = useTranslations("nav");
+  const t = useTranslations("home.nav");
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();

@@ -1,0 +1,21 @@
+{
+  "servicesTitle": "خدماتنا",
+  "services": {
+    "residential": "سكني",
+    "commercial": "تجاري",
+    "medical": "طبي",
+    "restaurants": "مطاعم ومقاهي"
+  },
+  "helpTitle": "مساعدة",
+  "help": {
+    "about": "من نحن",
+    "contact": "تواصل معنا",
+    "terms": "الشروط والأحكام"
+  },
+  "priceTitle": "طلب عرض سعر",
+  "scheduleMeeting": "احجز اجتماع",
+  "requestPrices": "اطلب الأسعار",
+  "priceSub": "سيرد عليك فريقنا خلال 24 ساعة!",
+  "emailPlaceholder": "example@gmail.com",
+  "rights": "جميع الحقوق محفوظة \u00a9 عمرو علي 2026."
+}

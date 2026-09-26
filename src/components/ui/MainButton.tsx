@@ -6,49 +6,38 @@ import type { ButtonProps as AntButtonProps } from "antd";
 import { twMerge } from "tailwind-merge";
 import { useRouter } from "@/i18n/navigation";
 
-export type MainButtonPreset = "solid" | "navLink" | "toggle" | "floatingIcon" | "Link";
+export type MainButtonPreset =
+  | "solid"
+  | "outline"
+  | "navLink"
+  | "toggle"
+  | "floatingIcon"
+  | "Link";
 
-// One shared className string per "type of button" you actually reuse
-// across the app — add a new key here instead of repeating a long
-// Tailwind string at every call site.
 const presetClasses: Record<MainButtonPreset, string> = {
-  // Default antd primary/round button — antd's own type/shape props
-  // already handle the look, no extra classes needed.
   solid: "",
 
-  // Plain text link living inside a white pill (e.g. the "Services"
-  // dropdown trigger) — matches the <Link> nav items next to it.
+  // White pill with an orange border/text — the "Request Prices" style.
+  // Pairs with resolvedType below (forced to antd's "default" type so
+  // antd doesn't fill it with the primary color).
+  outline:
+    "!flex !h-12 !items-center !justify-center !border-2 !border-clay-500 !bg-white !px-8 !font-semibold !text-clay-500 !shadow-none hover:!border-clay-600 hover:!text-clay-600 hover:!bg-clay-50",
+
   navLink:
     "!flex !h-auto !items-center !gap-1 !border-none !bg-transparent !px-0 !font-semibold !text-navy-600 !shadow-none hover:!text-clay-500",
 
-  // Small circular pill segment — the EN/Ar language switch. Pair with
-  // the `active` prop below to get the filled/unfilled state for free.
   toggle:
     "!flex !size-10 !items-center !justify-center !border-none !text-sm !font-semibold !shadow-none",
 
-  // Large white circular icon button with a drop shadow — mobile
-  // hamburger trigger, or any other floating icon action.
   floatingIcon:
     "!flex !h-14 !w-14 !items-center !justify-center !border-none !bg-white !shadow-lg !shadow-black/10",
 
-  Link: 
-    "!flex   !gap-1 !border-none !bg-transparent !px-0 !font-semibold !shadow-none font-bold! text-base! !text-clay-700 hover:!text-clay-650",  
+  Link: "!flex   !gap-1 !border-none !bg-transparent !px-0 !font-semibold !shadow-none font-bold! text-base! !text-clay-700 hover:!text-clay-650",
 };
 
 export interface MainButtonProps extends AntButtonProps {
-  /**
-   * Internal route to navigate to on click, through next-intl's locale-aware
-   * router. Pass a plain path ("/contact"), not a locale-prefixed one.
-   */
   href?: string;
-  /** Picks one of the shared style presets above instead of repeating the
-   * same Tailwind string at every call site. Defaults to a normal antd
-   * button. Distinct from antd's own `variant` prop (outlined/dashed/etc.),
-   * which is still available and passed straight through. */
   preset?: MainButtonPreset;
-  /** Only meaningful with preset="toggle": true renders the filled/active
-   * segment (white bg, dark text), false the muted/inactive one — replaces
-   * passing a background/color style object by hand at each call site. */
   active?: boolean;
 }
 
@@ -76,7 +65,8 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
       }
     }
 
-    const resolvedType = preset === "solid" ? type : "text";
+    const resolvedType =
+      preset === "outline" ? "default" : preset === "solid" ? type : "text";
     const resolvedShape =
       preset === "toggle" || preset === "floatingIcon" ? "circle" : shape;
 

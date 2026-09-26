@@ -1,4 +1,5 @@
 
+
 import SectorDetailContent from "@/components/sectors/SectorDetailContent";
 import SectorDetailHero from "@/components/sectors/SectorDetailHero";
 import { routing } from "@/i18n/routing";

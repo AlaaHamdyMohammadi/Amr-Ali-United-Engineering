@@ -33,7 +33,7 @@ const TAB_CONTENT: Record<TabId, React.ComponentType> = {
 };
 
 export default function AboutTabs() {
-  const t = useTranslations("aboutPage.tabs");
+  const t = useTranslations("about.tabs");
   const [active, setActive] = useState<TabId>("companyProfile");
 
   const ActiveContent = TAB_CONTENT[active];

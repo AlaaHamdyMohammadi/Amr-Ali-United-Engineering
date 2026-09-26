@@ -7,7 +7,7 @@ import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";
 
 export default function Hero() {
-  const t = useTranslations("hero");
+  const t = useTranslations("home.hero");
   const lines = t("headline").split("\n");
 
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="animate-hero-zoom"
+        className="animate-hero-zoom object-cover"
         // className="object-cover"
       />
 

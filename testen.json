@@ -134,25 +134,7 @@
     },
     "author": "Khaled Omar"
   },
-  "footer": {
-    "servicesTitle": "Services",
-    "services": {
-      "residential": "Residentials",
-      "commercial": "Commercial",
-      "medical": "Medical",
-      "restaurants": "Restaurants & Cafes"
-    },
-    "helpTitle": "Help",
-    "help": {
-      "about": "About us",
-      "contact": "Contact us",
-      "terms": "Terms & Condition"
-    },
-    "priceTitle": "Price Request",
-    "priceSub": "Our team will respond to you within 24 hours!",
-    "emailPlaceholder": "example@gmail.com",
-    "rights": "All rights reserved \u00a9 AmrAli 2026."
-  },
+  
   "aboutPage": {
     "title": "About Us",
     "tabs": {
