@@ -3,6 +3,10 @@
   "sector": "Sector:",
   "section": "Section:",
   "location": "Location:",
+  "buildings": "Buildings",
+  "interiors": "Home Interiors",
+  "apartments": "Apartments",
+  "villas": "Villas",
   "year": "Year:",
   "items": {
     "learnMore": "Learn more",
@@ -44,5 +48,255 @@
     "status": "Status",
     "reset": "Reset Filter",
     "noResults": "No projects match your filters."
+  },
+  "detailHeroTitle": "Projects",
+  "share": "Share",
+  "requestSimilar": "Request Similar Project",
+  "scheduleMeeting": "Schedule Meeting",
+  "requestPrices": "Request Prices",
+  "area": "Area",
+  "duration": "Duration",
+  "status": "Status",
+  "moreImages": "+{count} image",
+  "challenges": "Challenges",
+  "solutions": "Solutions",
+  "tabs": {
+    "challengesSolutions": "Challenges & Solutions",
+    "phases": "Implementation Phases",
+    "services": "Used Services"
+  },
+  "details": {
+    "buildings": {
+      "title": "Nasr City Building",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam. Sed sagittis sollicitudin dolor, quis finibus nibh ornare ut. Donec placerat quam non ante interdum vestibulum.",
+      "sector": "Residential Development",
+      "section": "Buildings",
+      "location": "5th Settlement - Cairo",
+      "year": "2019 - 2020",
+      "area": "400m²",
+      "duration": "6 months",
+      "status": "Finished",
+      "challenges": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Site preparation & foundation",
+          "body": "Ground survey, excavation, and structural foundation pour completed to spec."
+        },
+        {
+          "title": "Structural build",
+          "body": "Core and shell construction across all floors, including MEP rough-in."
+        },
+        {
+          "title": "Finishing & hand-over",
+          "body": "Interior finishing, inspections, and final client walkthrough."
+        }
+      ],
+      "services": [
+        "Structural Engineering",
+        "MEP Design",
+        "Site Supervision",
+        "Interior Fit-out",
+        "Facade Works"
+      ]
+    },
+    "interiors": {
+      "title": "Zamalek Residence Interiors",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam.",
+      "sector": "Residential Development",
+      "section": "Home Interiors",
+      "location": "Zamalek - Cairo",
+      "year": "2021 - 2022",
+      "area": "220m²",
+      "duration": "3 months",
+      "status": "Finished",
+      "challenges": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Design & material selection",
+          "body": "Mood boards, material palette, and layout finalized with the client."
+        },
+        {
+          "title": "Joinery & finishing",
+          "body": "Custom joinery, flooring, and lighting installed."
+        },
+        {
+          "title": "Styling & hand-over",
+          "body": "Furniture placement, styling, and final reveal."
+        }
+      ],
+      "services": [
+        "Interior Design",
+        "Joinery",
+        "Lighting Design",
+        "Soft Furnishing"
+      ]
+    },
+    "apartments": {
+      "title": "New Cairo Apartments",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam.",
+      "sector": "Residential Development",
+      "section": "Apartments",
+      "location": "New Cairo",
+      "year": "2023 - 2024",
+      "area": "180m²",
+      "duration": "8 months",
+      "status": "Ongoing",
+      "challenges": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Foundation & structure",
+          "body": "Groundwork and structural frame in progress."
+        },
+        {
+          "title": "MEP & envelope",
+          "body": "Mechanical, electrical, and building envelope installation."
+        },
+        {
+          "title": "Finishing",
+          "body": "Interior and exterior finishing works underway."
+        }
+      ],
+      "services": ["Structural Engineering", "MEP Design", "Site Supervision"]
+    },
+    "villas": {
+      "title": "Sheikh Zayed Villa",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam.",
+      "sector": "Residential Development",
+      "section": "Villas",
+      "location": "Sheikh Zayed",
+      "year": "2019 - 2020",
+      "area": "650m²",
+      "duration": "12 months",
+      "status": "Finished",
+      "challenges": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        },
+        {
+          "title": "Lorem ipsum",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Site preparation & foundation",
+          "body": "Ground survey, excavation, and structural foundation pour completed to spec."
+        },
+        {
+          "title": "Structural build",
+          "body": "Core and shell construction, including MEP rough-in."
+        },
+        {
+          "title": "Finishing & hand-over",
+          "body": "Interior finishing, landscaping, and final client walkthrough."
+        }
+      ],
+      "services": [
+        "Structural Engineering",
+        "MEP Design",
+        "Landscape Design",
+        "Interior Fit-out"
+      ]
+    }
   }
 }

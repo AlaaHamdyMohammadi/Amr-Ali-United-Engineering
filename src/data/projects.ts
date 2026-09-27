@@ -59,3 +59,14 @@ export const projects: ProjectItem[] = Array.from({ length: 32 }, (_, i) => {
 export function getUniqueValues<K extends keyof ProjectItem>(key: K) {
   return Array.from(new Set(projects.map((p) => p[key])));
 }
+
+export const PROJECT_TYPE_KEYS: ProjectTypeKey[] = [
+  "buildings",
+  "interiors",
+  "apartments",
+  "villas",
+];
+
+export function isProjectTypeKey(value: string): value is ProjectTypeKey {
+  return (PROJECT_TYPE_KEYS as string[]).includes(value);
+}

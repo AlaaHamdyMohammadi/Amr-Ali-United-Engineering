@@ -106,6 +106,7 @@ export default function ProjectContent() {
   }, [filters]);
 
   const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  console.log("paged = ", paged);
 
   function updateFilter<K extends keyof Filters>(key: K, value: Filters[K]) {
     setFilters((prev) => ({ ...prev, [key]: value }));
@@ -259,7 +260,7 @@ export default function ProjectContent() {
                         </div>
                       </div>
                     </div>
-                    <MainButton preset="navLink" className="justify-start!">
+                    <MainButton preset="navLink" className="justify-start!" href={`/projects/${item.typeKey}`}>
                       <span>{t("seeProjects")}</span>
                       <Arrow size={16} />
                     </MainButton>

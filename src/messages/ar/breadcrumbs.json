@@ -6,5 +6,9 @@
   "sectors": "القطاعات",
   "articles": "المقالات",
   "residential": "التطوير السكني",
-  "industrial": "التطوير الصناعي"
+  "industrial": "التطوير الصناعي",
+  "buildings": "المباني",
+  "apartments": "الشقق",
+  "villas": "الفلل",
+  "interiors": "الديكورات"
 }
