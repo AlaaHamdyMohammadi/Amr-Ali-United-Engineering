@@ -1,0 +1,39 @@
+{
+  "title": "Contact Us",
+  "locations": {
+    "title": "Locations",
+    "items": [
+      {
+        "name": "Company Location 1",
+        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ferm."
+      },
+      {
+        "name": "Company Location 2",
+        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ferm"
+      },
+      {
+        "name": "Company Location 3",
+        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ferm"
+      }
+    ]
+  },
+  "emails": { "title": "Emails" },
+  "phones": { "title": "Phone Number" },
+  "form": {
+    "title": "Contact Us",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "First name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Last name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "phone": "Phone number",
+    "message": "Message",
+    "messagePlaceholder": "write your email here....",
+    "submit": "Send Message",
+    "required": "This field is required",
+    "emailInvalid": "Please enter a valid email",
+    "phoneInvalid": "Please enter a valid phone number",
+    "success": "Your message has been sent. We'll get back to you soon."
+  }
+}

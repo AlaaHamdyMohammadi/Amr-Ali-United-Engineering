@@ -116,10 +116,14 @@ body {
   background-color: transparent !important;
 }
 
-.ant-input{
+/* .ant-input{
   border-radius: 8px !important;
   background-color: #F8F8F8 !important;
   border: 1px solid #E8E8E8 !important;
   color: #0b1730 !important;
   font-size: 14px !important;
+} */
+
+.ant-form-item-label_label .ant-form-item-label label{
+  font-size: 16px !important;
 }

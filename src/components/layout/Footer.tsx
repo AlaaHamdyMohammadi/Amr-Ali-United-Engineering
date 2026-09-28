@@ -72,10 +72,12 @@ export default function Footer() {
                 <a href={`/${locale}/about`}>{t("help.about")}</a>
               </li>
               <li className="hover:text-clay-600 hover:cursor-pointer">
-                <a href={`/${locale}/contact`}>{t("help.contact")}</a>
+                <a href={`/${locale}/contact-us`}>{t("help.contact")}</a>
               </li>
               <li className="hover:text-clay-600 hover:cursor-pointer">
-                <a href={`/${locale}/terms`}>{t("help.terms")}</a>
+                <a href={`/${locale}/terms-and-conditions`}>
+                  {t("help.terms")}
+                </a>
               </li>
             </ul>
           </div>
@@ -84,14 +86,14 @@ export default function Footer() {
             <MainButton
               preset="solid"
               className="h-14! w-full! sm:w-62.25! bg-clay-650! hover:bg-clay-600! font-bold! text-base!"
-              href="/contact"
+              href="/contact-us"
             >
               {t("scheduleMeeting")}
             </MainButton>
             <MainButton
               preset="outline"
               className="h-14! w-full! sm:w-62.25! border! border-clay-700! text-clay-700! font-bold! text-base! hover:bg-clay-600! hover:text-white!"
-              href="/contact"
+              href="/contact-us"
             >
               {t("requestPrices")}
             </MainButton>

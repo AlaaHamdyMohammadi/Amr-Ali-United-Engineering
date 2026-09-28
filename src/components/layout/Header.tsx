@@ -89,7 +89,7 @@ export default function Header() {
         {/* Contact + language pill (desktop only) */}
         <div className="hidden items-center gap-6 rounded-full bg-white p-4 md:flex">
           <Link
-            href="/contact"
+            href="/contact-us"
             className="font-semibold text-navy-600 transition-colors hover:text-clay-500"
           >
             {t("contact")}
@@ -143,7 +143,7 @@ export default function Header() {
           ))}
 
           <MainButton
-            href="/contact"
+            href="/contact-us"
             block
             className="mt-3"
             onClick={() => setDrawerOpen(false)}

@@ -29,6 +29,8 @@ const namespaces = [
   "projects",
   "services",
   "articles",
+  "contact",
+  "terms"
 ] as const;
 
 export default getRequestConfig(async ({ locale }) => {
