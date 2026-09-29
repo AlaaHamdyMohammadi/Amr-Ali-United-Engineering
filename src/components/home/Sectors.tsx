@@ -44,7 +44,7 @@ export default function Sectors() {
           shineColor="#A0B8D7"
           spread={120}
           direction="left"
-          className="text-3xl font-bold leading-tight text-white sm:text-[48px]"
+          className="title-font text-3xl font-bold leading-tight text-white sm:text-[48px]"
         />
         <p className="text-lg  text-gray-300">{t("sub")}</p>
 
@@ -94,42 +94,6 @@ export default function Sectors() {
                   <Arrow size={16} className="text-white" />
                 </button>
               </div>
-              // <motion.div
-              //   key={key}
-              //   variants={fadeCardVar}
-              //   className="
-              //   relative
-
-              //   flex flex-col gap-5 rounded-3xl border border-white/10 bg-white/3 p-6 transition-colors hover:bg-white/6
-              //   overflow-hidden
-              //    justify-start cursor-pointer
-              // "
-              // >
-              //   <span className="flex size-14 items-center border border-gray-300 justify-center rounded-2xl bg-white text-navy-750">
-              //     <Icon size={18} strokeWidth={2} />
-              //   </span>
-              //   <div className="flex flex-col gap-2.5">
-              //     <h3 className="text-2xl font-bold text-white">
-              //       {t(`items.${key}.title`)}
-              //     </h3>
-              //     <p className="text-gray-300">{t(`items.${key}.body`)}</p>
-              //   </div>
-              //   <ul className="flex flex-col gap-1.5">
-              //     {(t.raw(`items.${key}.points`) as string[]).map((point) => (
-              //       <li
-              //         key={point}
-              //         className="flex items-center gap-2 text-sm text-white"
-              //       >
-              //         <span className="size-1 shrink-0 rounded-full bg-clay-550" />
-              //         {point}
-              //       </li>
-              //     ))}
-              //   </ul>
-              //   <button className="inline-flex w-fit items-center gap-2 font-bold text-white">
-              //     {t("cta")}
-              //     <Arrow size={16} className="text-white" />
-              //   </button>
-              // </motion.div>
             );
           })}
         </div>

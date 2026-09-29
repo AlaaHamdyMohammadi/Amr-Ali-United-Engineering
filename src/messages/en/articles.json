@@ -1,3 +1,91 @@
 {
-    "title": "Articles"
+  "title": "Articles",
+  "readArticle": "Read Article",
+  "noResults": "No articles found",
+  "items": {
+    "constructions": {
+      "title": "Constructions",
+      "description": "Explore the latest methods, machinery and site practices shaping modern construction projects from groundwork to handover."
+    },
+    "architecture": {
+      "title": "Architecture",
+      "description": "Insights into structural design, planning and the ideas that turn a concept into a functional, beautiful building."
+    },
+    "metals": {
+      "title": "Metals",
+      "description": "A closer look at reinforcement steel, fabrication and the metal works that give structures their strength and durability."
+    },
+    "altitude": {
+      "title": "Altitude",
+      "description": "How cranes, scaffolding and safety systems make high-rise construction possible, efficient and safe."
+    }
+  },
+  "play": "Play video",
+  "details": {
+    "constructions": {
+      "title": "Constructions",
+      "sections": [
+        {
+          "id": "overview",
+          "nav": "Overview",
+          "title": "Overview",
+          "paragraphs": [
+            "We provide comprehensive general contracting services for residential, commercial, and industrial projects. Our work covers the full construction cycle, from site preparation and structural works to finishing and final handover.",
+            "We focus on delivering projects according to approved drawings and technical specifications while maintaining high standards of quality, safety, cost control, and schedule management."
+          ],
+          "listTitle": "Our general contracting services include:",
+          "list": [
+            "Site preparation and enabling works.",
+            "Excavation, foundations, and structural works.",
+            "Concrete and masonry works.",
+            "Architectural and finishing works.",
+            "Electrical, plumbing, and mechanical works.",
+            "HVAC systems.",
+            "Waterproofing and thermal insulation.",
+            "Façade and roofing works.",
+            "External works and landscaping.",
+            "Renovation and refurbishment.",
+            "Coordination of subcontractors and suppliers.",
+            "Testing, commissioning, and final project handover."
+          ]
+        },
+        {
+          "id": "project-types",
+          "nav": "Suitable Project Types",
+          "title": "Suitable Project Types",
+          "items": [
+            {
+              "title": "Residential Projects",
+              "body": "Villas, apartment buildings, residential compounds, and private developments."
+            },
+            {
+              "title": "Commercial Projects",
+              "body": "Office buildings, retail stores, showrooms, commercial centers, and mixed-use developments."
+            },
+            {
+              "title": "Industrial Projects",
+              "body": "Factories, warehouses, workshops, production facilities, and industrial administrative buildings."
+            }
+          ]
+        },
+        {
+          "id": "advantages",
+          "nav": "Service Advantages",
+          "title": "Service Advantages",
+          "listTitle": "Our general contracting approach provides:",
+          "list": [
+            "End-to-end project management from construction start to final delivery.",
+            "Coordination between structural, architectural, electrical, and mechanical works.",
+            "Continuous quality monitoring throughout construction.",
+            "Schedule and progress control.",
+            "Clear cost and quantity management.",
+            "Appropriate construction solutions for each project type.",
+            "Site safety and construction standards compliance.",
+            "Regular progress reporting and project documentation.",
+            "Professional coordination with consultants, suppliers, and subcontractors."
+          ]
+        }
+      ]
+    }
+  }
 }

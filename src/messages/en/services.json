@@ -1,3 +1,85 @@
 {
-    "title": "Services"
+  "title": "Services",
+  "generalContracting": "General Contracting",
+  "generalSupplies": "General Supplies",
+  "integratedFinishing": "Integrated Finishing",
+  "residentialFinishing": "Residential Finishing",
+  "commercialAdministrativeFinishing": "Commercial & Administrative Finishing",
+  "industrialFinishing": "Industrial Finishing",
+  "claddingFacades": "Cladding & Facades",
+  "curtainWallsGlassFacades": "Curtain Walls & Glass Facades",
+  "generalContractingTab": {
+    "hero": {
+      "title": "General Contracting",
+      "body1": "We provide comprehensive general contracting services for residential, commercial, and industrial projects. Our work covers the full construction cycle, from site preparation and structural works to finishing and final handover.",
+      "body2": "We focus on delivering projects according to approved drawings and technical specifications while maintaining high standards of quality, safety, cost control, and schedule management.",
+      "scopeTitle": "Scope of Work",
+      "scopeLead": "We focus on delivering projects according to approved drawings and technical specifications while maintaining high standards of <b>quality, safety, cost control, and schedule management</b>.",
+      "scopePoints": [
+        "Site preparation and enabling works.",
+        "Excavation, foundations, and structural works.",
+        "Concrete and masonry works.",
+        "Architectural and finishing works.",
+        "Electrical, plumbing, and mechanical works.",
+        "HVAC systems."
+      ]
+    },
+    "buttons": {
+      "schedule": "Schedule Meeting",
+      "prices": "Price Ranges"
+    },
+    "projectTypes": {
+      "title": "Suitable Project Types",
+      "items": [
+        {
+          "title": "Residential Development",
+          "body": "Villas, apartment buildings, residential compounds, and private developments."
+        },
+        {
+          "title": "Commercial & Administrative",
+          "body": "Office buildings, retail stores, showrooms, commercial centers, and mixed-use developments."
+        },
+        {
+          "title": "Industrial & Logistics",
+          "body": "Factories, warehouses, workshops, production facilities, and industrial administrative buildings."
+        }
+      ]
+    },
+    "materials": {
+      "title": "Materials & Systems",
+      "lead": "Materials and construction systems are selected according to the project's technical requirements, specifications, and approved budget.",
+      "points": [
+        "Reinforced concrete and structural steel.",
+        "Masonry and partition systems.",
+        "Waterproofing and thermal insulation systems.",
+        "Electrical and lighting systems.",
+        "Plumbing and drainage systems.",
+        "HVAC and ventilation systems.",
+        "Fire protection systems where required.",
+        "Flooring, ceilings, façades, and finishing materials."
+      ],
+      "note": "All materials are reviewed and approved before installation to ensure compliance with project specifications and quality requirements."
+    },
+    "advantages": {
+      "title": "Advantages",
+      "items": [
+        {
+          "title": "Safe Contracting",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+        },
+        {
+          "title": "Best Prices",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+        },
+        {
+          "title": "End-to-End Project Management",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+        },
+        {
+          "title": "Strong Architecture",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+        }
+      ]
+    }
+  }
 }

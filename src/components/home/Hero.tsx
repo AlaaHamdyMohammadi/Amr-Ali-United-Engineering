@@ -47,7 +47,7 @@ export default function Hero() {
           direction="top"
           className="text-[32px] font-bold tracking-wide text-clay-500"
         />
-        <h1 className="max-w-3xl font-display text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]">
+        <h1 className="max-w-3xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]">
           {lines.map((line, i) => (
             <BlurText
               key={i}

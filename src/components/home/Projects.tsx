@@ -83,7 +83,7 @@ export default function Projects() {
           shineColor="#eef1fc"
           spread={120}
           direction="left"
-          className="text-2xl font-bold text-navy-650 sm:text-[48px]"
+          className="title-font text-2xl font-bold text-navy-650 sm:text-[48px]"
         />
 
         <motion.div

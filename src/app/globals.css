@@ -36,12 +36,16 @@
   --color-heading: #303030;
 }
 
-html[lang='ar'] * {
-  font-family: var(--font-cairo), sans-serif !important;
+html[lang='ar'] body {
+  font-family: var(--font-cairo), sans-serif ;
 }
 
-html[lang='en'] * {
-  font-family: var(--font-cairo), sans-serif !important;
+html[lang='en'] body {
+  font-family: var(--font-cairo), sans-serif ;
+}
+
+.title-font {
+  font-family: var(--font-clash-display), var(--font-cairo), sans-serif ;
 }
 
 html,
@@ -126,4 +130,28 @@ body {
 
 .ant-form-item-label_label .ant-form-item-label label{
   font-size: 16px !important;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-clay-700) var(--color-mist-100);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-mist-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-700);
+  border-radius: 999px;
+  border: 2px solid var(--color-mist-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-clay-600);
 }

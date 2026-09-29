@@ -12,6 +12,44 @@ import { antdTheme } from "@/lib/theme";
 import "../globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import localFont from "next/font/local";
+
+const ClashDisplay = localFont({
+  src: [
+    {
+      path: "../../fonts/ClashDisplay-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ClashDisplay-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ClashDisplay-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ClashDisplay-Semibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ClashDisplay-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ClashDisplay-Extralight.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-clash-display",
+  display: "swap",
+});
 
 
 const CairoFont = Cairo({
@@ -53,7 +91,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const isRtl = locale === "ar";
 
-  const fontVars = isRtl ? `${CairoFont.variable}` : `${CairoFont.variable}`;
+  const fontVars = `${CairoFont.variable} ${PublicSans.variable} ${ClashDisplay.variable}`;
 
   return (
     <html lang={locale} dir={isRtl ? "rtl" : "ltr"}>

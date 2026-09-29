@@ -52,12 +52,19 @@ export default function Header() {
               {t("about")}
             </Link>
 
-            <Dropdown menu={{ items: servicesItems }} trigger={["click"]}>
+            {/* <Dropdown menu={{ items: servicesItems }} trigger={["click"]}>
               <MainButton preset="navLink" className="text-base!">
                 {t("services")}
                 <ChevronDown size={16} />
               </MainButton>
-            </Dropdown>
+            </Dropdown> */}
+
+            <Link
+              href="/services"
+              className="rounded-full font-semibold text-navy-600 transition-colors hover:text-clay-500"
+            >
+              {t("services")}
+            </Link>
 
             <Link
               href="/sectors"

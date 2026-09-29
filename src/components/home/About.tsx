@@ -12,9 +12,22 @@ import CountUp from "../TextAnimations/CountUpText";
 import ScrollFadeIn from "../animations/ScrollFadeIn";
 import ShinyText from "../TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
+import Framer from "@/assets/framer.svg";
+import Atlassian from "@/assets/attlas.svg";
+import Shopify from "@/assets/shopify.svg";
+import GitHub from "@/assets/github.svg";
+import LaunchDarkly from "@/assets/darkly.svg";
+import Tailscale from "@/assets/tailscale.svg";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
-const logos = ["Framer", "Atlassian", "Shopify", "GitHub", "LaunchDarkly", "Tailscale"];
+const logos = [
+  { name: "Framer", src: Framer },
+  { name: "Atlassian", src: Atlassian },
+  { name: "Shopify", src: Shopify },
+  { name: "GitHub", src: GitHub },
+  { name: "LaunchDarkly", src: LaunchDarkly },
+  { name: "Tailscale", src: Tailscale },
+];
 
 export default function About() {
   const t = useTranslations("home.about");
@@ -57,7 +70,7 @@ export default function About() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px]"
+            className="title-font text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px]"
           />
           <p className="text-lg max-w-4xl text-gray-200">{t("lead")}</p>
         </div>
@@ -136,11 +149,14 @@ export default function About() {
           <p className="font-bold tracking-wider text-black/60">
             {t("trustedBy")}
           </p>
-          <div className="mt-4 flex flex-wrap items-center gap-x-10 gap-y-4">
+          <div className="flex flex-wrap items-center gap-16.75">
             {logos.map((logo) => (
-              <span key={logo} className="text-lg font-bold text-black/60">
-                {logo}
-              </span>
+              <Image
+                key={logo.name}
+                src={logo.src}
+                alt={logo.name}
+                className="h-6 w-auto opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+              />
             ))}
           </div>
         </ScrollFadeIn>

@@ -91,7 +91,7 @@ export default function Testimonials() {
           shineColor="#A0B8D7"
           spread={120}
           direction="left"
-          className="font-display text-3xl font-extrabold text-white sm:text-4xl"
+          className="title-font text-3xl font-semibold text-white sm:text-[48px]"
         />
 
         <div
