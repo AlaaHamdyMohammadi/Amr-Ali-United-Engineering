@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Dropdown, Drawer } from "antd";
-import type { MenuProps } from "antd";
-import { ChevronDown, Menu as MenuIcon } from "lucide-react";
+import { Drawer } from "antd";
+import { Menu as MenuIcon } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter, Link } from "@/i18n/navigation";
 import Image from "next/image";
@@ -13,23 +12,23 @@ import MainButton from "@/components/ui/MainButton";
 export default function Header() {
   const t = useTranslations("home.nav");
   const locale = useLocale();
-  const pathname = usePathname();
+  const pathname = usePathname(); // locale prefix is already stripped, e.g. "/about"
   const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const servicesItems: MenuProps["items"] = [
-    { key: "residential", label: t("servicesMenu.residential") },
-    { key: "commercial", label: t("servicesMenu.commercial") },
-    { key: "industrial", label: t("servicesMenu.industrial") },
-    { key: "consulting", label: t("servicesMenu.consulting") },
-  ];
-
   const navLinks = [
+    { key: "home", label: t("home"), href: "/" },
     { key: "about", label: t("about"), href: "/about" },
-    { key: "projects", label: t("projects"), href: "/projects" },
+    { key: "services", label: t("services"), href: "/services" },
     { key: "sectors", label: t("sectors"), href: "/sectors" },
+    { key: "projects", label: t("projects"), href: "/projects" },
     { key: "articles", label: t("articles"), href: "/articles" },
   ];
+
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
 
   function switchLocale(next: string) {
     router.replace(pathname, { locale: next });
@@ -45,51 +44,18 @@ export default function Header() {
           </Link>
 
           <div className="hidden items-center gap-6 md:flex">
-            <Link
-              href="/about"
-              className="rounded-full font-semibold text-navy-600 transition-colors hover:text-clay-500"
-            >
-              {t("about")}
-            </Link>
-
-            {/* <Dropdown menu={{ items: servicesItems }} trigger={["click"]}>
-              <MainButton preset="navLink" className="text-base!">
-                {t("services")}
-                <ChevronDown size={16} />
-              </MainButton>
-            </Dropdown> */}
-
-            <Link
-              href="/services"
-              className="rounded-full font-semibold text-navy-600 transition-colors hover:text-clay-500"
-            >
-              {t("services")}
-            </Link>
-
-            <Link
-              href="/sectors"
-              className="rounded-full font-semibold text-navy-600 transition-colors hover:text-clay-500"
-            >
-              {t("sectors")}
-            </Link>
-            <Link
-              href="/projects"
-              className="rounded-full font-semibold text-navy-600 transition-colors hover:text-clay-500"
-            >
-              {t("projects")}
-            </Link>
-            {/* <Dropdown menu={{ items: servicesItems }} trigger={["click"]}>
-              <MainButton preset="navLink" className="text-base!">
-                {t("sectors")}
-                <ChevronDown size={16} />
-              </MainButton>
-            </Dropdown> */}
-            <Link
-              href="/articles"
-              className="rounded-full font-semibold text-navy-600 transition-colors hover:text-clay-500"
-            >
-              {t("articles")}
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.key}
+                href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`rounded-full font-semibold transition-colors hover:text-clay-500 ${
+                  isActive(link.href) ? "text-clay-500" : "text-navy-600"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </nav>
 
@@ -97,7 +63,10 @@ export default function Header() {
         <div className="hidden items-center gap-6 rounded-full bg-white p-4 md:flex">
           <Link
             href="/contact-us"
-            className="font-semibold text-navy-600 transition-colors hover:text-clay-500"
+            aria-current={isActive("/contact-us") ? "page" : undefined}
+            className={`font-semibold transition-colors hover:text-clay-500 ${
+              isActive("/contact-us") ? "text-clay-500" : "text-navy-600"
+            }`}
           >
             {t("contact")}
           </Link>
@@ -142,7 +111,12 @@ export default function Header() {
             <Link
               key={link.key}
               href={link.href}
-              className="rounded-lg px-3 py-3 text-base font-medium text-navy-900 hover:bg-mist-50"
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className={`rounded-lg px-3 py-3 text-base font-medium hover:bg-mist-50 ${
+                isActive(link.href)
+                  ? "bg-mist-50 text-clay-500"
+                  : "text-navy-900"
+              }`}
               onClick={() => setDrawerOpen(false)}
             >
               {link.label}

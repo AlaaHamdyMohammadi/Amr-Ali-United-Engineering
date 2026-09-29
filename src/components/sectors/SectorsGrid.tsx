@@ -44,7 +44,7 @@ export default function SectorsGrid({
   return (
     <div className="flex flex-col gap-12">
       <motion.h2
-        className="text-[48px] font-semibold text-navy-650"
+        className="title-font text-[48px] font-semibold text-navy-650"
         variants={headingVariants}
         initial="hidden"
         whileInView="show"

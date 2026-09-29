@@ -23,13 +23,12 @@ export default function ProjectHero() {
       />
 
       <div className="container-page relative flex min-h-[320px] flex-col justify-end pb-10 pt-36 lg:min-h-[460px]">
-        
         <BlurText
           text={t("title")}
           delay={30}
           animateBy="words"
           direction="top"
-          className="font-display text-4xl font-medium text-white sm:text-[80px]"
+          className="title-font text-4xl font-medium text-white sm:text-[80px]"
         />
       </div>
     </section>

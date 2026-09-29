@@ -111,7 +111,7 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
             )}
           </div>
 
-          <h1 className="font-display text-[32px] font-semibold uppercase text-heading">
+          <h1 className="title-font text-[32px] font-semibold uppercase text-heading">
             {detail.title}
           </h1>
 
@@ -125,7 +125,7 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
               {index > 0 && (
                 <>
                   <hr className="border-[#CDCDCD]" />
-                  <h2 className="font-display text-[32px] font-semibold uppercase text-heading">
+                  <h2 className="title-font text-[32px] font-semibold uppercase text-heading">
                     {section.title}
                   </h2>
                 </>
@@ -158,7 +158,9 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
               {section.items?.map((item) => (
                 <div key={item.title} className="flex flex-col gap-1">
                   <p className="text-xl font-bold text-heading">{item.title}</p>
-                  <p className="text-lg leading-7 font-medium text-heading">{item.body}</p>
+                  <p className="text-lg leading-7 font-medium text-heading">
+                    {item.body}
+                  </p>
                 </div>
               ))}
             </div>
