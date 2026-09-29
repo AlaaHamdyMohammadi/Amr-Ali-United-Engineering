@@ -9,8 +9,8 @@ import { motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import Image, { type StaticImageData } from "next/image";
 import { useRef } from "react";
-import MainButton from "../ui/MainButton";
 import ShinyText from "../TextAnimations/ShinyText";
+import MainButton from "../ui/MainButton";
 
 const projectKeys = ["buildings", "interiors", "apartments", "villas"] as const;
 
@@ -109,7 +109,6 @@ export default function Projects() {
                 whileHover="hover"
                 variants={hoverLift}
               >
-              
                 <Image
                   src={images[key]}
                   alt={key}
@@ -172,34 +171,69 @@ export default function Projects() {
           </a>
 
           <div className="hidden gap-2 sm:flex">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="inline-flex"
-            >
-              <MainButton
-                preset="toggle"
-                className="!bg-white !shadow-sm"
-                icon={<ChevronLeft size={16} />}
-                onClick={() => scroll(-360)}
-                aria-label="Previous"
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="inline-flex"
-            >
-              <MainButton
-                preset="toggle"
-                className="!bg-white !shadow-sm"
-                icon={<ChevronRight size={16} />}
-                onClick={() => scroll(360)}
-                aria-label="Next"
-              />
-            </motion.div>
+            {locale === "en" ? (
+              <>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="inline-flex"
+                >
+                  <MainButton
+                    preset="toggle"
+                    className="!bg-white !shadow-sm"
+                    icon={<ChevronLeft size={16} />}
+                    onClick={() => scroll(-360)}
+                    aria-label="Previous"
+                  />
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="inline-flex"
+                >
+                  <MainButton
+                    preset="toggle"
+                    className="!bg-white !shadow-sm"
+                    icon={<ChevronRight size={16} />}
+                    onClick={() => scroll(360)}
+                    aria-label="Next"
+                  />
+                </motion.div>{" "}
+              </>
+            ) : (
+              <>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="inline-flex"
+                >
+                  <MainButton
+                    preset="toggle"
+                    className="!bg-white !shadow-sm"
+                    icon={<ChevronRight size={16} />}
+                    onClick={() => scroll(-360)}
+                    aria-label="Previous"
+                  />
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="inline-flex"
+                >
+                  <MainButton
+                    preset="toggle"
+                    className="!bg-white !shadow-sm"
+                    icon={<ChevronLeft size={16} />}
+                    onClick={() => scroll(360)}
+                    aria-label="Next"
+                  />
+                </motion.div>
+              </>
+            )}
           </div>
         </div>
       </div>
