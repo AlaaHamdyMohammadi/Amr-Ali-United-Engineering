@@ -24,10 +24,10 @@
   },
   "about": {
     "eyebrow": "About Us",
-    "title": "Building Homes, Schools, and Offices that lasts",
-    "lead": "We are a collective of designers, engineers, and thinkers dedicated to crafting intuitive, beautiful, and scalable solutions for modern businesses. Our mission is to bridge the gap between technology and human connection.",
-    "approachTitle": "Our approach is rooted in empathy and precision.",
-    "approachBody": "We believe that the best products are those that feel invisible. By combining rigorous research with a deep understanding of human behavior, we design systems that are both powerful and effortless to use. Whether you're a startup looking to launch or an enterprise looking to scale, we help you build products that people love.",
+    "title": "Amr Ali is a prominent public contracting and construction company.",
+    "lead": "We have provided you with high quality professional work in our work field such as construction, contracting, decoration and cladding for years in Saudi Arabia and Egypt.",
+    "approachTitle": "What do we do?",
+    "approachBody": "Amr Ali Co. offers a wide range of technical and project management solutions, which include engineering, procurement, construction (EPC), commissioning services. Our specialization is in interior design, construction of Buildings, Civil, Electromechanical, Infrastructure, Alominum cladding,Temporary facility and Facility Management Services to our public and private infrastructure and manufacturing sectors.",
     "yearsValue": "12+",
     "yearsLabel": "Years of Experience",
     "projectsValue": "500+",
@@ -51,6 +51,20 @@
         "sectionTitle": "Buildings",
         "locationTitle": "5th Settlement - Cairo",
         "yearTitle": "2019 - 2020"
+      },
+      "office": {
+        "title": "Modern administrative office",
+        "sectorTitle": "Administrative office",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2024 - 2025"
+      },
+      "pool": {
+        "title": "Al-Mulla House",
+        "sectorTitle": "Residential apartment",
+        "sectionTitle": "Buildings",
+        "locationTitle": "5th Settlement - Cairo",
+        "yearTitle": "2024 - 2026"
       },
       "interiors": {
         "title": "Home Interiors",

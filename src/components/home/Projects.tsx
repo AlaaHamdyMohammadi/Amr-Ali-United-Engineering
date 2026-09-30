@@ -1,9 +1,11 @@
 "use client";
 
 import apartmants from "@/assets/apartmants.png";
+import pool from "@/assets/pool.png";
 import buildings from "@/assets/buildings.png";
 import interiors from "@/assets/home-interiors.png";
 import villas from "@/assets/villas.png";
+import office from "@/assets/officeimg.jpg";
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
@@ -12,13 +14,15 @@ import { useRef } from "react";
 import ShinyText from "../TextAnimations/ShinyText";
 import MainButton from "../ui/MainButton";
 
-const projectKeys = ["buildings", "interiors", "apartments", "villas"] as const;
+const projectKeys = ["office", "pool", "interiors", "apartments", "villas", "buildings"] as const;
 
 const images: Record<(typeof projectKeys)[number], StaticImageData> = {
   buildings,
   interiors,
   apartments: apartmants,
   villas,
+  office,
+  pool,
 };
 
 // Scroll-triggered entrance: parent staggers children in
@@ -88,8 +92,7 @@ export default function Projects() {
 
         <motion.div
           ref={scrollerRef}
-          className="grid grid-cols-1 sm:grid-cols-4 gap-6"
-          style={{ scrollSnapType: "x mandatory" }}
+          className="flex flex-col gap-6 py-4 sm:flex-row sm:snap-x sm:snap-mandatory sm:overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -112,7 +115,7 @@ export default function Projects() {
                 <Image
                   src={images[key]}
                   alt={key}
-                  className="w-80 h-40 sm:w-84.25 sm:h-52.25 rounded-3xl object-cover"
+                  className="h-40 w-full rounded-3xl object-cover sm:h-52.25"
                 />
                 <div className="flex flex-col gap-8 px-6">
                   <div className="flex flex-col gap-4">
@@ -150,7 +153,7 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                  <MainButton preset="Link" className="justify-start!">
+                  <MainButton preset="Link" className="justify-start!" href={`/projects`}>
                     <span>See Projects</span>
                     <motion.span variants={arrowMove} className="inline-flex">
                       <Arrow size={16} />

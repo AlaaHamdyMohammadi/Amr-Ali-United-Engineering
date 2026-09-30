@@ -4,16 +4,12 @@
     "title": "Locations",
     "items": [
       {
-        "name": "Company Location 1",
-        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ferm."
+        "name": "Company Location",
+        "address": "8 AbdAlrahman Algidily St - Alnozha Algadida - Cairo - Egypt"
       },
       {
-        "name": "Company Location 2",
-        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ferm"
-      },
-      {
-        "name": "Company Location 3",
-        "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ferm"
+        "name": "Website",
+        "address": "www.amr-ali.com"
       }
     ]
   },
@@ -34,6 +30,7 @@
     "required": "This field is required",
     "emailInvalid": "Please enter a valid email",
     "phoneInvalid": "Please enter a valid phone number",
-    "success": "Your message has been sent. We'll get back to you soon."
+    "success": "Your message has been sent. We'll get back to you soon.",
+    "error": "Something went wrong, please try again."
   }
 }

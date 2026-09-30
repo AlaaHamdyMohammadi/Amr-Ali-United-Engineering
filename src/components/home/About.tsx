@@ -70,7 +70,7 @@ export default function About() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="title-font text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px]"
+            className="title-font text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px] max-w-[1000px]"
           />
           <p className="text-lg max-w-4xl text-gray-200">{t("lead")}</p>
         </div>
@@ -135,7 +135,7 @@ export default function About() {
             </ScrollFadeIn>
             <ScrollFadeIn delay={0.3} className="w-fit">
               <MainButton
-                href={`/${locale}/about`}
+                href={`/about`}
                 className="w-fit h-12! bg-clay-650! hover:bg-clay-600! py-2! px-5! transition-transform hover:-translate-y-0.5"
               >
                 <span className="text-base! font-bold!">{t("cta")}</span>

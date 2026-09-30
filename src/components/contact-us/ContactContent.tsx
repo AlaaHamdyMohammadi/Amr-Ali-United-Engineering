@@ -8,8 +8,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Breadcrumbs from "../ui/Breadcrumbs";
 import MainButton from "../ui/MainButton";
 
-const EMAILS = ["AmrAli@gmail.com", "AmrAli@amail.net"];
-const PHONES = ["+2010231231234", "+2010231231234"];
+const EMAILS = ["info@amr-ali.com"];
+const PHONES = ["+201500092233", "+201151449669"];
 const MESSAGE_MAX = 50;
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -115,12 +115,22 @@ export default function ContactContent() {
 
   async function onFinish(values: ContactFormValues) {
     setSubmitting(true);
-    // No backend yet — swap this for a real request later.
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    console.log("Contact form submitted:", values);
-    messageApi.success(t("form.success"));
-    form.resetFields();
-    setSubmitting(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      messageApi.success(t("form.success"));
+      form.resetFields();
+    } catch {
+      messageApi.error(t("form.error"));
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
