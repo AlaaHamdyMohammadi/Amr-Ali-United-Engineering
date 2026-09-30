@@ -59,19 +59,29 @@ export default function Testimonials() {
     setIsDragging(false);
   }
 
+  // Distance from one card's start to the next (card width + gap), always positive
+  function getStep(el: HTMLDivElement) {
+    const first = el.children[0] as HTMLElement;
+    const second = el.children[1] as HTMLElement | undefined;
+    return second
+      ? Math.abs(second.offsetLeft - first.offsetLeft)
+      : first.offsetWidth;
+  }
+
   function handleScroll() {
     const el = scrollerRef.current;
     if (!el) return;
-    const cardWidth = el.scrollWidth / testimonialKeys.length;
-    const index = Math.round(el.scrollLeft / cardWidth);
+    // abs() because scrollLeft is negative in RTL
+    const index = Math.round(Math.abs(el.scrollLeft) / getStep(el));
     setActive(Math.min(Math.max(index, 0), testimonialKeys.length - 1));
   }
 
   function goTo(index: number) {
     const el = scrollerRef.current;
     if (!el) return;
-    const cardWidth = el.scrollWidth / testimonialKeys.length;
-    el.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    const isRtl = getComputedStyle(el).direction === "rtl";
+    const left = getStep(el) * index * (isRtl ? -1 : 1);
+    el.scrollTo({ left, behavior: "smooth" });
   }
 
   return (
