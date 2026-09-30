@@ -67,7 +67,7 @@ const PublicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AmrAli United Engineering",
+  title: "Amr Ali For Contracting & General Trading Company",
   description: "Build your home with trusted hands.",
 };
 

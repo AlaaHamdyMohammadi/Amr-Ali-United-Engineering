@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Card, Form, Input, message } from "antd";
-import { MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import Breadcrumbs from "../ui/Breadcrumbs";
@@ -212,8 +212,11 @@ export default function ContactContent() {
                       href={`mailto:${email}`}
                       variants={itemVariants}
                       whileHover={reduce ? undefined : { x: nudgeX }}
-                      className="w-fit text-[#292929]! hover:text-clay-600!"
+                      className="flex w-fit items-center gap-2 text-[#292929]! hover:text-clay-600!"
                     >
+                      <motion.span variants={pinVariants} className="shrink-0">
+                        <Mail size={16} className="text-clay-600" />
+                      </motion.span>
                       {email}
                     </motion.a>
                   ))}
@@ -241,9 +244,13 @@ export default function ContactContent() {
                       variants={itemVariants}
                       whileHover={reduce ? undefined : { x: nudgeX }}
                       // dir="ltr"
-                      className="w-fit text-[#292929]! hover:text-clay-600!"
+                      className="flex w-fit items-center gap-2 text-[#292929]! hover:text-clay-600!"
                     >
-                      {phone}
+                      <motion.span variants={pinVariants} className="shrink-0">
+                        <Phone size={16} className="text-clay-600" />
+                      </motion.span>
+                      {/* dir="ltr" keeps the "+" at the start in Arabic */}
+                      <span dir="ltr">{phone}</span>
                     </motion.a>
                   ))}
                 </div>

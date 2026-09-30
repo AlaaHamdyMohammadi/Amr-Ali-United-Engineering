@@ -45,7 +45,7 @@ function renderSupportEmail(d: ContactData) {
     timeStyle: "short",
   });
   const replySubject = encodeURIComponent(
-    "Re: your message to AmrAli United Engineering",
+    "Re: your message to Amr Ali For Contracting & General Trading Company",
   );
 
   const row = (label: string, valueHtml: string) => `
@@ -64,7 +64,7 @@ function renderSupportEmail(d: ContactData) {
 
             <tr>
               <td style="background:${NAVY};padding:28px 32px;">
-                <div style="color:${CLAY};font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">AmrAli United Engineering</div>
+                <div style="color:${CLAY};font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Amr Ali For Contracting & General Trading Company</div>
                 <div style="color:#ffffff;font-size:24px;font-weight:700;margin-top:6px;">New contact request</div>
               </td>
             </tr>

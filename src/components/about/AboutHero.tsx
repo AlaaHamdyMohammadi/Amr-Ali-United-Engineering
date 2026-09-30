@@ -1,6 +1,6 @@
 "use client";
 
-import aboutHeroImg from "@/assets/aboutImg.png";
+import aboutHeroImg from "@/assets/aboutUS2.jpeg";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";

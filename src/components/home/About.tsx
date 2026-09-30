@@ -18,15 +18,21 @@ import Shopify from "@/assets/shopify.svg";
 import GitHub from "@/assets/github.svg";
 import LaunchDarkly from "@/assets/darkly.svg";
 import Tailscale from "@/assets/tailscale.svg";
+import frame1 from "@/assets/Frame1.png";
+import frame2 from "@/assets/Frame2.png";
+import frame3 from "@/assets/Frame3.png";
+import frame4 from "@/assets/Frame4.png";
+import frame5 from "@/assets/Frame5.png";
+import frame6 from "@/assets/Frame6.png";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 const logos = [
-  { name: "Framer", src: Framer },
-  { name: "Atlassian", src: Atlassian },
-  { name: "Shopify", src: Shopify },
-  { name: "GitHub", src: GitHub },
-  { name: "LaunchDarkly", src: LaunchDarkly },
-  { name: "Tailscale", src: Tailscale },
+  { name: "Framer", src: frame1 },
+  { name: "Atlassian", src: frame2 },
+  { name: "Shopify", src: frame3 },
+  { name: "GitHub", src: frame4 },
+  { name: "LaunchDarkly", src: frame5 },
+  { name: "Tailscale", src: frame6 },
 ];
 
 export default function About() {
@@ -155,7 +161,7 @@ export default function About() {
                 key={logo.name}
                 src={logo.src}
                 alt={logo.name}
-                className="h-6 w-auto opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                className="h-30 w-auto  transition-all duration-300 "
               />
             ))}
           </div>

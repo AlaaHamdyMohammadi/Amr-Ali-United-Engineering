@@ -1,6 +1,6 @@
 "use client";
 
-import heroSctionImg from "@/assets/heroSection.png";
+import heroSctionImg from "@/assets/heroSctionImg2.png";
 import Header from "@/components/layout/Header";
 import { useTranslations } from "next-intl";
 import Image from "next/image";

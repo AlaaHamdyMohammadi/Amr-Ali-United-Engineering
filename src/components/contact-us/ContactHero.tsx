@@ -1,6 +1,6 @@
 "use client";
 
-import contactImg from "@/assets/contactImg.png";
+import contactImg from "@/assets/contactUS2.jpeg";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";

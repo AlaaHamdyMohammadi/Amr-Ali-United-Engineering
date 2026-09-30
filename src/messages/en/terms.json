@@ -1,4 +1,115 @@
 {
-    "title": "Terms & Conditions",
-    "contract rules": "Contract rules"
+  "title": "Terms & Conditions",
+  "contract rules": "Contract rules",
+  "heading": "Terms & Conditions",
+  "sections": [
+    {
+      "title": "1. Introduction",
+      "paragraphs": [
+        "Welcome to the website of Amr Ali For Contracting & General Trading. These terms and conditions govern the use of the website and access to the information and services offered through it. Please read these terms carefully before using the website or contacting us to request any of our services.",
+        "By using this website, you acknowledge that you have read and agreed to these terms, to the extent permitted by applicable law."
+      ]
+    },
+    {
+      "title": "2. Scope of Services",
+      "paragraphs": [
+        "Amr Ali For Contracting & General Trading provides a range of engineering services covering residential, commercial, and industrial projects, according to the nature of each project and the agreed scope of work.",
+        "All services provided are subject to the terms of the contracts and the approved technical and financial proposals between the company and the client. Displaying a service on the website does not constitute a commitment to provide it unless formally agreed upon."
+      ]
+    },
+    {
+      "title": "3. Requesting Services and Price Quotes",
+      "paragraphs": [
+        "Clients may contact the company through the website or the available means of communication to request consultations or price quotes.",
+        "Prices and quotes provided are preliminary unless explicitly stated otherwise.",
+        "The final cost is determined based on the nature of the project, the scope of work, the technical requirements, and the timeline.",
+        "Submitting a request through the website does not constitute a binding contract between the company and the client, and project execution does not begin until the terms are agreed upon and the necessary procedures are completed."
+      ]
+    },
+    {
+      "title": "4. Contracts and Obligations",
+      "paragraphs": [
+        "Projects carried out by the company are governed by the contracts and agreements approved between the two parties, which define the scope of work, costs, execution schedule, payment terms, and each party's obligations.",
+        "In the event of any conflict between these terms and any contract signed between the company and the client, priority is given to the provisions of the contract with respect to the relevant project, in accordance with applicable law."
+      ]
+    },
+    {
+      "title": "5. Client Obligations",
+      "paragraphs": ["The client undertakes to:"],
+      "points": [
+        "Provide the information, documents, and data necessary to execute the project accurately and in a timely manner.",
+        "Clearly define their requirements and the required scope of work before execution begins.",
+        "Adhere to the payment schedule agreed upon in the contract.",
+        "Review and approve the required drawings, designs, and documents within the agreed timeframes.",
+        "Notify the company of any changes or additional requirements that may affect the scope of work, cost, or timeline."
+      ]
+    },
+    {
+      "title": "6. Prices and Payment Terms",
+      "paragraphs": [
+        "Service prices are determined according to the approved financial proposals and contracts. The client undertakes to settle payments according to the agreed payment schedule.",
+        "If the client requests additional work or modifications that exceed the scope of the original contract, this may result in an adjustment to the cost and timeline, following agreement between both parties."
+      ]
+    },
+    {
+      "title": "7. Modifications and Changes to the Scope of Work",
+      "paragraphs": [
+        "Any substantial modifications to the designs, drawings, or scope of work must be agreed upon in advance.",
+        "The company reserves the right to re-evaluate the cost and timeline when changes affecting the project's requirements are requested, provided that such modifications are documented and approved by both parties before implementation."
+      ]
+    },
+    {
+      "title": "8. Execution and Delivery Timelines",
+      "paragraphs": [
+        "Project timelines are determined based on the scope of work, the nature of the project, and anticipated conditions.",
+        "Execution timelines may be affected by factors beyond the company's control, such as delays in document approval, unavailability of required information, changes requested by the client, or emergency circumstances. Such cases are handled in accordance with the provisions of the approved contract."
+      ]
+    },
+    {
+      "title": "9. Intellectual Property Rights",
+      "paragraphs": [
+        "All rights related to the content published on the website, including text, images, designs, trademarks, and promotional materials, are reserved to their respective owners, and may not be copied, republished, or used commercially without prior permission from the rights holder.",
+        "The rights to use and ownership of project-related drawings, designs, and engineering documents are governed by the provisions of the contract concluded with the client and applicable laws."
+      ]
+    },
+    {
+      "title": "10. Confidentiality",
+      "paragraphs": [
+        "The company is committed to handling the information and documents provided by clients confidentially, and uses them only for purposes related to the requested service or project execution, while observing relevant legal and contractual obligations."
+      ]
+    },
+    {
+      "title": "11. Limitation of Liability",
+      "paragraphs": [
+        "The company strives to provide accurate and up-to-date information through the website; however, content published to introduce its services is not a substitute for specialized engineering consultations or approved technical documents.",
+        "The company shall not be liable for any damages arising from unauthorized use of the information published on the website, or from relying on it without consulting specialists, to the extent permitted by law.",
+        "This clause does not affect any liabilities or warranties stipulated in contracts concluded with clients or established under the law."
+      ]
+    },
+    {
+      "title": "12. Links to External Websites",
+      "paragraphs": [
+        "The website may contain links to external websites or platforms to provide additional information. The company is not responsible for the content of those websites or their privacy policies and terms of use."
+      ]
+    },
+    {
+      "title": "13. Updating the Terms and Conditions",
+      "paragraphs": [
+        "The company reserves the right to update or amend these terms as needed, in line with the development of its services or legal and regulatory requirements.",
+        "The updated version will be published on this page, and the date of the last update shown on it shall govern."
+      ]
+    },
+    {
+      "title": "14. Governing Law",
+      "paragraphs": [
+        "These terms are governed by the laws applicable in the Arab Republic of Egypt, taking into account any mandatory applicable provisions. Disputes are resolved in accordance with the relevant legal rules and procedures, unless the relevant contract provides otherwise in a legally valid manner."
+      ]
+    },
+    {
+      "title": "15. Contact Us",
+      "paragraphs": [
+        "If you have any inquiries regarding these terms and conditions or the company's services, you may contact us through the Contact Us page on the website, or through the official contact details available."
+      ]
+    }
+  ]
 }

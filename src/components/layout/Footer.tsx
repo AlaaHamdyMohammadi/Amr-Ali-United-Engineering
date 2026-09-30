@@ -21,6 +21,11 @@ export default function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
 
+  const WHATSAPP_NUMBER = "201500092233";
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    t("whatsappMessage"),
+  )}`;
+
   return (
     // grid sm:grid-cols-2 lg:grid-cols-4
     <footer className="section pt-22 bg-gray-450 ">
@@ -93,7 +98,9 @@ export default function Footer() {
             <MainButton
               preset="outline"
               className="h-14! w-full! sm:w-62.25! border! border-clay-700! text-clay-700! font-bold! text-base! hover:bg-clay-600! hover:text-white!"
-              href="/contact-us"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {t("requestPrices")}
             </MainButton>

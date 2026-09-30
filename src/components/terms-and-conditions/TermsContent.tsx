@@ -4,8 +4,15 @@ import { useTranslations } from "next-intl";
 import Breadcrumbs from "../ui/Breadcrumbs";
 import ShinyText from "@/components/TextAnimations/ShinyText";
 
+interface TermsSection {
+  title: string;
+  paragraphs: string[];
+  points?: string[];
+}
+
 export default function TermsContent() {
   const t = useTranslations("terms");
+  const sections = t.raw("sections") as TermsSection[];
 
   return (
     <section className="section">
@@ -14,9 +21,9 @@ export default function TermsContent() {
       </div>
 
       <div className="container-page pt-10 pb-20">
-        <div className="flex flex-col gap-12 p-6 bg-white border border-[#CDCDCD] rounded-3xl">
+        <div className="flex flex-col gap-10 rounded-3xl border border-[#CDCDCD] bg-white p-6">
           <ShinyText
-            text={t("contract rules")}
+            text={t("heading")}
             speed={5}
             delay={0}
             color="#072469"
@@ -25,10 +32,32 @@ export default function TermsContent() {
             direction="left"
             className="text-2xl font-bold text-heading"
           />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel, architecto recusandae adipisci molestiae magni consequatur animi, ducimus harum officia vero modi at, cumque maiores repellendus! Perferendis doloremque quis repudiandae! Maiores eos obcaecati, amet a non molestiae, illum optio quas id voluptas perferendis enim asperiores saepe. Obcaecati pariatur, doloribus eveniet ipsum laudantium ad assumenda ipsa iusto fuga qui accusamus atque. Sequi eligendi quaerat vero. Suscipit quaerat tenetur voluptatem repellat, ipsa saepe provident accusamus cum, modi iusto libero? Quisquam eos dicta doloribus architecto eum. Iste aliquid veritatis perferendis et sit inventore dolorem placeat quas laboriosam corporis? Hic, natus. Nam, quo voluptatibus.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel, architecto recusandae adipisci molestiae magni consequatur animi, ducimus harum officia vero modi at, cumque maiores repellendus! Perferendis doloremque quis repudiandae! Maiores eos obcaecati, amet a non molestiae, illum optio quas id voluptas perferendis enim asperiores saepe. Obcaecati pariatur, doloribus eveniet ipsum laudantium ad assumenda ipsa iusto fuga qui accusamus atque. Sequi eligendi quaerat vero. Suscipit quaerat tenetur voluptatem repellat, ipsa saepe provident accusamus cum, modi iusto libero? Quisquam eos dicta doloribus architecto eum. Iste aliquid veritatis perferendis et sit inventore dolorem placeat quas laboriosam corporis? Hic, natus. Nam, quo voluptatibus.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel, architecto recusandae adipisci molestiae magni consequatur animi, ducimus harum officia vero modi at, cumque maiores repellendus! Perferendis doloremque quis repudiandae! Maiores eos obcaecati, amet a non molestiae, illum optio quas id voluptas perferendis enim asperiores saepe. Obcaecati pariatur, doloribus eveniet ipsum laudantium ad assumenda ipsa iusto fuga qui accusamus atque. Sequi eligendi quaerat vero. Suscipit quaerat tenetur voluptatem repellat, ipsa saepe provident accusamus cum, modi iusto libero? Quisquam eos dicta doloribus architecto eum. Iste aliquid veritatis perferendis et sit inventore dolorem placeat quas laboriosam corporis? Hic, natus. Nam, quo voluptatibus.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel, architecto recusandae adipisci molestiae magni consequatur animi, ducimus harum officia vero modi at, cumque maiores repellendus! Perferendis doloremque quis repudiandae! Maiores eos obcaecati, amet a non molestiae, illum optio quas id voluptas perferendis enim asperiores saepe. Obcaecati pariatur, doloribus eveniet ipsum laudantium ad assumenda ipsa iusto fuga qui accusamus atque. Sequi eligendi quaerat vero. Suscipit quaerat tenetur voluptatem repellat, ipsa saepe provident accusamus cum, modi iusto libero? Quisquam eos dicta doloribus architecto eum. Iste aliquid veritatis perferendis et sit inventore dolorem placeat quas laboriosam corporis? Hic, natus. Nam, quo voluptatibus.</p>
+
+          {sections.map((section) => (
+            <div key={section.title} className="flex flex-col gap-3">
+              <h2 className="text-lg font-bold text-[#292929]">
+                {section.title}
+              </h2>
+              {section.paragraphs.map((paragraph, i) => (
+                <p key={i} className="text-[#707070]">
+                  {paragraph}
+                </p>
+              ))}
+              {section.points && (
+                <ul className="flex flex-col gap-2">
+                  {section.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2 text-[#707070]"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-navy-900/50" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
