@@ -18,6 +18,12 @@ import frame3 from "@/assets/Frame3.png";
 import frame4 from "@/assets/Frame4.png";
 import frame5 from "@/assets/Frame5.png";
 import frame6 from "@/assets/Frame6.png";
+import Frame7 from "@/assets/Frame7.png"; // frame_6
+import Frame8 from "@/assets/Frame8.png"; // frame_6
+import Frame9 from "@/assets/Frame9.png"; // frame_6
+import Frame10 from "@/assets/Frame10.png"; // frame_6
+import Frame11 from "@/assets/Frame11.png"; // frame_6
+import Frame12 from "@/assets/Frame12.png"; // frame_6
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 const logos = [
@@ -27,6 +33,12 @@ const logos = [
   { name: "GitHub", src: frame4 },
   { name: "LaunchDarkly", src: frame5 },
   { name: "Tailscale", src: frame6 },
+  { name: "Framer7", src: Frame7 },
+  { name: "Framer8", src: Frame8 },
+  { name: "Framer9", src: Frame9 },
+  { name: "Framer10", src: Frame10 },
+  { name: "Framer11", src: Frame11 },
+  { name: "Framer12", src: Frame12 },
 ];
 
 export default function About() {
@@ -40,6 +52,23 @@ export default function About() {
       opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: easeOut, delay: 0.05 },
+    },
+  };
+
+  const EASE = [0.22, 1, 0.36, 1] as const;
+
+  const container: Variants = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.08 } },
+  };
+  
+  const item: Variants = {
+    hidden: { opacity: 0, y: 24, scale: 0.95 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.5, ease: EASE },
     },
   };
 
@@ -149,16 +178,29 @@ export default function About() {
           <p className="font-bold tracking-wider text-black/60">
             {t("trustedBy")}
           </p>
-          <div className="flex flex-wrap items-center gap-16.75">
-            {logos.map((logo) => (
-              <Image
-                key={logo.name}
-                src={logo.src}
-                alt={logo.name}
-                className="h-30 w-auto  transition-all duration-300 "
-              />
-            ))}
-          </div>
+          <motion.div
+                  className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6"
+                  variants={container}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                >
+                  {logos.map((client) => (
+                    <motion.div
+                      key={client.name}
+                      variants={item}
+                      whileHover={{ y: -6 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      className="group flex h-32 items-center justify-center rounded-3xl border border-gray-50 bg-white p-6 shadow-md shadow-navy-900/5"
+                    >
+                      <Image
+                        src={client.src}
+                        alt={client.name}
+                        className="h-14 w-auto object-contain grayscale transition duration-300 group-hover:grayscale-0"
+                      />
+                    </motion.div>
+                  ))}
+                </motion.div>
         </ScrollFadeIn>
       </div>
     </section>
