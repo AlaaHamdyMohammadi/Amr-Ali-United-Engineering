@@ -1,14 +1,11 @@
 "use client";
 
-import generalImg from "@/assets/generalImg.png";
-import systemsImg from "@/assets/systemsImg.png";
-import typesImg from "@/assets/typesImg.png";
 import Projects from "@/components/home/Projects";
 import MainButton from "@/components/ui/MainButton";
-import { Building2, ShieldCheck, Users2, Wallet } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -22,11 +19,17 @@ const itemVariants: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE } },
 };
 
-// Order matches the 4 advantages in the translation file:
-// specifications, integrated management, cost & time, engineering coordination
-const advantageIcons = [ShieldCheck, Building2, Wallet, Users2];
-
-
+type Props = {
+  /** Translation namespace, e.g. "services.generalSuppliesTab" */
+  namespace: string;
+  images: {
+    hero: StaticImageData;
+    types: StaticImageData;
+    materials: StaticImageData;
+  };
+  /** One icon per advantage card, in the same order as the translation file */
+  advantageIcons: LucideIcon[];
+};
 
 function ActionButtons({ t }: { t: ReturnType<typeof useTranslations> }) {
   const WHATSAPP_NUMBER = "201500092233";
@@ -51,9 +54,18 @@ function ActionButtons({ t }: { t: ReturnType<typeof useTranslations> }) {
   );
 }
 
-export default function GeneralContractingtab() {
-  const t = useTranslations("services.generalContractingTab");
+export default function ServiceTabTemplate({
+  namespace,
+  images,
+  advantageIcons,
+}: Props) {
+  const t = useTranslations(namespace);
   const locale = useLocale();
+
+  const WHATSAPP_NUMBER = "201500092233";
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    t("whatsappMessage"),
+  )}`;
 
   // In RTL the image columns swap sides, so the slide-in direction flips too
   const flip = locale === "ar" ? -1 : 1;
@@ -88,10 +100,11 @@ export default function GeneralContractingtab() {
     title: string;
     body: string;
   }[];
+  const hasNote = t.has("materials.note");
 
   return (
     <div className="flex flex-col overflow-x-clip">
-      {/* Section 1: General Contracting overview */}
+      {/* Section 1: overview + scope of work */}
       <motion.div
         className="container-page grid justify-between gap-10 pt-10 pb-20 lg:grid-cols-2 lg:items-center"
         initial="hidden"
@@ -158,17 +171,17 @@ export default function GeneralContractingtab() {
           className="group w-full max-w-170.75 justify-self-end overflow-hidden rounded-3xl"
         >
           <Image
-            src={generalImg}
+            src={images.hero}
             alt={t("hero.title")}
             className="aspect-683/666 w-full rounded-3xl object-cover shadow-[0_2px_16px_2px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-105 group-hover:brightness-110"
           />
         </motion.div>
       </motion.div>
 
-      {/* Section 2: Suitable Project Types — full-bleed photo background */}
+      {/* Section 2: suitable project types — full-bleed photo background */}
       <div className="relative isolate overflow-hidden">
         <Image
-          src={typesImg}
+          src={images.types}
           alt=""
           fill
           sizes="100vw"
@@ -210,7 +223,7 @@ export default function GeneralContractingtab() {
         </motion.div>
       </div>
 
-      {/* Section 3: Materials & Systems */}
+      {/* Section 3: materials & systems */}
       <motion.div
         className="container-page flex w-full flex-col items-center gap-10 py-16 sm:flex-row lg:gap-20 lg:py-20"
         initial="hidden"
@@ -223,7 +236,7 @@ export default function GeneralContractingtab() {
           className="group w-full overflow-hidden rounded-3xl sm:w-1/2"
         >
           <Image
-            src={systemsImg}
+            src={images.materials}
             alt={t("materials.title")}
             className="h-100 w-full rounded-3xl object-cover shadow-[0_2px_16px_2px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-105 group-hover:brightness-110 sm:h-141.5"
           />
@@ -260,11 +273,21 @@ export default function GeneralContractingtab() {
             ))}
           </motion.ul>
 
+          {/* Optional: only shown when the translation file has materials.note */}
+          {hasNote && (
+            <motion.p
+              variants={itemVariants}
+              className="text-lg font-medium text-heading"
+            >
+              {t("materials.note")}
+            </motion.p>
+          )}
+
           <ActionButtons t={t} />
         </div>
       </motion.div>
 
-      {/* Section 4: Advantages */}
+      {/* Section 4: advantages */}
       <motion.div
         className="bg-[#061435] py-16 lg:py-20"
         initial="hidden"
@@ -328,8 +351,10 @@ export default function GeneralContractingtab() {
           >
             <MainButton href="/contact-us">{t("buttons.schedule")}</MainButton>
             <MainButton
-              href="/contact-us"
+              href={whatsappUrl}
+              target="_blank"
               type="default"
+              rel="noopener noreferrer"
               className="!border-clay-600 !text-clay-600 hover:!bg-clay-50"
             >
               {t("buttons.prices")}
@@ -337,9 +362,6 @@ export default function GeneralContractingtab() {
           </motion.div>
         </div>
       </motion.div>
-
-      {/* Section 5: Projects */}
-      <Projects />
     </div>
   );
 }

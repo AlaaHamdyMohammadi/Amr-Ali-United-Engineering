@@ -140,13 +140,22 @@
   "testimonials": {
     "title": "Testimonials",
     "items": {
-      "t1": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
-      "t2": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
-      "t3": "From the first site visit to hand-over, communication was clear and every milestone was met on time.",
-      "t4": "AmrAli delivered our compound two weeks ahead of schedule without cutting a single corner on quality.",
-      "t5": "Their engineering team caught a structural issue early that would have cost us months of rework later.",
-      "t6": "From the first site visit to hand-over, communication was clear and every milestone was met on time."
-    },
-    "author": "Khaled Omar"
+      "t1": {
+        "review": "From the initial agreement through to delivery, Amr Ali’s team was committed to every detail and deadline, and the execution matched exactly what we had agreed upon.",
+        "author": "Ahmed Mahmoud"
+      },
+      "t2": {
+        "review": "Working with the team was very smooth, and the continuous follow-up made every stage of the project clear and easy.",
+        "author": "Mohamed Sameh"
+      },
+      "t3": {
+        "review": "What I liked most was the attention to detail and the quality of the finishes; the final result was better than we expected.",
+        "author": "Karim Adel"
+      },
+      "t4": {
+        "review": "A professional engineering team that quickly resolves any challenges arising during execution, with a clear commitment to quality workmanship.",
+        "author": "Omar Hassan"
+      }
+    }
   }
 }

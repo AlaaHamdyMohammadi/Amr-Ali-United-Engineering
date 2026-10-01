@@ -11,75 +11,238 @@
   "generalContractingTab": {
     "hero": {
       "title": "General Contracting",
-      "body1": "We provide comprehensive general contracting services for residential, commercial, and industrial projects. Our work covers the full construction cycle, from site preparation and structural works to finishing and final handover.",
-      "body2": "We focus on delivering projects according to approved drawings and technical specifications while maintaining high standards of quality, safety, cost control, and schedule management.",
+      "body1": "Amr Ali Contracting & General Trading Company provides general contracting services for residential, commercial, administrative and industrial projects, through integrated solutions that cover every stage of construction, from site preparation and structural works to finishing and final handover.",
+      "body2": "We deliver projects through careful planning, coordination between engineering disciplines, and close follow-up of each stage of work, while adhering to the approved drawings, technical specifications and the agreed schedule.",
       "scopeTitle": "Scope of Work",
-      "scopeLead": "We focus on delivering projects according to approved drawings and technical specifications while maintaining high standards of <b>quality, safety, cost control, and schedule management</b>.",
+      "scopeLead": "We provide integrated services for executing a wide range of structural and architectural works, tailored to the nature and requirements of each project.",
       "scopePoints": [
-        "Site preparation and enabling works.",
-        "Excavation, foundations, and structural works.",
-        "Concrete and masonry works.",
-        "Architectural and finishing works.",
-        "Electrical, plumbing, and mechanical works.",
-        "HVAC systems."
+        "Site preparation and preliminary works.",
+        "Excavation, foundations and structural works.",
+        "Reinforced concrete and masonry works.",
+        "Architectural works and finishing.",
+        "Electrical, plumbing and mechanical works.",
+        "HVAC and ventilation systems.",
+        "Coordination and follow-up of execution and handover stages."
       ]
-    },
-    "buttons": {
-      "schedule": "Schedule Meeting",
-      "prices": "Price Ranges"
     },
     "projectTypes": {
       "title": "Suitable Project Types",
       "items": [
         {
           "title": "Residential Development",
-          "body": "Villas, apartment buildings, residential compounds, and private developments."
+          "body": "Villas, residential buildings, residential compounds and private real estate projects."
         },
         {
-          "title": "Commercial & Administrative",
-          "body": "Office buildings, retail stores, showrooms, commercial centers, and mixed-use developments."
+          "title": "Commercial & Administrative Projects",
+          "body": "Office buildings, retail stores, showrooms, shopping centers and mixed-use buildings."
         },
         {
-          "title": "Industrial & Logistics",
-          "body": "Factories, warehouses, workshops, production facilities, and industrial administrative buildings."
+          "title": "Industrial & Logistics Projects",
+          "body": "Factories, warehouses, workshops, production facilities and industrial administrative buildings."
         }
       ]
     },
     "materials": {
       "title": "Materials & Systems",
-      "lead": "Materials and construction systems are selected according to the project's technical requirements, specifications, and approved budget.",
+      "lead": "Materials and systems are selected according to the nature of the project, the approved designs, the technical requirements and the defined budget.",
       "points": [
         "Reinforced concrete and structural steel.",
-        "Masonry and partition systems.",
+        "Building systems and architectural partitions.",
         "Waterproofing and thermal insulation systems.",
         "Electrical and lighting systems.",
         "Plumbing and drainage systems.",
         "HVAC and ventilation systems.",
-        "Fire protection systems where required.",
-        "Flooring, ceilings, façades, and finishing materials."
-      ],
-      "note": "All materials are reviewed and approved before installation to ensure compliance with project specifications and quality requirements."
+        "Fire protection systems according to project requirements.",
+        "Flooring, ceiling, facade and finishing materials."
+      ]
     },
     "advantages": {
       "title": "Advantages",
       "items": [
         {
-          "title": "Safe Contracting",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+          "title": "Execution to Specifications",
+          "body": "Adherence to the approved drawings and technical specifications, with attention to the requirements of each stage of execution."
         },
         {
-          "title": "Best Prices",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+          "title": "Integrated Project Management",
+          "body": "Coordinating the different works and following up each stage of execution to keep the project running in an organized way."
         },
         {
-          "title": "End-to-End Project Management",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+          "title": "Cost & Time Management",
+          "body": "Planning resources and monitoring expenses and execution stages according to the agreed budget and schedule."
         },
         {
-          "title": "Strong Architecture",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacinia tortor, in dignissim nibh. Ut vulputate non leo volutpat."
+          "title": "Engineering Disciplines Coordination",
+          "body": "Achieving integration between structural, architectural, electrical and mechanical works within the project scope."
         }
       ]
+    },
+    "buttons": {
+      "schedule": "Book a Meeting to Discuss Your Project",
+      "prices": "Request a Quote"
+    },
+    "whatsappMessage": "Hello, I would like to request a price quote."
+  },
+  "generalSuppliesTab": {
+    "whatsappMessage": "Hello, I would like to request a price quote.",
+    "hero": {
+      "title": "General Supplies",
+      "body1": "Amr Ali Contracting & General Trading Company provides general supply services to meet project needs for building materials, raw materials and technical supplies, taking into account the required specifications, quantities and delivery dates.",
+      "body2": "We coordinate supply operations according to the requirements of each project, helping to secure the materials needed for each stage of execution and to organize purchasing and delivery.",
+      "scopeTitle": "Scope of Work",
+      "scopeLead": "We provide a variety of supply solutions that suit the nature and technical requirements of each project.",
+      "scopePoints": [
+        "Supply of building and construction materials.",
+        "Supply of steel and structural materials.",
+        "Supply of finishing and flooring materials.",
+        "Supply of electrical works materials.",
+        "Supply of plumbing and drainage materials.",
+        "Supply of HVAC and ventilation system materials.",
+        "Supply of tools, equipment and technical supplies according to the contract scope.",
+        "Coordination of quantities and delivery dates."
+      ]
+    },
+    "projectTypes": {
+      "title": "Suitable Project Types",
+      "items": [
+        {
+          "title": "Construction Projects",
+          "body": "Supplying the materials and raw materials needed for building and structural projects."
+        },
+        {
+          "title": "Residential & Commercial Projects",
+          "body": "Providing finishing materials and fittings needed for residential and commercial buildings and units."
+        },
+        {
+          "title": "Industrial Projects",
+          "body": "Supplying technical materials and supplies according to the nature of the facilities and operating requirements."
+        }
+      ]
+    },
+    "materials": {
+      "title": "Materials & Systems",
+      "lead": "The products we can supply vary according to project needs, including:",
+      "points": [
+        "Building materials and concrete.",
+        "Steel and metal materials.",
+        "Bricks and various building materials.",
+        "Waterproofing and thermal insulation materials.",
+        "Ceramic, porcelain and flooring materials.",
+        "Paints and finishing materials.",
+        "Cables and electrical supplies.",
+        "Pipes and plumbing and drainage supplies.",
+        "HVAC and ventilation supplies."
+      ],
+      "note": "Types, brands and specifications are determined according to the client's request and the approved offer."
+    },
+    "advantages": {
+      "title": "Advantages",
+      "items": [
+        {
+          "title": "Wide Range of Supply Options",
+          "body": "Providing a variety of materials and supplies that meet the needs of different projects."
+        },
+        {
+          "title": "Specification Compliance",
+          "body": "Taking the required technical specifications into account when selecting materials and quantities."
+        },
+        {
+          "title": "Organized Supply",
+          "body": "Coordinating delivery dates and quantities to match the project's execution stages."
+        },
+        {
+          "title": "Flexibility in Meeting Needs",
+          "body": "Preparing supply offers that suit the nature of the project and the defined budget."
+        }
+      ]
+    },
+    "buttons": {
+      "schedule": "Contact Us to Define Your Project Needs",
+      "prices": "Request a Supply Quote"
+    }
+  },
+  
+  "integratedFinishingTab": {
+    "hero": {
+      "title": "Integrated Finishing",
+      "body1": "Amr Ali Contracting & General Trading Company provides integrated finishing services for residential, commercial, and administrative projects, covering the coordination and execution of various finishing works, from space preparation and preliminary works to installations and final details.",
+      "body2": "We ensure coordination between different disciplines while considering approved designs, material quality, and execution accuracy, according to the specific requirements of each project."
+    },
+
+    "scope": {
+      "title": "Scope of Work",
+      "lead": "Our integrated finishing services include a range of works determined according to the scope and requirements of each project.",
+      "points": [
+        "Plastering and surface preparation.",
+        "Flooring and installation of tiles and marble.",
+        "Painting and wall cladding works.",
+        "Suspended ceilings and decorative works.",
+        "Electrical works and lighting systems.",
+        "Plumbing and sanitary installations.",
+        "Doors, windows, and interior fittings.",
+        "Final finishing works and handover."
+      ]
+    },
+
+    "projectTypes": {
+      "title": "Suitable Project Types",
+      "items": [
+        {
+          "title": "Residential Projects",
+          "body": "Apartments, villas, residential units, and residential buildings."
+        },
+        {
+          "title": "Commercial & Administrative Projects",
+          "body": "Offices, retail stores, showrooms, and administrative buildings."
+        },
+        {
+          "title": "Mixed-Use Projects",
+          "body": "Buildings combining residential, commercial, and administrative uses according to the nature of the project."
+        }
+      ]
+    },
+
+    "materials": {
+      "title": "Materials & Systems",
+      "lead": "Materials and systems are selected according to the approved designs, the nature of the space, and the intended use.",
+      "points": [
+        "Marble, ceramic, and porcelain.",
+        "Interior and exterior paints.",
+        "Suspended ceiling systems.",
+        "Cladding and decorative materials.",
+        "Lighting systems and electrical fittings.",
+        "Sanitary fittings and drainage systems.",
+        "Doors and windows.",
+        "Insulation and surface treatment materials."
+      ]
+    },
+
+    "advantages": {
+      "title": "Advantages",
+      "items": [
+        {
+          "title": "Integrated Finishing Works",
+          "body": "Coordination of architectural, electrical, and mechanical works to reduce conflicts between execution stages."
+        },
+        {
+          "title": "Flexible Finishing Solutions",
+          "body": "Providing solutions that suit the project's nature, design, and budget."
+        },
+        {
+          "title": "Attention to Detail",
+          "body": "Ensuring accurate execution and consistency between materials and final finishes."
+        },
+        {
+          "title": "Organized Execution Stages",
+          "body": "Planning the sequence of works and monitoring their execution according to the agreed schedule."
+        }
+      ]
+    },
+
+    "buttons": {
+      "schedule": "Discuss Your Project",
+      "cta": "Discuss your finishing requirements with our team"
     }
   }
+
 }

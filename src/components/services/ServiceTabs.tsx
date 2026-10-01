@@ -2,9 +2,12 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+
 import PlaceholderTab from "./tabs/PlaceholderTab";
 import Breadcrumbs from "../ui/Breadcrumbs";
 import GeneralContractingtab from "./tabs/GeneralContractingTab";
+import GeneralSupplies from "./tabs/GeneralSupplies";
+import IntegratedFinishing from "./tabs/IntegratedFinishing";
 
 const TAB_IDS = [
   "generalContracting",
@@ -21,8 +24,8 @@ type TabId = (typeof TAB_IDS)[number];
 
 const TAB_CONTENT: Record<TabId, React.ComponentType> = {
   generalContracting: GeneralContractingtab,
-  generalSupplies: PlaceholderTab,
-  integratedFinishing: PlaceholderTab,
+  generalSupplies: GeneralSupplies,
+  integratedFinishing: IntegratedFinishing,
   residentialFinishing: PlaceholderTab,
   commercialAdministrativeFinishing: PlaceholderTab,
   industrialFinishing: PlaceholderTab,
@@ -32,39 +35,77 @@ const TAB_CONTENT: Record<TabId, React.ComponentType> = {
 
 export default function ServiceTabs() {
   const t = useTranslations("services");
+
   const [active, setActive] = useState<TabId>("generalContracting");
+
   const ActiveContent = TAB_CONTENT[active];
 
-  // Click-and-drag scrolling — native overflow-x-auto only responds to
-  // touch/trackpad by default, not a mouse click-drag.
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const isDraggingRef = useRef(false);
+
+  // Drag state
+  const isPointerDownRef = useRef(false);
+  const hasMovedRef = useRef(false);
+
   const startXRef = useRef(0);
   const startScrollLeftRef = useRef(0);
+
   const [isDragging, setIsDragging] = useState(false);
 
-  function onPointerDown(e: React.PointerEvent) {
+  function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
     const el = scrollerRef.current;
+
     if (!el) return;
-    isDraggingRef.current = true;
-    setIsDragging(true);
+
+    isPointerDownRef.current = true;
+    hasMovedRef.current = false;
+
     startXRef.current = e.clientX;
     startScrollLeftRef.current = el.scrollLeft;
-    el.setPointerCapture(e.pointerId);
   }
 
-  function onPointerMove(e: React.PointerEvent) {
+  function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
     const el = scrollerRef.current;
-    if (!el || !isDraggingRef.current) return;
+
+    if (!el || !isPointerDownRef.current) return;
+
     const delta = e.clientX - startXRef.current;
+
+    // Ignore tiny mouse movements
+    if (Math.abs(delta) < 5) {
+      return;
+    }
+
+    // Now we know that this is a drag
+    hasMovedRef.current = true;
+    setIsDragging(true);
+
     el.scrollLeft = startScrollLeftRef.current - delta;
   }
 
-  function endDrag(e: React.PointerEvent) {
-    const el = scrollerRef.current;
-    if (isDraggingRef.current) el?.releasePointerCapture(e.pointerId);
-    isDraggingRef.current = false;
+  function onPointerUp() {
+    isPointerDownRef.current = false;
     setIsDragging(false);
+
+    // Reset after the click event has been processed
+    setTimeout(() => {
+      hasMovedRef.current = false;
+    }, 0);
+  }
+
+  function onPointerCancel() {
+    isPointerDownRef.current = false;
+    hasMovedRef.current = false;
+    setIsDragging(false);
+  }
+
+  function handleTabClick(id: TabId) {
+    // If the user dragged the container,
+    // don't treat the interaction as a click.
+    if (hasMovedRef.current) {
+      return;
+    }
+
+    setActive(id);
   }
 
   return (
@@ -75,8 +116,8 @@ export default function ServiceTabs() {
           ref={scrollerRef}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
-          onPointerUp={endDrag}
-          onPointerLeave={endDrag}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerCancel}
           className={`flex gap-6 overflow-x-auto px-0 select-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-12 ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
@@ -84,7 +125,8 @@ export default function ServiceTabs() {
           {TAB_IDS.map((id) => (
             <button
               key={id}
-              onClick={() => setActive(id)}
+              type="button"
+              onClick={() => handleTabClick(id)}
               className="shrink-0 p-5 text-lg font-bold transition-colors"
               style={{
                 background: active === id ? "#E9EFFF" : "transparent",
@@ -97,10 +139,12 @@ export default function ServiceTabs() {
         </div>
       </div>
 
+      {/* Breadcrumbs */}
       <div className="px-4 py-6 sm:px-12">
         <Breadcrumbs />
       </div>
 
+      {/* Active tab content */}
       <div className="bg-mist-50">
         <ActiveContent />
       </div>

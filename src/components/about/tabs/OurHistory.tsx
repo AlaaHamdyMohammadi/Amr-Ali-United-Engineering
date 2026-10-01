@@ -1,6 +1,6 @@
 "use client";
 
-import sectorbuilding from "@/assets/sectorbuilding.png";
+import sectorbuilding from "@/assets/historyimg.png";
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
 import { useTranslations } from "next-intl";
