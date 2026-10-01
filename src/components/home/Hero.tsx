@@ -39,7 +39,7 @@ export default function Hero() {
         <div className="absolute inset-x-0 top-[77%] h-px bg-white/25" />
       </div>
 
-      <div className="container-page relative flex min-h-160 flex-col justify-end gap-8 pb-20  lg:min-h-180 lg:pb-42">
+      <div className="container-page relative flex min-h-160 flex-col justify-end gap-8 pb-20 lg:min-h-[clamp(45rem,85svh,68.75rem)] lg:pb-42">
         <BlurText
           text={t("eyebrow")}
           delay={50}
