@@ -3,7 +3,7 @@
   "services": {
     "residential": "سكني",
     "commercial": "تجاري",
-    "medical": "طبي",
+    "industrial": "صناعي",
     "restaurants": "مطاعم ومقاهي"
   },
   "helpTitle": "مساعدة",

@@ -5,6 +5,12 @@ import { useTranslations } from "next-intl";
 import CompanyProfile from "./tabs/CompanyProfile";
 import PlaceholderTab from "./tabs/PlaceholderTab";
 import Breadcrumbs from "../ui/Breadcrumbs";
+import OurApproach from "./tabs/OurApproach";
+import OurHistory from "./tabs/OurHistory";
+import BoardOfDirectors from "./tabs/BoardOfDirectors";
+import ExecutiveTeam from "./tabs/ExecutiveTeam";
+import BoardCommittees from "./tabs/BoardCommittees";
+import OurPartners from "./tabs/OurPartners";
 
 
 const TAB_IDS = [
@@ -24,12 +30,12 @@ type TabId = (typeof TAB_IDS)[number];
 // content, write its component under ./tabs and drop it in here.
 const TAB_CONTENT: Record<TabId, React.ComponentType> = {
   companyProfile: CompanyProfile,
-  ourApproach: PlaceholderTab,
-  ourHistory: PlaceholderTab,
-  boardOfDirectors: PlaceholderTab,
-  boardCommittees: PlaceholderTab,
-  executiveTeam: PlaceholderTab,
-  ourPartners: PlaceholderTab,
+  ourApproach: OurApproach,
+  ourHistory: OurHistory,
+  boardOfDirectors: BoardOfDirectors,
+  boardCommittees: BoardCommittees,
+  executiveTeam: ExecutiveTeam,
+  ourPartners: OurPartners,
 };
 
 export default function AboutTabs() {

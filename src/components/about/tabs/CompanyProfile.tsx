@@ -1,4 +1,4 @@
-import constructionImg from "@/assets/aboutUSSection.jpg";
+import constructionImg from "@/assets/aboutsec.jpeg";
 import building from "@/assets/building2.png";
 import cer1 from "@/assets/cer1.png";
 import cer2 from "@/assets/cer2.png";
@@ -139,12 +139,6 @@ export default function CompanyProfile() {
             <div className="flex flex-col gap-10 max-w-160 lg:max-w-255">
               <p className="text-lg text-heading font-medium">
                 {t("whyBody1")}
-              </p>
-              <p className="text-lg text-heading font-medium">
-                {t("whyBody2")}
-              </p>
-              <p className="text-lg text-heading font-medium">
-                {t("whyBody3")}
               </p>
               <span className="h-0.75 w-23 rounded-full bg-clay-500" />
             </div>

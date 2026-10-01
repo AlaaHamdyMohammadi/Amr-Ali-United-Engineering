@@ -55,10 +55,7 @@ export default function Footer() {
                 {t("services.commercial")}
               </li>
               <li className="hover:text-clay-600 hover:cursor-pointer">
-                {t("services.medical")}
-              </li>
-              <li className="hover:text-clay-600 hover:cursor-pointer">
-                {t("services.restaurants")}
+                {t("services.industrial")}
               </li>
             </ul>
           </div>

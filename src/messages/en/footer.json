@@ -3,7 +3,7 @@
   "services": {
     "residential": "Residentials",
     "commercial": "Commercial",
-    "medical": "Medical",
+    "industrial": "Industrial",
     "restaurants": "Restaurants & Cafes"
   },
   "helpTitle": "Help",

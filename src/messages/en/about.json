@@ -20,8 +20,8 @@
     ],
     "body1": "Every project starts with a detailed feasibility and structural review, so surprises get caught on paper instead of on site.",
     "body2": "We stay involved past hand-over with a maintenance window on every build, because a finished building is still our responsibility.",
-    "whyTitle": "Why AmrAli",
-    "whyBody1": "We control quality by keeping core trades in-house rather than fully subcontracting, so the crew on-site is the same crew accountable for the result.",
+    "whyTitle": "What do we do?",
+    "whyBody1": "AmrAli Co. offers a wide range of technical and project management solutions, which include engineering, procurement, construction (EPC), commissioning services. Our specialization is in interior design, construction of Buildings, Civil, Electromechanical, Infrastructure, Alominum cladding,Temporary facility and Facility Management Services to our public and private infrastructure and manufacturing sectors.",
     "whyBody2": "Our project managers report progress weekly with photos and a schedule variance — no waiting until hand-over to find out where things stand.",
     "whyBody3": "Clients typically stay with us across multiple projects, which is the metric we actually optimize for.",
     "sectorSection": {
@@ -32,5 +32,164 @@
       "sectorButton": "Explore Sector Specification"
     },
     "certificates": "Certificates"
+  },
+  "ourApproach": {
+    "title": "Our Approach to Project Execution",
+    "intro": "We believe a project's success begins before anyone ever sets foot on site. That's why we follow an integrated process: understanding the client's needs, studying the project and defining its scope, building a clear execution plan, and carrying it through to follow-up and handover.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Project Study",
+        "body": "Studying the technical, operational, budget, and timeline requirements of the project."
+      },
+      {
+        "number": "02",
+        "title": "Planning",
+        "body": "Preparing a clear execution plan covering resources, labor, materials, phases, and site requirements."
+      },
+      {
+        "number": "03",
+        "title": "Execution",
+        "body": "Carrying out the work in line with approved technical specifications and quality and safety standards."
+      },
+      {
+        "number": "04",
+        "title": "Monitoring & Control",
+        "body": "Tracking completion rates and execution quality, and confirming adherence to the schedule."
+      },
+      {
+        "number": "05",
+        "title": "Testing & Handover",
+        "body": "Reviewing completed work and running the necessary tests before final handover."
+      },
+      {
+        "number": "06",
+        "title": "Post-Handover",
+        "body": "Continuing to support the client and address maintenance and operational needs after the project concludes."
+      }
+    ],
+    "goal": "Our goal: the client stays fully informed about what's happening on their project, from day one through handover."
+  },
+  "ourHistory": {
+    "title": "Our History",
+    "body1": "Amr Ali For Contracting & General Trading began with the goal of offering engineering and execution services that combine hands-on experience with organized project management.",
+    "body2": "As the company's work grew, our range of services expanded to cover a number of sectors and fields, with a focus on residential, commercial, and industrial projects, along with fit-out, finishing, and engineering services. Throughout our journey, we've focused on building a way of working founded on the pillars below, and today we continue developing our capabilities, teams, and services.",
+    "pillars": [
+      "Quality",
+      "Commitment",
+      "Safety",
+      "Management",
+      "Continuous Development"
+    ],
+    "visionTitle": "Our Future Vision",
+    "visionBody": "We aim to grow the company's standing in the contracting and engineering sector by expanding our project portfolio, developing our talent, and adopting more efficient methods for managing and executing projects."
+  },
+  "boardOfDirectors": {
+    "title": "Board of Directors",
+    "body": "Amr Ali's board of directors brings together a group of experienced leaders who set the company's strategic direction, oversee overall performance, and ensure alignment with the company's vision and its quality and safety standards."
+  },
+  "board": {
+    "title": "Board of Directors",
+    "intro": "The Board of Directors of Amr Ali brings together a group of experienced members who set the company's strategic direction, oversee overall performance, and ensure commitment to the company's vision and its quality and safety standards.",
+    "vision": {
+      "title": "Our Vision",
+      "body": "To be one of the most trusted companies in Egypt's contracting and engineering sector, delivering projects that combine quality, efficiency, safety and commitment."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "body": "To provide integrated engineering and execution solutions that help our clients deliver their projects efficiently, through a specialized team, clear management, and quality and safety standards that ensure the best possible project performance."
+    },
+    "valuesTitle": "Our Values",
+    "values": {
+      "quality": {
+        "title": "Quality",
+        "body": "We adhere to technical specifications and standards at every stage of execution."
+      },
+      "safety": {
+        "title": "Safety",
+        "body": "The safety of workers, the site and the project is a core part of our work culture."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "body": "We stay clear and keep to what has been agreed with the client."
+      },
+      "responsibility": {
+        "title": "Responsibility",
+        "body": "We treat every project as a full responsibility, not just an execution task."
+      },
+      "development": {
+        "title": "Development",
+        "body": "We keep developing our methods, people and services to meet market needs."
+      }
+    },
+    "membersTitle": "Board Members",
+    "members": [
+      {
+        "name": "Name",
+        "role": "Position"
+      },
+      {
+        "name": "Name",
+        "role": "Position"
+      },
+      {
+        "name": "Name",
+        "role": "Position"
+      },
+      {
+        "name": "Name",
+        "role": "Position"
+      }
+    ]
+  },
+  "executive": {
+    "title": "Executive Management",
+    "intro": "The executive management oversees project delivery day to day according to the approved plan and standards, ensuring clear management, on-time delivery, and quality at every stage of the project.",
+    "principlesTitle": "How We Manage Our Projects",
+    "principles": {
+      "quality": {
+        "title": "Quality Under Control",
+        "body": "We rely on specialized teams and direct follow-up of execution stages, which helps maintain a consistent level of quality."
+      },
+      "management": {
+        "title": "Clear Project Management",
+        "body": "Project progress is tracked continuously through schedules and execution reports, and any deviation from the plan is addressed in time."
+      },
+      "deadlines": {
+        "title": "Commitment to Deadlines",
+        "body": "We set a clear execution plan for every project and monitor progress rates continuously to keep to the agreed schedule."
+      },
+      "integrated": {
+        "title": "Integrated Solutions",
+        "body": "We provide a complete set of engineering and execution services under one management instead of dealing with multiple parties."
+      },
+      "partnerships": {
+        "title": "Long-Term Partnerships",
+        "body": "We aim to build lasting relationships with our clients through quality of execution, commitment and clarity in dealing."
+      }
+    },
+    "membersTitle": "Executive Team",
+    "members": [
+      {
+        "name": "Name",
+        "role": "Position"
+      },
+      {
+        "name": "Name",
+        "role": "Position"
+      },
+      {
+        "name": "Name",
+        "role": "Position"
+      },
+      {
+        "name": "Name",
+        "role": "Position"
+      }
+    ]
+  },
+  "clients": {
+    "title": "Our Clients",
+    "intro": "We are proud of the trust of our clients and partners, and we always aim to build long-term relationships based on quality of execution, commitment and clarity in dealing."
   }
 }
