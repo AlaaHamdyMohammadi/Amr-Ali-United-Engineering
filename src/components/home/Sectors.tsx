@@ -44,7 +44,7 @@ export default function Sectors() {
           shineColor="#A0B8D7"
           spread={120}
           direction="left"
-          className="title-font text-3xl font-bold leading-tight text-white sm:text-[48px]"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-bold leading-tight text-white sm:text-[48px]`}
         />
         <p className="text-lg  text-gray-300">{t("sub")}</p>
 

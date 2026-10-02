@@ -3,7 +3,7 @@
 import building from "@/assets/building2.png";
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -20,6 +20,7 @@ const imageVariants: Variants = {
 
 export default function BoardOfDirectors() {
   const t = useTranslations("about.boardOfDirectors");
+  const locale = useLocale();
 
   return (
     <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-10 py-10">
@@ -31,7 +32,7 @@ export default function BoardOfDirectors() {
           shineColor="#eef1fc"
           spread={120}
           direction="left"
-          className="title-font text-[48px] font-semibold text-heading"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
         />
         <p className="text-lg text-heading font-medium">{t("body")}</p>
         <span className="h-0.75 w-23 rounded-full bg-clay-500" />

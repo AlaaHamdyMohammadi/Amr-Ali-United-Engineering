@@ -8,6 +8,7 @@ import Breadcrumbs from "../ui/Breadcrumbs";
 import GeneralContractingtab from "./tabs/GeneralContractingTab";
 import GeneralSupplies from "./tabs/GeneralSupplies";
 import IntegratedFinishing from "./tabs/IntegratedFinishing";
+import ResidentialFinishingTab from "./tabs/ResidentialFinishingTab";
 
 const TAB_IDS = [
   "generalContracting",
@@ -26,7 +27,7 @@ const TAB_CONTENT: Record<TabId, React.ComponentType> = {
   generalContracting: GeneralContractingtab,
   generalSupplies: GeneralSupplies,
   integratedFinishing: IntegratedFinishing,
-  residentialFinishing: PlaceholderTab,
+  residentialFinishing: ResidentialFinishingTab,
   commercialAdministrativeFinishing: PlaceholderTab,
   industrialFinishing: PlaceholderTab,
   claddingFacades: PlaceholderTab,

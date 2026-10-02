@@ -2,7 +2,7 @@
 
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import PeopleGrid, { type Person } from "./PeopleGrid";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -28,6 +28,7 @@ const principleKeys = [
 export default function ExecutiveTeam() {
   const t = useTranslations("about.executive");
   const members = t.raw("members") as Person[];
+  const locale = useLocale();
 
   return (
     <>
@@ -41,14 +42,16 @@ export default function ExecutiveTeam() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="title-font text-[48px] font-semibold text-heading"
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
           />
           <p className="text-lg font-medium text-heading">{t("intro")}</p>
           <span className="h-0.75 w-23 rounded-full bg-clay-500" />
         </div>
 
         <div className="flex flex-col gap-10">
-          <h2 className="title-font text-3xl font-semibold text-navy-650 sm:text-4xl">
+          <h2
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-semibold text-navy-650 sm:text-4xl`}
+          >
             {t("principlesTitle")}
           </h2>
           <motion.div

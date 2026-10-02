@@ -1,12 +1,13 @@
 "use client";
 
 import contactImg from "@/assets/contactUS2.jpeg";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";
 
 export default function ContactHero() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
       <Image
@@ -30,7 +31,7 @@ export default function ContactHero() {
           delay={30}
           animateBy="words"
           direction="top"
-          className="title-font text-4xl font-medium text-white sm:text-[80px]"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-4xl font-medium text-white sm:text-[80px]`}
         />
       </div>
     </section>

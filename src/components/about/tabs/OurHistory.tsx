@@ -3,7 +3,7 @@
 import sectorbuilding from "@/assets/historyimg.png";
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -31,6 +31,7 @@ const itemVariants: Variants = {
 export default function OurHistory() {
   const t = useTranslations("about.ourHistory");
   const pillars = t.raw("pillars") as string[];
+  const locale = useLocale();
 
   return (
     <div className="flex flex-col gap-0">
@@ -58,7 +59,7 @@ export default function OurHistory() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="title-font text-[48px] font-semibold text-heading"
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
           />
           <p className="text-lg text-heading font-medium">{t("body1")}</p>
           <p className="text-lg text-heading font-medium">{t("body2")}</p>
@@ -95,7 +96,7 @@ export default function OurHistory() {
         <div className="container-page flex flex-col gap-6">
           <motion.h2
             variants={itemVariants}
-            className="title-font text-white text-3xl sm:text-4xl font-semibold"
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-white text-3xl sm:text-4xl font-semibold`}
           >
             {t("visionTitle")}
           </motion.h2>

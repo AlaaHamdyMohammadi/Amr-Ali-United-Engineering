@@ -1,18 +1,13 @@
-"use client"; 
+"use client";
 
-import { useTranslations } from "next-intl";
-import { ArrowRight, ArrowLeft } from "lucide-react";
-import { useLocale } from "next-intl";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
-import Image from "next/image";
 import aboutUSSection from "@/assets/aboutSection.jpeg";
-import MainButton from "../ui/MainButton";
-import ScrollReveal from "../TextAnimations/scrollRevealText";
-import CountUp from "../TextAnimations/CountUpText";
-import ScrollFadeIn from "../animations/ScrollFadeIn";
-import ShinyText from "../TextAnimations/ShinyText";
-import { motion, type Variants } from "motion/react";
 import frame1 from "@/assets/Frame1.png";
+import Frame10 from "@/assets/Frame10.png"; // frame_6
+import Frame11 from "@/assets/Frame11.png"; // frame_6
+import Frame12 from "@/assets/Frame12.png"; // frame_6
 import frame2 from "@/assets/Frame2.png";
 import frame3 from "@/assets/Frame3.png";
 import frame4 from "@/assets/Frame4.png";
@@ -21,9 +16,13 @@ import frame6 from "@/assets/Frame6.png";
 import Frame7 from "@/assets/Frame7.png"; // frame_6
 import Frame8 from "@/assets/Frame8.png"; // frame_6
 import Frame9 from "@/assets/Frame9.png"; // frame_6
-import Frame10 from "@/assets/Frame10.png"; // frame_6
-import Frame11 from "@/assets/Frame11.png"; // frame_6
-import Frame12 from "@/assets/Frame12.png"; // frame_6
+import { motion, type Variants } from "motion/react";
+import Image from "next/image";
+import ScrollFadeIn from "../animations/ScrollFadeIn";
+import CountUp from "../TextAnimations/CountUpText";
+import ScrollReveal from "../TextAnimations/scrollRevealText";
+import ShinyText from "../TextAnimations/ShinyText";
+import MainButton from "../ui/MainButton";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 const logos = [
@@ -61,7 +60,7 @@ export default function About() {
     hidden: {},
     show: { transition: { staggerChildren: 0.08 } },
   };
-  
+
   const item: Variants = {
     hidden: { opacity: 0, y: 24, scale: 0.95 },
     show: {
@@ -99,7 +98,7 @@ export default function About() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="title-font text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px] max-w-[1000px]"
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px] max-w-[1000px]`}
           />
           <p className="text-lg max-w-4xl text-gray-200">{t("lead")}</p>
         </div>
@@ -179,28 +178,28 @@ export default function About() {
             {t("trustedBy")}
           </p>
           <motion.div
-                  className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6"
-                  variants={container}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.2 }}
-                >
-                  {logos.map((client) => (
-                    <motion.div
-                      key={client.name}
-                      variants={item}
-                      whileHover={{ y: -6 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      className="group flex h-32 items-center justify-center rounded-3xl border border-gray-50 bg-white p-6 shadow-md shadow-navy-900/5"
-                    >
-                      <Image
-                        src={client.src}
-                        alt={client.name}
-                        className="h-14 w-auto object-contain grayscale transition duration-300 group-hover:grayscale-0"
-                      />
-                    </motion.div>
-                  ))}
-                </motion.div>
+            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {logos.map((client) => (
+              <motion.div
+                key={client.name}
+                variants={item}
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="group flex h-32 items-center justify-center rounded-3xl border border-gray-50 bg-white p-6 shadow-md shadow-navy-900/5"
+              >
+                <Image
+                  src={client.src}
+                  alt={client.name}
+                  className="h-25 w-auto object-contain  transition duration-300 "
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </ScrollFadeIn>
       </div>
     </section>

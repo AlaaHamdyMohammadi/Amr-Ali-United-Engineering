@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
-import { Cairo, Public_Sans } from "next/font/google";
-import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
-import { ConfigProvider } from "antd";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
-import arEG from "antd/locale/ar_EG";
-import enUS from "antd/locale/en_US";
-import { routing } from "@/i18n/routing";
-import { antdTheme } from "@/lib/theme";
-import "../globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { routing } from "@/i18n/routing";
+import { antdTheme } from "@/lib/theme";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { ConfigProvider } from "antd";
+import arEG from "antd/locale/ar_EG";
+import enUS from "antd/locale/en_US";
+import type { Metadata } from "next";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { Cairo, Public_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import { notFound } from "next/navigation";
+import "../globals.css";
 
 const ClashDisplay = localFont({
   src: [
@@ -51,6 +51,32 @@ const ClashDisplay = localFont({
   display: "swap",
 });
 
+const ElMessiri = localFont({
+  src: [
+    {
+      path: "../../fonts/ArbFONTS-ElMessiri-Regular-1.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ArbFONTS-ElMessiri-Medium-1.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ArbFONTS-ElMessiri-SemiBold-1.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/ArbFONTS-ElMessiri-Bold-1.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-el-messiri",
+  display: "swap",
+})
 
 const CairoFont = Cairo({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -67,7 +93,7 @@ const PublicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Amr Ali For Contracting & General Trading Company",
+  title: "Amr Ali For Contracting & General Trading",
   description: "Build your home with trusted hands.",
 };
 
@@ -91,7 +117,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const isRtl = locale === "ar";
 
-  const fontVars = `${CairoFont.variable} ${PublicSans.variable} ${ClashDisplay.variable}`;
+  const fontVars = `${CairoFont.variable} ${PublicSans.variable} ${ClashDisplay.variable} ${ElMessiri.variable}`;
 
   return (
     <html lang={locale} dir={isRtl ? "rtl" : "ltr"}>

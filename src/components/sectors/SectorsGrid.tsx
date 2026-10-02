@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion, type Variants } from "motion/react";
+import { useLocale } from "next-intl";
 
 const headingVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -41,10 +42,11 @@ export default function SectorsGrid({
   seeProjects: string;
   isRtl: boolean;
 }) {
+  const locale = useLocale();
   return (
     <div className="flex flex-col gap-12">
       <motion.h2
-        className="title-font text-[48px] font-semibold text-navy-650"
+        className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-navy-650`}
         variants={headingVariants}
         initial="hidden"
         whileInView="show"

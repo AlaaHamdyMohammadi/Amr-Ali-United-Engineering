@@ -1,9 +1,9 @@
 {
   "servicesTitle": "خدماتنا",
   "services": {
-    "residential": "سكني",
-    "commercial": "تجاري",
-    "industrial": "صناعي",
+    "residential": "انشاءات سكنية",
+    "commercial": "انشاءات تجارية وإدارية",
+    "industrial": "انشاءات صناعية ولوجستية",
     "restaurants": "مطاعم ومقاهي"
   },
   "helpTitle": "مساعدة",

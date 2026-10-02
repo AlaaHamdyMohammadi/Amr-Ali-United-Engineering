@@ -2,7 +2,7 @@
 
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image, { type StaticImageData } from "next/image";
 
 // Save the logos in src/assets/clients/ with these names
@@ -71,6 +71,7 @@ const item: Variants = {
 
 export default function OurPartners() {
   const t = useTranslations("about.clients");
+  const locale = useLocale();
 
   return (
     <div className="container-page flex flex-col gap-16 py-10 pb-20">
@@ -83,7 +84,7 @@ export default function OurPartners() {
           shineColor="#eef1fc"
           spread={120}
           direction="left"
-          className="title-font text-[48px] font-semibold text-heading"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
         />
         <p className="text-lg font-medium text-heading">{t("intro")}</p>
         <span className="h-0.75 w-23 rounded-full bg-clay-500" />
@@ -102,12 +103,12 @@ export default function OurPartners() {
             variants={item}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="group flex h-32 items-center justify-center rounded-3xl border border-gray-50 bg-white p-6 shadow-md shadow-navy-900/5"
+            className="group flex h-36 items-center justify-center rounded-3xl border border-gray-50 bg-white p-6 shadow-md shadow-navy-900/5"
           >
             <Image
               src={client.src}
               alt={client.name}
-              className="h-14 w-auto object-contain grayscale transition duration-300 group-hover:grayscale-0"
+              className="h-25 w-auto object-contain transition duration-300"
             />
           </motion.div>
         ))}

@@ -2,13 +2,14 @@
 
 import heroSctionImg from "@/assets/heroSctionImg2.png";
 import Header from "@/components/layout/Header";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";
 
 export default function Hero() {
   const t = useTranslations("home.hero");
   const lines = t("headline").split("\n");
+  const locale = useLocale();
 
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
@@ -47,7 +48,7 @@ export default function Hero() {
           direction="top"
           className="text-[32px] font-bold tracking-wide text-clay-500"
         />
-        <h1 className="max-w-3xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]">
+        <h1 className={`max-w-2xl ${locale === "en" ? "title-font" : "title-font-ar"} text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]`}>
           {lines.map((line, i) => (
             <BlurText
               key={i}
@@ -63,7 +64,7 @@ export default function Hero() {
           delay={70}
           animateBy="words"
           direction="top"
-          className="max-w-xl text-base text-white sm:text-2xl"
+          className="max-w-2xl text-base text-white sm:text-2xl"
         />
       </div>
     </section>

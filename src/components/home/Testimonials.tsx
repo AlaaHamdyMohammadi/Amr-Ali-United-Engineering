@@ -4,7 +4,7 @@ import quote1 from "@/assets/quotation 1.svg";
 import quote2 from "@/assets/quotation 2.svg";
 
 import { motion, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { User, House, BuildingComplex } from "lucide-react";
@@ -46,6 +46,7 @@ const cardEntranceVariants: Variants = {
 
 export default function Testimonials() {
   const t = useTranslations("home.testimonials");
+  const locale = useLocale();
 
   const scrollerRef = useRef<HTMLDivElement>(null);
 
@@ -150,7 +151,7 @@ export default function Testimonials() {
           shineColor="#A0B8D7"
           spread={120}
           direction="left"
-          className="title-font text-3xl font-semibold text-white sm:text-[48px]"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-semibold text-white sm:text-[48px]`}
         />
 
         {/* Testimonials Slider */}

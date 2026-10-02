@@ -48,6 +48,10 @@ html[lang='en'] body {
   font-family: var(--font-clash-display), var(--font-cairo), sans-serif ;
 }
 
+.title-font-ar {
+  font-family: var(--font-el-messiri), var(--font-cairo), sans-serif ;
+}
+
 html,
 body {
   padding: 0;

@@ -161,7 +161,7 @@
       "prices": "Request a Supply Quote"
     }
   },
-  
+
   "integratedFinishingTab": {
     "hero": {
       "title": "Integrated Finishing",
@@ -243,6 +243,86 @@
       "schedule": "Discuss Your Project",
       "cta": "Discuss your finishing requirements with our team"
     }
+  },
+  "residentialFinishingTab": {
+    "hero": {
+      "title": "Residential Finishing",
+      "body1": "Amr Ali Contracting & General Trading Company provides residential finishing services for apartments, villas, and housing units, focused on delivering solutions that balance aesthetics and function to suit residents' needs and the nature of each space.",
+      "body2": "We carry out every stage of finishing according to the approved designs, carefully selecting materials and coordinating the architectural, electrical, and plumbing works.",
+      "scopeTitle": "Scope of Work",
+      "scopePoints": [
+        "Finishing of apartments and residential units.",
+        "Finishing of villas and houses.",
+        "Plastering and wall and ceiling preparation.",
+        "Flooring and cladding installation.",
+        "Painting and interior finishing works.",
+        "Kitchen and bathroom fit-outs.",
+        "Electrical and lighting works.",
+        "Plumbing and drainage works.",
+        "Suspended ceilings and decorative works.",
+        "Final installations and finishing details."
+      ]
+    },
+    "projectTypes": {
+      "title": "Suitable Project Types",
+      "items": [
+        {
+          "title": "Residential Apartments",
+          "body": "Finishing apartments of varying sizes, with attention to the internal layout and usage requirements."
+        },
+        {
+          "title": "Villas & Houses",
+          "body": "Finishing works for both interior and exterior spaces, according to the project's scope."
+        },
+        {
+          "title": "New Residential Units",
+          "body": "Executing finishing works for new units in line with agreed plans and specifications."
+        },
+        {
+          "title": "Residential Unit Renovation",
+          "body": "Renovation and upgrade works for existing units, based on site condition and scope of work."
+        }
+      ]
+    },
+    "materials": {
+      "title": "Materials & Systems",
+      "points": [
+        "Marble, ceramic, and porcelain.",
+        "Interior paints and cladding.",
+        "Flooring and wall materials.",
+        "Ceiling and decorative systems.",
+        "Lighting fixtures and electrical fittings.",
+        "Sanitaryware and mixers.",
+        "Waterproofing systems for bathrooms and wet areas.",
+        "Doors, windows, and interior fittings."
+      ]
+    },
+    "advantages": {
+      "title": "Advantages",
+      "items": [
+        {
+          "title": "Solutions Suited to Every Space",
+          "body": "Finishing work carried out according to the unit's size and intended use."
+        },
+        {
+          "title": "Aesthetic Consistency",
+          "body": "Ensuring materials, colors, and details align with the approved design."
+        },
+        {
+          "title": "Execution Quality",
+          "body": "Close attention to the precision of finishing work and review of technical details."
+        },
+        {
+          "title": "Flexibility in Material Selection",
+          "body": "Material options defined according to the design, budget, and agreed requirements."
+        }
+      ]
+    },
+    "cta": "Start preparing your residential unit — contact us to discuss your finishing requirements.",
+    "buttons": {
+      "schedule": "Schedule Meeting",
+      "prices": "Price Ranges"
+    },
+    "whatsappMessage": "Hello, I'd like to ask about residential finishing services"
   }
-
 }

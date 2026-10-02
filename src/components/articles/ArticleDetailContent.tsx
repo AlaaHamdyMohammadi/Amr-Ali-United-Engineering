@@ -5,7 +5,7 @@ import type { ArticleTypeKey } from "@/data/articles";
 import { articlesImages, articlesVideos } from "@/lib/articles";
 import { Play } from "lucide-react";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -31,6 +31,7 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
   const t = useTranslations("articles");
   const [playing, setPlaying] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
+  const locale = useLocale();
 
   if (!t.has(`details.${id}`)) notFound();
 
@@ -111,7 +112,9 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
             )}
           </div>
 
-          <h1 className="title-font text-[32px] font-semibold uppercase text-heading">
+          <h1
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[32px] font-semibold uppercase text-heading`}
+          >
             {detail.title}
           </h1>
 
@@ -125,7 +128,9 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
               {index > 0 && (
                 <>
                   <hr className="border-[#CDCDCD]" />
-                  <h2 className="title-font text-[32px] font-semibold uppercase text-heading">
+                  <h2
+                    className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[32px] font-semibold uppercase text-heading`}
+                  >
                     {section.title}
                   </h2>
                 </>

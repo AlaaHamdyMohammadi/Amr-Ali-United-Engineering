@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { articlesImages } from "@/lib/articles";
 import type { ArticleTypeKey } from "@/data/articles";
 import BlurText from "../TextAnimations/BlurText";
+import { useLocale } from "next-intl";
 
 export default async function ArticleDetailHero({
   id,
@@ -10,6 +11,7 @@ export default async function ArticleDetailHero({
   id: ArticleTypeKey;
 }) {
   const t = await getTranslations("articles");
+  const locale = useLocale();
 
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
@@ -33,7 +35,7 @@ export default async function ArticleDetailHero({
           delay={30}
           animateBy="words"
           direction="top"
-          className="title-font text-4xl font-medium text-white sm:text-[80px]"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-4xl font-medium text-white sm:text-[80px]`}
         />
       </div>
     </section>

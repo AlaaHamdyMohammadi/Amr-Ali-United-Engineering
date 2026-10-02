@@ -87,7 +87,7 @@ export default function Projects() {
           shineColor="#eef1fc"
           spread={120}
           direction="left"
-          className="title-font text-2xl font-bold text-navy-650 sm:text-[48px]"
+          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-2xl font-bold text-navy-650 sm:text-[48px]`}
         />
 
         <motion.div
@@ -153,7 +153,11 @@ export default function Projects() {
                       </div>
                     </div>
                   </div>
-                  <MainButton preset="Link" className="justify-start!" href={`/projects`}>
+                  <MainButton
+                    preset="Link"
+                    className="justify-start!"
+                    href={`/projects`}
+                  >
                     <span>See Projects</span>
                     <motion.span variants={arrowMove} className="inline-flex">
                       <Arrow size={16} />

@@ -2,7 +2,7 @@
 
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import PeopleGrid, { type Person } from "./PeopleGrid";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -34,6 +34,7 @@ const valueKeys = [
 export default function BoardCommittees() {
   const t = useTranslations("about.board");
   const members = t.raw("members") as Person[];
+  const locale = useLocale();
 
   return (
     <>
@@ -48,7 +49,7 @@ export default function BoardCommittees() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="title-font text-[48px] font-semibold text-heading"
+            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
           />
           <p className="text-lg font-medium text-heading">{t("intro")}</p>
           <span className="h-0.75 w-23 rounded-full bg-clay-500" />
@@ -67,7 +68,9 @@ export default function BoardCommittees() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="flex flex-col gap-4 rounded-3xl border border-gray-50 bg-white p-8 shadow-md shadow-navy-900/5"
             >
-              <h2 className="title-font text-2xl font-semibold text-navy-650">
+              <h2
+                className={`{locale === "en" ? "title-font" : "title-font-ar"} text-2xl font-semibold text-navy-650`}
+              >
                 {t(`${key}.title`)}
               </h2>
               <p className="text-lg font-medium text-heading">
@@ -87,7 +90,7 @@ export default function BoardCommittees() {
         >
           <motion.h2
             variants={item}
-            className="title-font text-[48px] font-semibold text-white"
+            className={`{locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-white`}
           >
             {t("valuesTitle")}
           </motion.h2>
