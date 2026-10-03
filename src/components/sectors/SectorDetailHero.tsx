@@ -4,7 +4,6 @@ import { sectorImages, type SectorId } from "@/lib/sectors";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import BlurText from "../TextAnimations/BlurText";
-import { useLocale } from "next-intl";
 
 export default async function SectorDetailHero({
   sectorId,
@@ -12,7 +11,6 @@ export default async function SectorDetailHero({
   sectorId: SectorId;
 }) {
   const t = await getTranslations("sectors.items");
-  const locale = useLocale();
 
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
