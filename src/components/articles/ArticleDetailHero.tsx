@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server";
 import { articlesImages } from "@/lib/articles";
 import type { ArticleTypeKey } from "@/data/articles";
 import BlurText from "../TextAnimations/BlurText";
-import { useLocale } from "next-intl";
 
 export default async function ArticleDetailHero({
   id,
@@ -11,7 +10,6 @@ export default async function ArticleDetailHero({
   id: ArticleTypeKey;
 }) {
   const t = await getTranslations("articles");
-  const locale = useLocale();
 
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
