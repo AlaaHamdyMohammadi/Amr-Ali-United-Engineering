@@ -59,7 +59,7 @@ export default function OurHistory() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
+            className={`title-font text-[48px] font-semibold text-heading`}
           />
           <p className="text-lg text-heading font-medium">{t("body1")}</p>
           <p className="text-lg text-heading font-medium">{t("body2")}</p>
@@ -96,7 +96,7 @@ export default function OurHistory() {
         <div className="container-page flex flex-col gap-6">
           <motion.h2
             variants={itemVariants}
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-white text-3xl sm:text-4xl font-semibold`}
+            className={`title-font text-white text-3xl sm:text-4xl font-semibold`}
           >
             {t("visionTitle")}
           </motion.h2>

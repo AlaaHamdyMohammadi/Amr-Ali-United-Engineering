@@ -6,7 +6,7 @@
   "residentialFinishing": "Residential Finishing",
   "commercialAdministrativeFinishing": "Commercial & Administrative Finishing",
   "industrialFinishing": "Industrial Finishing",
-  "claddingFacades": "Cladding & Facades",
+  "designs": "Engineering designs",
   "curtainWallsGlassFacades": "Curtain Walls & Glass Facades",
   "generalContractingTab": {
     "hero": {
@@ -161,7 +161,6 @@
       "prices": "Request a Supply Quote"
     }
   },
-
   "integratedFinishingTab": {
     "hero": {
       "title": "Integrated Finishing",
@@ -324,5 +323,369 @@
       "prices": "Price Ranges"
     },
     "whatsappMessage": "Hello, I'd like to ask about residential finishing services"
+  },
+  "commercialAdministrativeFinishingTab": {
+    "hero": {
+      "title": "Commercial & Administrative Finishing",
+      "body1": "Amr Ali Contracting & General Trading Company provides commercial and administrative finishing services for offices, administrative buildings, and commercial spaces, with a focus on creating practical environments that suit the nature of the activity and operational requirements.",
+      "body2": "We execute and coordinate various finishing and fit-out works while considering efficient space utilization, approved designs, and the technical requirements of each project."
+    },
+
+    "scope": {
+      "title": "Scope of Work",
+      "points": [
+        "Office and administrative headquarters finishing.",
+        "Commercial buildings and spaces finishing.",
+        "Meeting rooms and reception areas fit-out.",
+        "Installation of internal partitions and dividers.",
+        "Flooring, wall, and painting works.",
+        "Suspended ceilings and lighting works.",
+        "Electrical and mechanical installations.",
+        "Interior and exterior façade works according to the project scope.",
+        "Final finishing works and fit-out."
+      ]
+    },
+
+    "projectTypes": {
+      "title": "Suitable Project Types",
+      "items": [
+        {
+          "title": "Administrative Buildings",
+          "body": "Administrative headquarters, offices, meeting rooms, and reception areas."
+        },
+        {
+          "title": "Commercial Spaces",
+          "body": "Shopping centers, showrooms, and commercial units."
+        },
+        {
+          "title": "Mixed-Use Projects",
+          "body": "Buildings that include administrative and commercial spaces within one project."
+        },
+        {
+          "title": "Offices & Corporate Spaces",
+          "body": "Private offices, corporate headquarters, and dedicated workspaces."
+        }
+      ]
+    },
+
+    "materials": {
+      "title": "Materials & Systems",
+      "points": [
+        "Marble, ceramic, and porcelain flooring.",
+        "Flooring solutions suitable for administrative spaces.",
+        "Glass and internal partitions.",
+        "Paints and architectural cladding.",
+        "Suspended ceiling systems.",
+        "Lighting systems and electrical fittings.",
+        "Air conditioning and ventilation systems.",
+        "Interior fittings and doors."
+      ]
+    },
+
+    "advantages": {
+      "title": "Advantages",
+      "items": [
+        {
+          "title": "Activity-Specific Designs",
+          "body": "Considering the nature of the business and its use when selecting finishing and fit-out solutions."
+        },
+        {
+          "title": "Optimal Space Utilization",
+          "body": "Organizing interior spaces while considering movement, functionality, and ease of use."
+        },
+        {
+          "title": "Integrated Disciplines",
+          "body": "Coordinating architectural, electrical, and mechanical works within the project scope."
+        },
+        {
+          "title": "Organized Execution Stages",
+          "body": "Planning finishing stages according to the project's requirements and agreed schedule."
+        }
+      ]
+    },
+
+    "buttons": {
+      "schedule": "Contact Us",
+      "cta": "Contact us to prepare your commercial or administrative space"
+    }
+  },
+  "industrialFinishingTab": {
+    "hero": {
+      "title": "Industrial Finishing",
+      "body1": "Amr Ali Contracting & General Trading Company provides industrial finishing and fit-out services for industrial facilities and buildings, taking into consideration the nature of operational activities and the technical requirements of each facility.",
+      "body2": "We execute finishing and fit-out works according to approved drawings and specifications, with careful consideration of materials and systems suitable for the intended use, while coordinating between different engineering disciplines."
+    },
+    "scope": {
+      "title": "Scope of Work",
+      "points": [
+        "Industrial facilities preparation and finishing.",
+        "Industrial flooring works.",
+        "Painting and cladding works.",
+        "Interior spaces and operational areas preparation.",
+        "Electrical and mechanical works.",
+        "Ventilation and air conditioning systems according to project requirements.",
+        "Insulation works and technical fit-out.",
+        "Warehouses and service buildings finishing.",
+        "Renovation and development works for existing facilities."
+      ]
+    },
+    "projectTypes": {
+      "title": "Suitable Project Types",
+      "items": [
+        {
+          "title": "Factories & Production Facilities",
+          "body": "Preparation and finishing of industrial spaces according to the nature of production processes."
+        },
+        {
+          "title": "Warehouses & Storage Centers",
+          "body": "Finishing and fit-out works for warehouses and storage areas."
+        },
+        {
+          "title": "Workshops & Technical Facilities",
+          "body": "Preparation and finishing of workshops and buildings dedicated to technical activities."
+        },
+        {
+          "title": "Industrial Administrative Buildings",
+          "body": "Finishing of offices and administrative spaces attached to industrial facilities."
+        }
+      ]
+    },
+    "materials": {
+      "title": "Materials & Systems",
+      "points": [
+        "Industrial flooring systems.",
+        "Paints and cladding suitable for the intended use.",
+        "Waterproofing and thermal insulation systems.",
+        "Surface preparation and treatment materials.",
+        "Electrical systems and industrial equipment.",
+        "Air conditioning and ventilation systems.",
+        "Fire protection systems according to project requirements."
+      ]
+    },
+    "advantages": {
+      "title": "Advantages",
+      "items": [
+        {
+          "title": "Operational Requirements",
+          "body": "Selecting finishing and fit-out solutions that suit the nature of the industrial activity."
+        },
+        {
+          "title": "Suitable Materials",
+          "body": "Considering the technical requirements of materials and systems according to the facility conditions."
+        },
+        {
+          "title": "Engineering Coordination",
+          "body": "Coordinating finishing works with the technical disciplines related to the project."
+        },
+        {
+          "title": "Safety Considerations",
+          "body": "Considering applicable safety requirements during the execution of the works."
+        }
+      ]
+    },
+    "buttons": {
+      "schedule": "Contact Us",
+      "cta": "Contact us to discuss your industrial facility requirements"
+    }
+  },
+  "engineeringDesignsTab": {
+    "hero": {
+      "title": "Integrated Engineering Solutions from Concept to Execution",
+      "subtitle": "Engineering design services for residential, commercial, administrative, and industrial projects",
+      "body1": "Amr Ali For Contracting & General Trading provides engineering design services for residential, commercial, administrative, and industrial projects through 2D drawings, 3D designs and visualizations, with coordination between different disciplines to ensure design clarity and execution readiness.",
+      "body2": "We focus on providing designs that combine engineering accuracy, practical use, aesthetic appeal, and constructability."
+    },
+    "common": {
+      "includes": "Includes"
+    },
+    "design2D": {
+      "title": "2D Engineering Designs",
+      "body": "We prepare detailed engineering drawings and plans that clearly define project dimensions and technical details, providing a clear reference during execution.",
+      "items": [
+        "Architectural drawings.",
+        "Structural drawings.",
+        "Electrical and lighting drawings.",
+        "Plumbing and drainage drawings.",
+        "HVAC and ventilation drawings.",
+        "Elevations and sections.",
+        "Floor and ceiling plans.",
+        "Finishing drawings.",
+        "Door and window details.",
+        "Shop Drawings."
+      ]
+    },
+    "design3D": {
+      "title": "3D Designs & Visualizations",
+      "body": "We transform drawings into visual representations that help clients see the project and understand its details before execution begins.",
+      "items": [
+        "Interior design.",
+        "Façade design.",
+        "Furniture layouts.",
+        "Color and material selection.",
+        "Lighting design.",
+        "Realistic perspectives.",
+        "3D Rendering & Visualization.",
+        "Exterior and interior visualizations."
+      ],
+      "benefitTitle": "Benefits of 3D Design",
+      "benefit": "3D design helps clients make better decisions regarding appearance, colors, materials, and space distribution before they are implemented on site."
+    },
+    "architecturalDesign": {
+      "title": "Architectural Design",
+      "body": "We begin by understanding the project's requirements and intended use, then develop the design to achieve a balance between functionality and aesthetics.",
+      "items": [
+        "Space planning.",
+        "Movement and circulation within the building.",
+        "Façades.",
+        "Openings and entrances.",
+        "Materials and finishes.",
+        "Architectural details.",
+        "Interior and exterior design."
+      ]
+    },
+    "structuralDesign": {
+      "title": "Structural Design",
+      "body": "We prepare the structural drawings required to support the execution stages according to project requirements and the architectural design.",
+      "items": [
+        "Foundations.",
+        "Columns.",
+        "Beams.",
+        "Slabs.",
+        "Stairs.",
+        "Structural details.",
+        "Reinforcement schedules when required."
+      ]
+    },
+    "mep": {
+      "title": "Electrical & Mechanical Designs",
+      "body": "We provide the required designs for project-related systems and services, while coordinating them with the architectural and structural designs."
+    },
+    "electrical": {
+      "title": "Electrical",
+      "items": [
+        "Lighting distribution.",
+        "Electrical outlets and points.",
+        "Distribution boards.",
+        "Power systems.",
+        "Low-current systems.",
+        "Networks and communications.",
+        "CCTV and control systems according to the project scope."
+      ]
+    },
+    "mechanical": {
+      "title": "Mechanical",
+      "items": [
+        "Air conditioning and ventilation.",
+        "Water networks.",
+        "Drainage.",
+        "Pumps and tanks.",
+        "Mechanical systems related to the project."
+      ]
+    },
+    "coordination": {
+      "title": "Interdisciplinary Coordination",
+      "body": "We do not work on each discipline separately. Instead, we coordinate between:",
+      "items": [
+        "Architecture",
+        "Structure",
+        "Electrical",
+        "Mechanical",
+        "Plumbing"
+      ],
+      "benefit": "This helps identify design clashes before reaching the execution stage and reduces modifications and problems on site."
+    },
+    "shopDrawings": {
+      "title": "Shop Drawings",
+      "body": "We transform the design into detailed drawings that help the execution team understand how different elements should be constructed.",
+      "items": [
+        "Façade details.",
+        "Sections.",
+        "Finishing details.",
+        "Floor and ceiling details.",
+        "Door and window details.",
+        "Architectural details.",
+        "Structural details.",
+        "Electrical and mechanical details."
+      ]
+    },
+    "deliverables": {
+      "title": "Design Deliverables",
+      "items": [
+        {
+          "title": "CAD Drawings",
+          "body": "Editable engineering drawings."
+        },
+        {
+          "title": "PDF Drawings",
+          "body": "Ready-to-review and print copies."
+        },
+        {
+          "title": "3D Renders",
+          "body": "Realistic project visualizations."
+        },
+        {
+          "title": "3D Models",
+          "body": "Three-dimensional models according to the project requirements."
+        },
+        {
+          "title": "Design Presentation",
+          "body": "A complete presentation of the design, materials, and colors."
+        }
+      ]
+    },
+    "process": {
+      "title": "Design Development Process",
+      "items": [
+        {
+          "number": "01",
+          "title": "Project Study",
+          "body": "Understanding the client's requirements, site conditions, intended use, and scope of work."
+        },
+        {
+          "number": "02",
+          "title": "Design Development",
+          "body": "Preparing the drawings and designs suitable for the project."
+        },
+        {
+          "number": "03",
+          "title": "Review & Coordination",
+          "body": "Reviewing details and coordinating between the different disciplines."
+        },
+        {
+          "number": "04",
+          "title": "Final Visualization",
+          "body": "Preparing 3D visualizations when requested and finalizing the approved design."
+        },
+        {
+          "number": "05",
+          "title": "Delivery",
+          "body": "Delivering the agreed drawings, files, and visualizations."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects We Serve",
+      "items": [
+        {
+          "title": "Residential Projects",
+          "body": "Villas, residential buildings, and residential complexes."
+        },
+        {
+          "title": "Commercial & Administrative Projects",
+          "body": "Offices, retail stores, administrative buildings, and shopping centers."
+        },
+        {
+          "title": "Industrial Projects",
+          "body": "Factories, warehouses, and industrial facilities."
+        },
+        {
+          "title": "Service Projects",
+          "body": "Hotels, educational, medical, and other service facilities."
+        }
+      ]
+    },
+    "buttons": {
+      "cta": "Contact us to discuss your project"
+    }
   }
 }

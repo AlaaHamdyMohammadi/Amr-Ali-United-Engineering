@@ -80,7 +80,7 @@ export default function CompanyProfile() {
               shineColor="#eef1fc"
               spread={120}
               direction="left"
-              className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
+              className={`title-font text-[48px] font-semibold text-heading`}
             />
             <div className="flex flex-col gap-10 max-w-180 lg:max-w-255">
               <p className="text-lg text-heading font-medium">{t("lead")}</p>
@@ -134,7 +134,7 @@ export default function CompanyProfile() {
 
           <div className="flex flex-col gap-14 lg:order-2">
             <h2
-              className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
+              className={`title-font text-[48px] font-semibold text-heading`}
             >
               {t("whyTitle")}
             </h2>
@@ -165,7 +165,7 @@ export default function CompanyProfile() {
         <div className="flex flex-col gap-14 w-full">
           <motion.h1
             variants={itemVariants}
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-white text-[48px] font-semibold`}
+            className={`title-font text-white text-[48px] font-semibold`}
           >
             {t(`sectorSection.title`)}
           </motion.h1>
@@ -209,7 +209,7 @@ export default function CompanyProfile() {
       </motion.div>
       <div className="flex flex-col gap-16 py-20 bg-mist-50">
         <h1
-          className={`${locale === "en" ? "title-font" : "title-font-ar"} px-12 text-heading text-[48px] font-semibold`}
+          className={`title-font px-12 text-heading text-[48px] font-semibold`}
         >
           {t(`certificates`)}
         </h1>

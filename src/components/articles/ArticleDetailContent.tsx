@@ -113,7 +113,7 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
           </div>
 
           <h1
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[32px] font-semibold uppercase text-heading`}
+            className={`title-font text-[32px] font-semibold uppercase text-heading`}
           >
             {detail.title}
           </h1>
@@ -129,7 +129,7 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
                 <>
                   <hr className="border-[#CDCDCD]" />
                   <h2
-                    className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[32px] font-semibold uppercase text-heading`}
+                    className={`title-font text-[32px] font-semibold uppercase text-heading`}
                   >
                     {section.title}
                   </h2>

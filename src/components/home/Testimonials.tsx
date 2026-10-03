@@ -151,7 +151,7 @@ export default function Testimonials() {
           shineColor="#A0B8D7"
           spread={120}
           direction="left"
-          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-semibold text-white sm:text-[48px]`}
+          className={`title-font text-3xl font-semibold text-white sm:text-[48px]`}
         />
 
         {/* Testimonials Slider */}

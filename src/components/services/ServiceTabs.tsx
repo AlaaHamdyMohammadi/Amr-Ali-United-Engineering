@@ -9,6 +9,9 @@ import GeneralContractingtab from "./tabs/GeneralContractingTab";
 import GeneralSupplies from "./tabs/GeneralSupplies";
 import IntegratedFinishing from "./tabs/IntegratedFinishing";
 import ResidentialFinishingTab from "./tabs/ResidentialFinishingTab";
+import CommercialAdministrativeFinishing from "./tabs/CommercialAdministrativeFinishing";
+import IndustrialFinishing from "./tabs/IndustrialFinishing";
+import EngineeringDesigns from "./tabs/EngineeringDesigns";
 
 const TAB_IDS = [
   "generalContracting",
@@ -17,8 +20,7 @@ const TAB_IDS = [
   "residentialFinishing",
   "commercialAdministrativeFinishing",
   "industrialFinishing",
-  "claddingFacades",
-  "curtainWallsGlassFacades",
+  "designs"
 ] as const;
 
 type TabId = (typeof TAB_IDS)[number];
@@ -28,10 +30,9 @@ const TAB_CONTENT: Record<TabId, React.ComponentType> = {
   generalSupplies: GeneralSupplies,
   integratedFinishing: IntegratedFinishing,
   residentialFinishing: ResidentialFinishingTab,
-  commercialAdministrativeFinishing: PlaceholderTab,
-  industrialFinishing: PlaceholderTab,
-  claddingFacades: PlaceholderTab,
-  curtainWallsGlassFacades: PlaceholderTab,
+  commercialAdministrativeFinishing: CommercialAdministrativeFinishing,
+  industrialFinishing: IndustrialFinishing,
+  designs: EngineeringDesigns,
 };
 
 export default function ServiceTabs() {

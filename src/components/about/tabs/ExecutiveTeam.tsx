@@ -42,7 +42,7 @@ export default function ExecutiveTeam() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
+            className={`title-font text-[48px] font-semibold text-heading`}
           />
           <p className="text-lg font-medium text-heading">{t("intro")}</p>
           <span className="h-0.75 w-23 rounded-full bg-clay-500" />
@@ -50,7 +50,7 @@ export default function ExecutiveTeam() {
 
         <div className="flex flex-col gap-10">
           <h2
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-semibold text-navy-650 sm:text-4xl`}
+            className={`title-font text-3xl font-semibold text-navy-650 sm:text-4xl`}
           >
             {t("principlesTitle")}
           </h2>

@@ -31,7 +31,7 @@ export default function ArticleHero() {
           delay={30}
           animateBy="words"
           direction="top"
-          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-4xl font-medium text-white sm:text-[80px]`}
+          className={`title-font text-4xl font-medium text-white sm:text-[80px]`}
         />
       </div>
     </section>

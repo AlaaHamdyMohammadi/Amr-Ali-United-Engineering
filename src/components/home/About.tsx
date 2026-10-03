@@ -98,7 +98,7 @@ export default function About() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className={`${locale === "en" ? "title-font" : "title-font-ar"} text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px] max-w-[1000px]`}
+            className={`title-font text-3xl font-semibold leading-tight text-navy-900 sm:text-[48px] max-w-[1000px]`}
           />
           <p className="text-lg max-w-4xl text-gray-200">{t("lead")}</p>
         </div>

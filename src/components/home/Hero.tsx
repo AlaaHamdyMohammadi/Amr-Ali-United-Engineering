@@ -1,6 +1,6 @@
 "use client";
 
-import heroSctionImg from "@/assets/heroSctionImg2.png";
+import heroSctionImg from "@/assets/heroimg2.png";
 import Header from "@/components/layout/Header";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -48,7 +48,7 @@ export default function Hero() {
           direction="top"
           className="text-[32px] font-bold tracking-wide text-clay-500"
         />
-        <h1 className={`max-w-2xl ${locale === "en" ? "title-font" : "title-font-ar"} text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]`}>
+        <h1 className={`max-w-2xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]`}>
           {lines.map((line, i) => (
             <BlurText
               key={i}

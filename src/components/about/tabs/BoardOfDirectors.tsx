@@ -32,7 +32,7 @@ export default function BoardOfDirectors() {
           shineColor="#eef1fc"
           spread={120}
           direction="left"
-          className={`${locale === "en" ? "title-font" : "title-font-ar"} text-[48px] font-semibold text-heading`}
+          className={`title-font text-[48px] font-semibold text-heading`}
         />
         <p className="text-lg text-heading font-medium">{t("body")}</p>
         <span className="h-0.75 w-23 rounded-full bg-clay-500" />
