@@ -20,72 +20,789 @@
       "description": "How cranes, scaffolding and safety systems make high-rise construction possible, efficient and safe."
     }
   },
+  "comingSoonNav": "Overview",
+  "comingSoonBody": "Full article content for this topic is coming soon.",
   "play": "Play video",
   "details": {
-    "constructions": {
-      "title": "Constructions",
+    "buttons": {
+      "schedule": "Schedule Meeting",
+      "prices": "Price Ranges"
+    },
+    "whatsappMessage": "Hello, I'd like to ask about residential finishing services",
+    "architecture": {
+      "title": "How Architectural Design Becomes a Functional, Beautiful Building",
       "sections": [
         {
-          "id": "overview",
-          "nav": "Overview",
-          "title": "Overview",
-          "paragraphs": [
-            "We provide comprehensive general contracting services for residential, commercial, and industrial projects. Our work covers the full construction cycle, from site preparation and structural works to finishing and final handover.",
-            "We focus on delivering projects according to approved drawings and technical specifications while maintaining high standards of quality, safety, cost control, and schedule management."
-          ],
-          "listTitle": "Our general contracting services include:",
-          "list": [
-            "Site preparation and enabling works.",
-            "Excavation, foundations, and structural works.",
-            "Concrete and masonry works.",
-            "Architectural and finishing works.",
-            "Electrical, plumbing, and mechanical works.",
-            "HVAC systems.",
-            "Waterproofing and thermal insulation.",
-            "Façade and roofing works.",
-            "External works and landscaping.",
-            "Renovation and refurbishment.",
-            "Coordination of subcontractors and suppliers.",
-            "Testing, commissioning, and final project handover."
-          ]
-        },
-        {
-          "id": "project-types",
-          "nav": "Suitable Project Types",
-          "title": "Suitable Project Types",
-          "items": [
+          "id": "intro",
+          "nav": "Introduction",
+          "title": "Introduction",
+          "blocks": [
             {
-              "title": "Residential Projects",
-              "body": "Villas, apartment buildings, residential compounds, and private developments."
+              "type": "paragraph",
+              "text": "Architectural design isn't just drawing what a building looks like — it's the stage where a client's needs and ideas turn into something that can actually be built."
             },
             {
-              "title": "Commercial Projects",
-              "body": "Office buildings, retail stores, showrooms, commercial centers, and mixed-use developments."
+              "type": "paragraph",
+              "text": "Successful design needs to strike a balance between aesthetic form, practical use of space, structural requirements, and the building's various services."
             },
             {
-              "title": "Industrial Projects",
-              "body": "Factories, warehouses, workshops, production facilities, and industrial administrative buildings."
+              "type": "paragraph",
+              "text": "Coordinating the architectural, structural, electrical, and mechanical designs also helps catch conflicts before they ever reach the construction site."
             }
           ]
         },
         {
-          "id": "advantages",
-          "nav": "Service Advantages",
-          "title": "Service Advantages",
-          "listTitle": "Our general contracting approach provides:",
-          "list": [
-            "End-to-end project management from construction start to final delivery.",
-            "Coordination between structural, architectural, electrical, and mechanical works.",
-            "Continuous quality monitoring throughout construction.",
-            "Schedule and progress control.",
-            "Clear cost and quantity management.",
-            "Appropriate construction solutions for each project type.",
-            "Site safety and construction standards compliance.",
-            "Regular progress reporting and project documentation.",
-            "Professional coordination with consultants, suppliers, and subcontractors."
+          "id": "client-needs",
+          "nav": "Understanding Client Needs",
+          "title": "1. Understanding Client Needs",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The first step toward a successful design is understanding the project."
+            },
+            {
+              "type": "list",
+              "items": [
+                "What is the building's purpose?",
+                "Who will use it?",
+                "What spaces are needed?",
+                "What's the nature of its use?",
+                "What special requirements does the client have?"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Answering these questions helps build an architectural concept suited to the project's real use, rather than relying on appearance alone."
+            }
+          ]
+        },
+        {
+          "id": "space-planning",
+          "nav": "Space Planning",
+          "title": "2. Space Planning",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Good space planning is one of the most important elements of architectural design."
+            },
+            {
+              "type": "paragraph",
+              "text": "A larger area doesn't necessarily mean a better design — smart layout can make a space feel more comfortable and practical."
+            },
+            {
+              "type": "list",
+              "listTitle": "Things worth considering include:",
+              "items": [
+                "How people move through the space.",
+                "The relationship between rooms and areas.",
+                "Where services are located.",
+                "Natural lighting.",
+                "Ventilation.",
+                "Privacy.",
+                "Ease of use."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aesthetics-identity",
+          "nav": "Aesthetics & Identity",
+          "title": "3. Aesthetic Form and Identity",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Once functional needs are defined, the aesthetic side comes in."
+            },
+            {
+              "type": "paragraph",
+              "text": "Choosing facades, materials, colors, and architectural details should connect to the project's identity and nature."
+            },
+            {
+              "type": "paragraph",
+              "text": "A residential villa has different requirements from an administrative building, and a commercial building differs from an industrial project."
+            }
+          ]
+        },
+        {
+          "id": "coordination",
+          "nav": "Coordination Between Designs",
+          "title": "4. Coordination Between Designs",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A single building brings together many specialties, so architectural design can't be handled in isolation from the rest."
+            },
+            {
+              "type": "list",
+              "listTitle": "Coordination is needed between:",
+              "items": [
+                "Architecture",
+                "Structure",
+                "Electrical",
+                "Mechanical",
+                "Plumbing"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Lack of coordination can lead to conflicts during execution — service routes clashing with structural elements, or openings that don't match the intended use."
+            },
+            {
+              "type": "paragraph",
+              "text": "Design coordination aims to solve these problems on paper, before they ever appear on site."
+            }
+          ]
+        },
+        {
+          "id": "constructability",
+          "nav": "Constructability",
+          "title": "5. Constructability",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A beautiful design also needs to be buildable."
+            },
+            {
+              "type": "list",
+              "listTitle": "This means thinking about:",
+              "items": [
+                "The nature of materials.",
+                "Construction methods.",
+                "Structural details.",
+                "Material availability.",
+                "Site requirements.",
+                "Cost.",
+                "Timeline."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "That's why the relationship between the designer and the execution team is a key part of turning an idea into a real building."
+            }
+          ]
+        },
+        {
+          "id": "from-drawings-to-reality",
+          "nav": "From Drawings to Reality",
+          "title": "6. From Drawings to Reality",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The most important stage is turning the design into reality — and this is where details matter most."
+            },
+            {
+              "type": "paragraph",
+              "text": "Execution doesn't just depend on having drawings; it depends on understanding them, reviewing them, confirming they're applied correctly, and handling anything that comes up on site in an organized, engineering-driven way."
+            }
+          ]
+        },
+        {
+          "id": "success-factors",
+          "nav": "What Makes a Design Successful",
+          "title": "What Makes Architectural Design Successful?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The key elements can be summed up as:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Function",
+                "Beauty",
+                "Coordination",
+                "Constructability",
+                "Quality"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "When these elements come together, a design becomes far more capable of achieving its intended goal."
+            }
+          ]
+        },
+        {
+          "id": "conclusion",
+          "nav": "Conclusion",
+          "title": "Conclusion",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Successful architecture isn't just a beautiful building in photos — it's a space designed to serve the people using it, function efficiently, and be built with precision."
+            },
+            {
+              "type": "paragraph",
+              "text": "At Amr Ali Contracting & General Trading, we believe a project's success starts with understanding the idea and turning it into real, well-considered execution."
+            }
           ]
         }
-      ]
+      ],
+      "cta": {
+        "text": "Have an idea for a new project? Share the details with us, and let's take it from concept all the way to execution.",
+        "whatsappMessage": "Hello, I have an idea for a new project and would like to share the details with you"
+      }
+    },
+    "metals": {
+      "title": "Reinforcement Steel in Structures: Why Quality and Precision Are Essential",
+      "sections": [
+        {
+          "id": "intro",
+          "nav": "Introduction",
+          "title": "Introduction",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Reinforcement steel is one of the fundamental elements in reinforced concrete structures, which is why the quality of metalwork doesn't just depend on the material itself — it extends to the precision of cutting, shaping, installation, and how closely execution matches the engineering drawings."
+            },
+            {
+              "type": "list",
+              "listTitle": "Key details that need careful review before pouring concrete include:",
+              "items": [
+                "The diameter and number of bars.",
+                "Spacing.",
+                "Splices.",
+                "Reinforcement placement.",
+                "Concrete cover."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "function",
+          "nav": "The Role of Reinforcement",
+          "title": "What Is the Role of Reinforcement Steel?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Concrete and steel work together within concrete elements to achieve the required structural performance."
+            },
+            {
+              "type": "paragraph",
+              "text": "That's why placing the steel in the right position, with the exact details specified in the design, is essential."
+            },
+            {
+              "type": "paragraph",
+              "text": "It isn't enough for the quantity of steel to be correct — its placement, spacing, and details must also match the approved drawings."
+            }
+          ]
+        },
+        {
+          "id": "drawings-review",
+          "nav": "Reviewing the Drawings",
+          "title": "1. Reviewing the Drawings",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Before reinforcement work begins, the approved structural drawings must be checked to determine:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Bar diameters.",
+                "Number of bars.",
+                "Spacing.",
+                "Splice locations.",
+                "Stirrup details.",
+                "Reinforcement locations.",
+                "Details of the various elements."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "These details shouldn't be determined by habit or personal judgment — they should follow the project's approved design and specifications."
+            }
+          ]
+        },
+        {
+          "id": "cutting-bending",
+          "nav": "Cutting and Bending",
+          "title": "2. Cutting and Bending",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Once reinforcement details are set, the bars are prepared to the required lengths and shapes."
+            },
+            {
+              "type": "paragraph",
+              "text": "Precision at this stage matters, since it affects how easily the steel can be installed and the execution team's ability to match what's shown in the drawings."
+            }
+          ]
+        },
+        {
+          "id": "installation",
+          "nav": "Installing the Steel",
+          "title": "3. Installing the Steel",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Reinforcement is installed within the concrete element according to the design details."
+            },
+            {
+              "type": "list",
+              "listTitle": "This stage requires reviewing:",
+              "items": [
+                "Spacing between bars.",
+                "Splice locations.",
+                "Fixing and tying.",
+                "Stirrups.",
+                "Reinforcement orientation.",
+                "Openings and intersections."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concrete-cover",
+          "nav": "Concrete Cover",
+          "title": "4. Concrete Cover",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Concrete cover is the distance between the surface of the concrete and the nearest reinforcement bar."
+            },
+            {
+              "type": "paragraph",
+              "text": "This cover helps protect the steel and provide the conditions needed for performance and durability — but the required thickness isn't a fixed number for every element; it depends on the structural element, the environment, the specifications, and the code governing the project."
+            },
+            {
+              "type": "paragraph",
+              "text": "That's why the value specified in the approved drawings and specifications must be followed, rather than relying on a generic figure."
+            }
+          ]
+        },
+        {
+          "id": "pre-pour-review",
+          "nav": "Review Before Pouring",
+          "title": "5. Review Before Pouring",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "This is one of the most important checkpoints."
+            },
+            {
+              "type": "paragraph",
+              "text": "Before concrete arrives, it must be confirmed that the reinforcement is correctly positioned, and that spacing, splices, cover, and supports all match the required details."
+            },
+            {
+              "type": "paragraph",
+              "text": "Because once concrete is poured, a large part of this work becomes invisible — making it far easier and clearer to correct any issues before pouring than after."
+            }
+          ]
+        },
+        {
+          "id": "small-details",
+          "nav": "Why Small Details Matter",
+          "title": "Why Do Small Details Matter?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "In construction work, some details can seem small, yet still have a real impact on the quality of execution."
+            },
+            {
+              "type": "paragraph",
+              "text": "That's why quality isn't just about using good materials — it's also about:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Suitable materials",
+                "Precise execution",
+                "Continuous review",
+                "Adherence to the drawings"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conclusion",
+          "nav": "Conclusion",
+          "title": "Conclusion",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The quality of metalwork starts with correctly reading the drawings, and extends through preparation, installation, and review before pouring."
+            },
+            {
+              "type": "paragraph",
+              "text": "The more precise the review process, the greater the ability to catch any issue at the right time."
+            },
+            {
+              "type": "paragraph",
+              "text": "Amr Ali Contracting & General Trading — we care about the details that make a real difference in execution quality."
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "text": "Have a project that needs specialized structural work? Contact us to discuss your project's requirements.",
+        "whatsappMessage": "Hello, I have a project that needs specialized reinforcement steel work and would like to discuss the requirements"
+      }
+    },
+    "comingSoonNav": "Overview",
+    "comingSoonBody": "Full article content for this topic is coming soon.",
+    "altitude": {
+      "title": "Working at Height: How We Maintain Safety and Execution Efficiency",
+      "sections": [
+        {
+          "id": "intro",
+          "nav": "Introduction",
+          "title": "Introduction",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Work carried out at height requires careful planning and clear safety procedures."
+            },
+            {
+              "type": "paragraph",
+              "text": "Working at height covers many situations — work on roofs, scaffolding, platforms, cranes, and areas with a risk of falling. It's one of the leading causes of serious injury and fatalities on construction sites, which is why it demands planning, supervision, and the right choice of equipment."
+            }
+          ]
+        },
+        {
+          "id": "planning",
+          "nav": "Planning Before Work Begins",
+          "title": "1. Planning Before Work Begins",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Safety begins before a worker ever climbs to a height."
+            },
+            {
+              "type": "paragraph",
+              "text": "The nature of the task and its potential risks must be identified first, then the right method and equipment chosen to carry it out."
+            },
+            {
+              "type": "list",
+              "listTitle": "Key questions include:",
+              "items": [
+                "How high is the work area?",
+                "What is the nature of the surface?",
+                "How long will the work take?",
+                "Are there edges or openings?",
+                "What equipment is needed?",
+                "How will the work area be accessed?",
+                "What happens in an emergency?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "equipment",
+          "nav": "Choosing the Right Equipment",
+          "title": "2. Choosing the Right Equipment",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "There's no single method suited to every height-related task."
+            },
+            {
+              "type": "list",
+              "listTitle": "Depending on the task, different methods can be used, such as:",
+              "items": [
+                "Scaffolding.",
+                "Elevated platforms.",
+                "Suitable cranes.",
+                "Fall protection systems.",
+                "Protective barriers."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Safety guidelines recommend equipment that is suitable, stable, and strong enough for the task, with regular inspection and maintenance."
+            }
+          ]
+        },
+        {
+          "id": "worker-protection",
+          "nav": "Protecting Workers",
+          "title": "3. Protecting Workers",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Personal protective equipment is an important part of the safety system, but it isn't the only solution."
+            },
+            {
+              "type": "paragraph",
+              "text": "Preventing falls as much as possible through collective protection measures — barriers, scaffolding, suitable platforms — should come first, with personal protective equipment used as needed on top of that."
+            }
+          ]
+        },
+        {
+          "id": "site-security",
+          "nav": "Securing the Work Area",
+          "title": "4. Securing the Work Area",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Safety isn't only about the people working at height."
+            },
+            {
+              "type": "paragraph",
+              "text": "It's also essential to consider people below the work area, especially in case tools or materials fall."
+            },
+            {
+              "type": "paragraph",
+              "text": "That's why the work area needs to be organized, with proper measures in place to prevent falling objects and secure the surrounding site."
+            }
+          ]
+        },
+        {
+          "id": "ongoing-inspection",
+          "nav": "Ongoing Inspection",
+          "title": "5. Ongoing Inspection",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Before work begins, the equipment being used must be confirmed to be in proper working condition."
+            },
+            {
+              "type": "list",
+              "listTitle": "During execution, attention should be paid to any change in site conditions, such as:",
+              "items": [
+                "Changes in surface condition.",
+                "Equipment shifting.",
+                "Changes in load.",
+                "The presence of obstacles.",
+                "Changes in weather conditions.",
+                "New risks emerging."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Work should also only be carried out by people with the appropriate skills and experience for the task."
+            }
+          ]
+        },
+        {
+          "id": "emergency-plans",
+          "nav": "Emergencies & Rescue Plans",
+          "title": "6. Emergencies and Rescue Plans",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "One of the most important things to think through before working at height: what will we do if an emergency happens?"
+            },
+            {
+              "type": "paragraph",
+              "text": "Having a clear emergency response and rescue plan helps teams handle unexpected situations, rather than making rushed decisions in the middle of an incident."
+            }
+          ]
+        },
+        {
+          "id": "safety-efficiency",
+          "nav": "Safety & Efficiency",
+          "title": "Safety and Efficiency Are Two Sides of the Same Process",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Safety procedures can seem like they add time to a project, but good organization actually helps reduce accidents and unplanned stoppages."
+            },
+            {
+              "type": "paragraph",
+              "text": "An organized site, suitable equipment, advance planning, and good supervision all come together to make the work safer and more efficient."
+            }
+          ]
+        },
+        {
+          "id": "conclusion",
+          "nav": "Conclusion",
+          "title": "Conclusion",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Working at height needs more than just protective equipment."
+            },
+            {
+              "type": "paragraph",
+              "text": "It's a complete system — starting with risk assessment and planning, then choosing the right equipment, securing the work area, training workers, ongoing monitoring, and being prepared for emergencies."
+            },
+            {
+              "type": "paragraph",
+              "text": "At Amr Ali Contracting & General Trading, we treat organization, precision, and safety as fundamentals of how we work on site."
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "text": "Have a project that involves working at height? Contact us to discuss the project and its execution requirements.",
+        "whatsappMessage": "Hello, I have a project that involves working at height and would like to discuss the requirements"
+      }
+    },
+    "constructions": {
+      "title": "From Foundation to Handover: The Key Stages of a Construction Project",
+      "sections": [
+        {
+          "id": "intro",
+          "nav": "Introduction",
+          "title": "Introduction",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The success of any construction project doesn't begin on site — it begins earlier, with good planning, understanding the nature of the project, studying the site, and clearly preparing the stages of execution."
+            },
+            {
+              "type": "paragraph",
+              "text": "A construction project moves through several interconnected stages: starting with site preparation and excavation and foundation work, then the concrete structure, masonry and fit-out works, finishing works, and finally a closing review and handover."
+            },
+            {
+              "type": "paragraph",
+              "text": "Understanding these stages helps the project owner follow the work more closely, and highlights why organized management and execution matter at every single stage."
+            }
+          ]
+        },
+        {
+          "id": "site-study",
+          "nav": "Project Study & Site Preparation",
+          "title": "1. Project Study and Site Preparation",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Before actual execution begins comes the stage of studying the project and preparing the site. This covers understanding the drawings and specifications, reviewing the nature of the land, preparing the site for work, and defining the sequence of works and the resources required."
+            },
+            {
+              "type": "paragraph",
+              "text": "The more precise the planning stage is, the easier it becomes to spot potential challenges and address them before they affect execution."
+            }
+          ]
+        },
+        {
+          "id": "foundations",
+          "nav": "Excavation & Foundations",
+          "title": "2. Excavation and Foundation Works",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Foundations are among the most important construction stages, since they form the point of contact between the building and the soil."
+            },
+            {
+              "type": "paragraph",
+              "text": "Work usually begins by marking out the foundation locations according to the drawings, followed by excavation and preparation, then execution of the foundation system approved for the project based on the design and engineering studies. The foundation method differs from one project to another depending on the soil conditions, loads, and structural design."
+            }
+          ]
+        },
+        {
+          "id": "structure",
+          "nav": "Concrete Structure",
+          "title": "3. Executing the Concrete Structure",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Once the foundations are complete, work begins on the building's structural elements, such as:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Columns.",
+                "Beams.",
+                "Slabs.",
+                "Staircases.",
+                "Other concrete elements."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Precision in following the drawings and reviewing the work before pouring becomes especially important at this stage, since errors in structural elements can be far harder to correct once execution is complete."
+            }
+          ]
+        },
+        {
+          "id": "buildings-fitout",
+          "nav": "Masonry & Fit-Out",
+          "title": "4. Masonry and Fit-Out Works",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Once the core structural stages are complete, masonry and fit-out works begin, varying according to the nature of the project."
+            },
+            {
+              "type": "paragraph",
+              "text": "This stage requires coordinating between the different trades, so that spaces, openings, and routing align correctly with the architectural, electrical, and mechanical designs."
+            }
+          ]
+        },
+        {
+          "id": "finishes",
+          "nav": "Finishing Works",
+          "title": "5. Finishing Works",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The finishing stage gives the project its final appearance."
+            },
+            {
+              "type": "list",
+              "listTitle": "Depending on the project, this stage typically includes:",
+              "items": [
+                "Plastering.",
+                "Flooring.",
+                "Painting.",
+                "Doors and windows.",
+                "Facades.",
+                "Electrical works.",
+                "Plumbing works.",
+                "Other finishing works."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Finishing quality isn't just about looks — it also includes material quality, precision of execution, and final detailing."
+            }
+          ]
+        },
+        {
+          "id": "review-handover",
+          "nav": "Review & Handover",
+          "title": "6. Review and Handover",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Before the project is handed over, a final review stage confirms that the work is complete and matches the approved specifications and designs."
+            },
+            {
+              "type": "paragraph",
+              "text": "Handover is best carried out only after reviewing the finished work and resolving any observations found during inspection."
+            }
+          ]
+        },
+        {
+          "id": "continuous-monitoring",
+          "nav": "Why Continuous Monitoring Matters",
+          "title": "Why Do Projects Need Continuous Monitoring?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Because construction stages are interconnected, any delay or error in one stage can affect the ones that follow. Continuous monitoring and coordination between teams help keep the project running in an organized way."
+            },
+            {
+              "type": "paragraph",
+              "text": "Having clear review checkpoints throughout execution also helps catch problems early, rather than discovering them after work has been covered up or a new stage has already begun."
+            }
+          ]
+        },
+        {
+          "id": "conclusion",
+          "nav": "Conclusion",
+          "title": "Conclusion",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A successful construction project is the result of a set of integrated stages, not just one."
+            },
+            {
+              "type": "paragraph",
+              "text": "From site study and foundations, through the concrete structure, finishing, and handover — every stage requires careful planning, execution, and review."
+            },
+            {
+              "type": "paragraph",
+              "text": "At Amr Ali Contracting & General Trading, we believe a project's quality starts with the small details that add up to the bigger result."
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "text": "Have a construction project and need a specialized team? Contact us to discuss your project's details and requirements.",
+        "whatsappMessage": "Hello, I have a construction project and would like to discuss the details with your team"
+      }
     }
   }
 }

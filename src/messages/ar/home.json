@@ -46,7 +46,7 @@
     "items": {
       "buildings": {
         "title": "المباني",
-        "sectorTitle": "التطوير السكني",
+        "sectorTitle": "انشاءات سكنية",
         "sectionTitle": "المباني",
         "locationTitle": "التجمع الخامس - القاهرة",
         "yearTitle": "2019 - 2020"
@@ -67,21 +67,21 @@
       },
       "interiors": {
         "title": "التصاميم الداخلية للمنازل",
-        "sectorTitle": "التطوير السكني",
+        "sectorTitle": "انشاءات سكنية",
         "sectionTitle": "المباني",
         "locationTitle": "التجمع الخامس - القاهرة",
         "yearTitle": "2019 - 2020"
       },
       "apartments": {
         "title": "شقق",
-        "sectorTitle": "التطوير السكني",
+        "sectorTitle": "انشاءات سكنية",
         "sectionTitle": "المباني",
         "locationTitle": "التجمع الخامس - القاهرة",
         "yearTitle": "2019 - 2020"
       },
       "villas": {
         "title": "فيلات",
-        "sectorTitle": "التطوير السكني",
+        "sectorTitle": "انشاءات سكنية",
         "sectionTitle": "المباني",
         "locationTitle": "التجمع الخامس - القاهرة",
         "yearTitle": "2019 - 2020"

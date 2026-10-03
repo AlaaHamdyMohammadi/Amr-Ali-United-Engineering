@@ -1,9 +1,9 @@
 "use client";
 
-import altitude from "@/assets/altitude.png";
-import architecture from "@/assets/architecture.png";
-import constructions from "@/assets/constructions.png";
-import metals from "@/assets/metals.png";
+import altitude from "@/assets/altitude.jpeg";
+import architecture from "@/assets/architecture2.jpeg";
+import constructions from "@/assets/constructions2.jpeg";
+import metals from "@/assets/metals.jpeg";
 import { articles, type ArticleTypeKey } from "@/data/articles";
 import { Pagination } from "antd";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -21,7 +21,7 @@ const images: Record<ArticleTypeKey, StaticImageData> = {
   altitude,
 };
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 4;
 
 const gridVariants: Variants = {
   hidden: {},

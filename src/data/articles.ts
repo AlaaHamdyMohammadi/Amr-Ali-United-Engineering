@@ -17,7 +17,7 @@ const keys: ArticleTypeKey[] = [
 ];
 
 // Mock data: replace with real API/data later
-export const articles: Article[] = Array.from({ length: 48 }, (_, i) => ({
+export const articles: Article[] = Array.from({ length: 4 }, (_, i) => ({
   id: i + 1,
   typeKey: keys[i % keys.length],
 }));

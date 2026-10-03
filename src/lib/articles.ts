@@ -1,8 +1,8 @@
 import type { StaticImageData } from "next/image";
-import altitude from "@/assets/altitude.png";
-import architecture from "@/assets/architecture.png";
-import constructions from "@/assets/constructions.png";
-import metals from "@/assets/metals.png";
+import altitude from "@/assets/altitude.jpeg";
+import architecture from "@/assets/architecture2.jpeg";
+import constructions from "@/assets/constructions2.jpeg";
+import metals from "@/assets/metals.jpeg";
 import type { ArticleTypeKey } from "@/data/articles";
 
 export const articlesImages: Record<ArticleTypeKey, StaticImageData> = {
