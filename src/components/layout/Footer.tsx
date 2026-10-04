@@ -5,6 +5,8 @@ import facebook from "@/assets/facebook.svg";
 import instegram from "@/assets/instegram.svg";
 import linkedin from "@/assets/linkedin.svg";
 import twitter from "@/assets/twitter.svg";
+import youtube from "@/assets/youtube.svg";
+import tiktok from "@/assets/tiktok.svg";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import GradientText from "../TextAnimations/GradientText";
@@ -22,7 +24,17 @@ const socialLinks = [
     icon: linkedin,
     href: "https://www.linkedin.com/in/amr-amrali-for-contracting-59045637a/",
   },
+  {
+    key: "tiktok",
+    icon: tiktok,
+    href: "https://www.tiktok.com/@amrali.for.contra0?_r=1&_t=ZS-9AH4OAjHSAn",
+  },
   { key: "instagram", icon: instegram, href: "#" },
+  {
+    key: "youtube",
+    icon: youtube,
+    href: "https://youtube.com/@amraliforcontracting?si=ODACDA6g_5NQl4uf",
+  },
 ];
 
 export default function Footer() {
@@ -121,7 +133,7 @@ export default function Footer() {
           >
             {t("rights")}
           </GradientText>
-          <div className="flex gap-2 text-black">
+          <div className="flex gap-3 text-black">
             {socialLinks.map(({ key, icon: Icon, href }) => (
               <a key={key} href={href} aria-label={key}>
                 <Image

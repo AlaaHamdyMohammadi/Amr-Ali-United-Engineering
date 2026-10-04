@@ -6,26 +6,26 @@ import { useLocale, useTranslations } from "next-intl";
 import Image, { type StaticImageData } from "next/image";
 
 // Save the logos in src/assets/clients/ with these names
-import amanatJeddah from "@/assets/Frame1.png"; // Frame_1
-import universityOfJeddah from "@/assets/Frame2.png"; // Frame_2
-import riyadhSeason from "@/assets/Frame3.png"; // Frame_3
-import almarai from "@/assets/Frame4.png"; // Frame_4
-import gandour from "@/assets/Frame5.png"; // Frame_5
-import healthAndTasty from "@/assets/Frame6.png"; // frame_6
-import Frame7 from "@/assets/Frame7.png"; // frame_6
-import Frame8 from "@/assets/Frame8.png"; // frame_6
-import Frame9 from "@/assets/Frame9.png"; // frame_6
-import Frame10 from "@/assets/Frame10.png"; // frame_6
-import Frame11 from "@/assets/Frame11.png"; // frame_6
-import Frame12 from "@/assets/Frame12.png"; // frame_6
-import Frame13 from "@/assets/Frame13.png"; // frame_6
-import Frame14 from "@/assets/Frame14.png"; // frame_6
-import Frame15 from "@/assets/Frame15.png"; // frame_6
-import Frame16 from "@/assets/Frame16.png"; // frame_6
-import Frame17 from "@/assets/Frame17.png"; // frame_6
-import Frame18 from "@/assets/Frame18.png"; // frame_6
-import Frame19 from "@/assets/Frame19.png"; // frame_6
-import Frame20 from "@/assets/Frame20.png"; // frame_6
+import amanatJeddah from "@/assets/1.png"; // Frame_1
+import universityOfJeddah from "@/assets/2.png"; // Frame_2
+import riyadhSeason from "@/assets/3.png"; // Frame_3
+import almarai from "@/assets/4.png"; // Frame_4
+import gandour from "@/assets/5.png"; // Frame_5
+import healthAndTasty from "@/assets/6.png"; // frame_6
+import Frame7 from "@/assets/7.png"; // frame_6
+import Frame8 from "@/assets/8.png"; // frame_6
+import Frame9 from "@/assets/9.png"; // frame_6
+import Frame10 from "@/assets/10.png"; // frame_6
+import Frame11 from "@/assets/11.png"; // frame_6
+import Frame12 from "@/assets/12.png"; // frame_6
+import Frame13 from "@/assets/13.png"; // frame_6
+import Frame14 from "@/assets/14.png"; // frame_6
+import Frame15 from "@/assets/15.png"; // frame_6
+import Frame16 from "@/assets/16.png"; // frame_6
+import Frame17 from "@/assets/17.png"; // frame_6
+import Frame18 from "@/assets/18.png"; // frame_6
+import Frame19 from "@/assets/19.png"; // frame_6
+import Frame20 from "@/assets/20.png"; // frame_6
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 

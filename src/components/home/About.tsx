@@ -4,18 +4,18 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 import aboutUSSection from "@/assets/aboutSection.jpeg";
-import frame1 from "@/assets/Frame1.png";
-import Frame10 from "@/assets/Frame10.png"; // frame_6
-import Frame11 from "@/assets/Frame11.png"; // frame_6
-import Frame12 from "@/assets/Frame12.png"; // frame_6
-import frame2 from "@/assets/Frame2.png";
-import frame3 from "@/assets/Frame3.png";
-import frame4 from "@/assets/Frame4.png";
-import frame5 from "@/assets/Frame5.png";
-import frame6 from "@/assets/Frame6.png";
-import Frame7 from "@/assets/Frame7.png"; // frame_6
-import Frame8 from "@/assets/Frame8.png"; // frame_6
-import Frame9 from "@/assets/Frame9.png"; // frame_6
+import frame1 from "@/assets/1.png";
+import Frame10 from "@/assets/2.png"; // frame_6
+import Frame11 from "@/assets/3.png"; // frame_6
+import Frame12 from "@/assets/4.png"; // frame_6
+import frame2 from "@/assets/5.png";
+import frame3 from "@/assets/6.png";
+import frame4 from "@/assets/7.png";
+import frame5 from "@/assets/8.png";
+import frame6 from "@/assets/9.png";
+import Frame7 from "@/assets/10.png"; // frame_6
+import Frame8 from "@/assets/11.png"; // frame_6
+import Frame9 from "@/assets/12.png"; // frame_6
 import { motion, type Variants } from "motion/react";
 import Image from "next/image";
 import ScrollFadeIn from "../animations/ScrollFadeIn";
