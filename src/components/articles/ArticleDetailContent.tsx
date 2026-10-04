@@ -106,35 +106,14 @@ export default function ArticleDetailContent({ id }: { id: ArticleTypeKey }) {
           transition={{ duration: 0.6, ease: EASE }}
         >
           <div className="relative h-60 w-full overflow-hidden rounded-3xl sm:h-[484px]">
-            {playing && video ? (
-              <video
-                src={video}
-                controls
-                autoPlay
-                className="h-full w-full object-cover"
-              />
-            ) : (
-              <>
-                <Image
-                  src={articlesImages[id]}
-                  alt={detail.title}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 66vw, 100vw"
-                  className="object-cover"
-                />
-                <motion.button
-                  aria-label={t("play")}
-                  onClick={() => video && setPlaying(true)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                  className="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white"
-                >
-                  <Play size={18} fill="currentColor" />
-                </motion.button>
-              </>
-            )}
+            <Image
+              src={articlesImages[id]}
+              alt={detail.title}
+              fill
+              priority
+              sizes="(min-width: 1024px) 66vw, 100vw"
+              className="object-cover"
+            />
           </div>
 
           <h1 className="title-font text-[32px] font-semibold uppercase text-heading">
