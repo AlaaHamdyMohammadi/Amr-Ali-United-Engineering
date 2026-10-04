@@ -1,4 +1,4 @@
-import constructionImg from "@/assets/aboutsec.jpeg";
+import constructionImg from "@/assets/aboutsec1.jpeg";
 import building from "@/assets/altitude.jpeg";
 import cer1 from "@/assets/cer1.png";
 import cer2 from "@/assets/cer2.png";

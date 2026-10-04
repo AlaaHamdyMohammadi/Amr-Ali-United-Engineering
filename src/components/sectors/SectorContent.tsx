@@ -3,9 +3,9 @@
 import Breadcrumbs from "../ui/Breadcrumbs";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import sector1 from "@/assets/sector1.png";
-import sector2 from "@/assets/sector2.png";
-import sector3 from "@/assets/sector3.png";
+import sector1 from "@/assets/sector1.jpeg";
+import sector2 from "@/assets/sector2.jpeg";
+import sector3 from "@/assets/sector3.jpeg";
 import Image, { type StaticImageData } from "next/image";
 import MainButton from "../ui/MainButton";
 import ScrollReveal from "../TextAnimations/scrollRevealText";
