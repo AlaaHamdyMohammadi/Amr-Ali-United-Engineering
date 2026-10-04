@@ -25,7 +25,7 @@ const images: Record<ProjectTypeKey, StaticImageData> = {
   villas,
 };
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 4;
 
 interface Filters {
   sector?: string;
@@ -272,7 +272,7 @@ export default function ProjectContent() {
         </AnimatePresence>
 
         {/* Pagination */}
-        {filtered.length > PAGE_SIZE && (
+        {/* {filtered.length > PAGE_SIZE && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -286,7 +286,7 @@ export default function ProjectContent() {
               align="center"
             />
           </motion.div>
-        )}
+        )} */}
       </div>
     </section>
   );

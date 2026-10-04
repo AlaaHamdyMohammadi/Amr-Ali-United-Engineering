@@ -1,5 +1,5 @@
 import constructionImg from "@/assets/aboutsec.jpeg";
-import building from "@/assets/building2.png";
+import building from "@/assets/altitude.jpeg";
 import cer1 from "@/assets/cer1.png";
 import cer2 from "@/assets/cer2.png";
 import cer3 from "@/assets/cer3.png";

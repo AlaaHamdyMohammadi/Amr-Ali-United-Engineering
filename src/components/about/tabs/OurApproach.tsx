@@ -1,6 +1,6 @@
 "use client";
 
-import building from "@/assets/building2.png";
+import building from "@/assets/architecture2.jpeg";
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import { motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
