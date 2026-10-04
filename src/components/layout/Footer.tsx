@@ -11,9 +11,17 @@ import GradientText from "../TextAnimations/GradientText";
 import MainButton from "../ui/MainButton";
 
 const socialLinks = [
-  { key: "facebook", icon: facebook, href: "#" },
+  {
+    key: "facebook",
+    icon: facebook,
+    href: "https://www.facebook.com/share/1GxwcZeFst/",
+  },
   { key: "twitter", icon: twitter, href: "#" },
-  { key: "linkedin", icon: linkedin, href: "#" },
+  {
+    key: "linkedin",
+    icon: linkedin,
+    href: "https://www.linkedin.com/in/amr-amrali-for-contracting-59045637a/",
+  },
   { key: "instagram", icon: instegram, href: "#" },
 ];
 
