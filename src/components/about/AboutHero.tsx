@@ -31,6 +31,7 @@ export default function AboutHero() {
           delay={30}
           animateBy="words"
           direction="top"
+          className={`title-font text-4xl font-medium text-white sm:text-[80px]`}
         />
       </div>
     </section>

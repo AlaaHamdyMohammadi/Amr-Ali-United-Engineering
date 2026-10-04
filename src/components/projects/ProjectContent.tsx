@@ -260,10 +260,10 @@ export default function ProjectContent() {
                         </div>
                       </div>
                     </div>
-                    <MainButton preset="navLink" className="justify-start!" href={`/projects/${item.typeKey}`}>
+                    {/* <MainButton preset="navLink" className="justify-start!" href={`/projects/${item.typeKey}`}>
                       <span>{t("seeProjects")}</span>
                       <Arrow size={16} />
-                    </MainButton>
+                    </MainButton> */}
                   </div>
                 </motion.div>
               ))}

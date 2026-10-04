@@ -17,14 +17,14 @@
     "contact": "Contact Us"
   },
   "hero": {
-    "eyebrow": "Amr Ali Company",
+    "eyebrow": "Amr Ali For Contracting & General Trading",
     "headline": "Build your home\nwith trusted hands",
     "sub": "Residential, Commercial, Industrial",
     "cta": "Request a quote"
   },
   "about": {
     "eyebrow": "About Us",
-    "title": "Amr Ali is a prominent public contracting and construction company.",
+    "title": "Amr Ali For Contracting & General Trading",
     "lead": "We have provided you with high quality professional work in our work field such as construction, contracting, decoration and cladding for years in Saudi Arabia and Egypt.",
     "approachTitle": "What do we do?",
     "approachBody": "Amr Ali Co. offers a wide range of technical and project management solutions, which include engineering, procurement, construction (EPC), commissioning services. Our specialization is in interior design, construction of Buildings, Civil, Electromechanical, Infrastructure, Alominum cladding,Temporary facility and Facility Management Services to our public and private infrastructure and manufacturing sectors.",
@@ -90,7 +90,7 @@
     }
   },
   "sectors": {
-    "title": "Engineering permanent solutions for seven vital sectors",
+    "title": "Engineering permanent solutions for three vital sectors",
     "sub": "From deep foundation pour to architectural final hand-over, we translate blueprints into enduring public and private spaces. Our specialized teams match rigorous engineering precision with structural utility.",
     "cta": "Explore Sector Specification",
     "items": {

@@ -117,7 +117,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const isRtl = locale === "ar";
 
-  const fontVars = `${CairoFont.variable} ${PublicSans.variable} ${ClashDisplay.variable} ${ElMessiri.variable}`;
+  const fontVars = `${CairoFont.variable} ${PublicSans.variable} ${ClashDisplay.variable}`;
 
   return (
     <html lang={locale} dir={isRtl ? "rtl" : "ltr"}>

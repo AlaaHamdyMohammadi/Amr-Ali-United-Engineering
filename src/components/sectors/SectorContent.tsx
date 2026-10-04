@@ -104,10 +104,10 @@ export default function SectorContent() {
                   <span className="font-bold text-black text-sm sm:text-base">
                     {t(`items.${key}.tag`)}
                   </span>
-                  <MainButton className="h-8! hover:bg-clay-700!" href={`/sectors/${key}`}>
+                  {/* <MainButton className="h-8! hover:bg-clay-700!" href={`/sectors/${key}`}>
                     {t("learnMore")}
                     <Arrow size={16} />
-                  </MainButton>
+                  </MainButton> */}
                 </div>
               </div>
             </motion.div>

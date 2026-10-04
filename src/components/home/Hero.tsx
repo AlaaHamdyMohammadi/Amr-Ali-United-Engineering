@@ -46,9 +46,11 @@ export default function Hero() {
           delay={50}
           animateBy="words"
           direction="top"
-          className="text-[32px] font-bold tracking-wide text-clay-500"
+          className="text-[32px] font-bold tracking-wide text-clay-500 [text-shadow:0_0_12px_rgba(255,255,255,0.8)]"
         />
-        <h1 className={`max-w-2xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]`}>
+        <h1
+          className={`max-w-2xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]`}
+        >
           {lines.map((line, i) => (
             <BlurText
               key={i}
