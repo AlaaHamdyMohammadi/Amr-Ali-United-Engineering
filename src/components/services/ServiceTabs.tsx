@@ -15,24 +15,24 @@ import EngineeringDesigns from "./tabs/EngineeringDesigns";
 
 const TAB_IDS = [
   "generalContracting",
-  "generalSupplies",
   "integratedFinishing",
   "residentialFinishing",
   "commercialAdministrativeFinishing",
   "industrialFinishing",
-  "designs"
+  "designs",
+  "generalSupplies",
 ] as const;
 
 type TabId = (typeof TAB_IDS)[number];
 
 const TAB_CONTENT: Record<TabId, React.ComponentType> = {
   generalContracting: GeneralContractingtab,
-  generalSupplies: GeneralSupplies,
   integratedFinishing: IntegratedFinishing,
   residentialFinishing: ResidentialFinishingTab,
   commercialAdministrativeFinishing: CommercialAdministrativeFinishing,
   industrialFinishing: IndustrialFinishing,
   designs: EngineeringDesigns,
+  generalSupplies: GeneralSupplies,
 };
 
 export default function ServiceTabs() {

@@ -98,6 +98,7 @@
         "title": "Residential Development",
         "body": "Custom turnkey villas, smart luxury compounds, and architectural masterpieces designed for premium generational living.",
         "points": [
+          "Comprehensive residential finishing works",
           "Luxury Compound Design",
           "Custom Residential Villas",
           "Smart-Home Engineering Integrations"
@@ -107,18 +108,20 @@
         "title": "Commercial & Administrative",
         "body": "Turnkey grade-A corporate towers, modern workspaces, and corporate headquarters built for collaboration and energy efficiency.",
         "points": [
-          "Grade-A Offices",
-          "Co-working Ecosystems",
-          "Turnkey Commercial Fit-outs"
+          "Administrative offices and headquarters",
+          "Shared workspaces",
+          "Fully equipped commercial facilities",
+          "Premium administrative fit-outs"
         ]
       },
       "industrial": {
         "title": "Industrial & Logistics",
         "body": "State-of-the-art warehouses, factories, and heavy infrastructure built to precise technical, logistics, and seismic load requirements.",
         "points": [
-          "Cold-Chain Storage Facilities",
-          "Precision Assembly Plants",
-          "High-Load Infrastructure Logistics"
+          "Factory",
+          "Production lines",
+          "Logistics infrastructure",
+          "Workshops and laboratories"
         ]
       }
     }
