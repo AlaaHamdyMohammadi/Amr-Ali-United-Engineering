@@ -26,7 +26,7 @@
   "details": {
     "buttons": {
       "schedule": "Schedule Meeting",
-      "prices": "Price Ranges"
+      "price": "Price Ranges"
     },
     "whatsappMessage": "Hello, I'd like to ask about residential finishing services",
     "architecture": {
