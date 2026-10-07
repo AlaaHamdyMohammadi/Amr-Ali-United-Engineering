@@ -72,11 +72,10 @@ export default function Header() {
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="container-page flex items-center justify-between gap-4 pt-6">
         {/* Logo + primary nav pill */}
-        <nav className="flex size-12 items-center justify-center gap-6 rounded-full shadow-xl shadow-black/40 md:h-auto md:w-auto md:justify-start md:bg-white md:p-4 md:shadow-none">
-          {" "}
+        <nav className="flex size-14 items-center justify-center gap-6 rounded-full shadow-lg shadow-white/30 md:h-auto md:w-auto md:justify-start md:bg-white md:p-4 md:shadow-none">
           <Link href="/">
-            <Image src={LogoImg} alt="logo" className="size-10 sm:size-13" />
-          </Link>
+            <Image src={LogoImg} alt="logo" className="size-14 sm:size-13 " />
+          </Link>{" "}
           <div className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
               <Link

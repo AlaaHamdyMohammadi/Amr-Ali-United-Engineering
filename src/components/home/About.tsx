@@ -6,15 +6,15 @@ import { useLocale, useTranslations } from "next-intl";
 import aboutUSSection from "@/assets/aboutSection.jpeg";
 import frame1 from "@/assets/1.png";
 import Frame10 from "@/assets/2.png"; // frame_6
-import Frame11 from "@/assets/3.png"; // frame_6
+import Frame11 from "@/assets/33.jpeg"; // frame_6
 import Frame12 from "@/assets/4.png"; // frame_6
 import frame2 from "@/assets/5.png";
-import frame3 from "@/assets/6.png";
+import frame3 from "@/assets/8.png";
 import frame4 from "@/assets/7.png";
-import frame5 from "@/assets/8.png";
+import frame5 from "@/assets/6.png";
 import frame6 from "@/assets/9.png";
 import Frame7 from "@/assets/10.jpeg"; // frame_6
-import Frame8 from "@/assets/11.png"; // frame_6
+import Frame8 from "@/assets/11.jpg.jpeg"; // frame_6
 import Frame9 from "@/assets/12.png"; // frame_6
 import { motion, type Variants } from "motion/react";
 import Image from "next/image";
@@ -190,12 +190,14 @@ export default function About() {
                 variants={item}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="group flex h-32 items-center justify-center rounded-3xl border border-gray-50 bg-white p-6 shadow-md shadow-navy-900/5"
+                className="group relative aspect-square w-full rounded-3xl border border-gray-50 bg-white p-4 shadow-md shadow-navy-900/5"
               >
                 <Image
                   src={client.src}
                   alt={client.name}
-                  className="h-25 w-auto object-contain  transition duration-300 "
+                  fill
+                  sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 50vw"
+                  className="object-contain p-2 transition duration-300"
                 />
               </motion.div>
             ))}
