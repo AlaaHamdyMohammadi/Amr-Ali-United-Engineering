@@ -46,10 +46,10 @@ export default function Hero() {
           delay={50}
           animateBy="words"
           direction="top"
-          className="text-[32px] font-bold tracking-wide text-clay-500 !overflow-visible [text-shadow:0_0_12px_rgba(22,41,92,0.8)]"
+          className="text-[32px] font-bold tracking-wide text-clay-500 !overflow-visible [text-shadow:0_0_12px_rgba(0,0,0,0.8)]"
         />
         <h1
-          className={`max-w-2xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px]`}
+          className={`max-w-2xl title-font text-4xl font-medium leading-[1.2] text-white sm:text-5xl lg:text-[80px] [text-shadow:0_0_12px_rgba(0,0,0,0.8)]`}
         >
           {lines.map((line, i) => (
             <BlurText
@@ -66,7 +66,7 @@ export default function Hero() {
           delay={70}
           animateBy="words"
           direction="top"
-          className="max-w-2xl text-base text-white sm:text-2xl"
+          className="max-w-2xl text-base text-white sm:text-2xl [text-shadow:0_0_12px_rgba(0,0,0,0.8)]"
         />
       </div>
     </section>

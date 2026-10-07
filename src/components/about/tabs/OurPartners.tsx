@@ -15,7 +15,7 @@ import healthAndTasty from "@/assets/6.png"; // frame_6
 import Frame7 from "@/assets/7.png"; // frame_6
 import Frame8 from "@/assets/8.png"; // frame_6
 import Frame9 from "@/assets/9.png"; // frame_6
-import Frame10 from "@/assets/10.png"; // frame_6
+import Frame10 from "@/assets/10.jpeg"; // frame_6
 import Frame11 from "@/assets/11.png"; // frame_6
 import Frame12 from "@/assets/12.png"; // frame_6
 import Frame13 from "@/assets/13.png"; // frame_6

@@ -13,7 +13,7 @@ import frame3 from "@/assets/6.png";
 import frame4 from "@/assets/7.png";
 import frame5 from "@/assets/8.png";
 import frame6 from "@/assets/9.png";
-import Frame7 from "@/assets/10.png"; // frame_6
+import Frame7 from "@/assets/10.jpeg"; // frame_6
 import Frame8 from "@/assets/11.png"; // frame_6
 import Frame9 from "@/assets/12.png"; // frame_6
 import { motion, type Variants } from "motion/react";

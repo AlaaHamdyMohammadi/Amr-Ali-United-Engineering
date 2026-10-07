@@ -12,7 +12,7 @@ import MainButton from "@/components/ui/MainButton";
 export default function Header() {
   const t = useTranslations("home.nav");
   const locale = useLocale();
-  const pathname = usePathname(); // locale prefix is already stripped, e.g. "/about"
+  const pathname = usePathname();
   const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -34,15 +34,49 @@ export default function Header() {
     router.replace(pathname, { locale: next });
   }
 
+  function LanguageToggle() {
+    return (
+      <div className="flex items-center gap-2 rounded-full bg-mist-200 p-2">
+        <MainButton
+          preset="toggle"
+          active={locale === "en"}
+          onClick={() => switchLocale("en")}
+        >
+          EN
+        </MainButton>
+        <MainButton
+          preset="toggle"
+          active={locale === "ar"}
+          onClick={() => switchLocale("ar")}
+        >
+          Ar
+        </MainButton>
+      </div>
+    );
+  }
+
+  function CompactLanguageSwitch() {
+    const nextLocale = locale === "en" ? "ar" : "en";
+    return (
+      <button
+        onClick={() => switchLocale(nextLocale)}
+        aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
+        className="flex size-11 items-center justify-center rounded-full bg-white text-sm font-bold text-navy-900 shadow-lg shadow-black/10"
+      >
+        {locale === "en" ? "EN" : "Ar"}
+      </button>
+    );
+  }
+
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="container-page flex items-center justify-between gap-4 pt-6">
         {/* Logo + primary nav pill */}
-        <nav className="flex size-14 items-center justify-center gap-6 rounded-full bg-white shadow-lg shadow-black/10 md:h-auto md:w-auto md:justify-start md:p-4 md:shadow-none">
+        <nav className="flex size-12 items-center justify-center gap-6 rounded-full shadow-xl shadow-black/40 md:h-auto md:w-auto md:justify-start md:bg-white md:p-4 md:shadow-none">
+          {" "}
           <Link href="/">
             <Image src={LogoImg} alt="logo" className="size-10 sm:size-13" />
           </Link>
-
           <div className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
               <Link
@@ -71,33 +105,22 @@ export default function Header() {
             {t("contact")}
           </Link>
 
-          <div className="flex items-center gap-2 rounded-full bg-mist-200 p-2">
-            <MainButton
-              preset="toggle"
-              active={locale === "en"}
-              onClick={() => switchLocale("en")}
-            >
-              EN
-            </MainButton>
-            <MainButton
-              preset="toggle"
-              active={locale === "ar"}
-              onClick={() => switchLocale("ar")}
-            >
-              Ar
-            </MainButton>
-          </div>
+          <LanguageToggle />
         </div>
 
-        {/* Mobile trigger */}
-        <MainButton
-          preset="floatingIcon"
-          aria-label="Open menu"
-          onClick={() => setDrawerOpen(true)}
-          className="md:hidden!"
-        >
-          <MenuIcon size={20} />
-        </MainButton>
+        {/* Mobile-only group: language switch + hamburger together,
+            gap-2 apart from each other, as one unit against the logo. */}
+        <div className="flex items-center gap-2 md:hidden">
+          <CompactLanguageSwitch />
+          <MainButton
+            preset="floatingIcon"
+            aria-label="Open menu"
+            onClick={() => setDrawerOpen(true)}
+            className="size-11!"
+          >
+            <MenuIcon size={20} />
+          </MainButton>
+        </div>
       </div>
 
       <Drawer
@@ -131,23 +154,6 @@ export default function Header() {
           >
             {t("contact")}
           </MainButton>
-
-          <div className="mt-3 flex w-fit items-center gap-2 rounded-full bg-mist-200 p-2">
-            <MainButton
-              preset="toggle"
-              active={locale === "en"}
-              onClick={() => switchLocale("en")}
-            >
-              EN
-            </MainButton>
-            <MainButton
-              preset="toggle"
-              active={locale === "ar"}
-              onClick={() => switchLocale("ar")}
-            >
-              Ar
-            </MainButton>
-          </div>
         </div>
       </Drawer>
     </header>
