@@ -17,3 +17,19 @@ export const sectorImages: Record<SectorId, StaticImageData> = {
   commercial: sector2,
   industrial: sector3,
 };
+
+export const SECTOR_SECTIONS = {
+  residential: [
+    "residentialFinishing",
+    "luxuryComplexes",
+    "residentialUnits",
+    "homeSystems",
+  ],
+  commercial: ["offices", "workspaces", "commercial", "premium"],
+  industrial: [
+    "factories",
+    "lines",
+    "infrastructure",
+    "laboratories",
+  ],
+} as const satisfies Record<SectorId, readonly string[]>;

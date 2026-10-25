@@ -5,42 +5,53 @@
   "sectionsTitle": "Sections",
   "seeProjects": "See projects",
   "sections": {
-    "buildings": "Buildings",
-    "homeInteriors": "Home Interiors",
-    "apartments": "Apartments",
-    "villas1": "Villas",
-    "villas2": "Villas",
-    "villas3": "Villas"
+    "residentialFinishing": "Comprehensive residential finishing",
+    "luxuryComplexes": "Design of luxury complexes",
+    "residentialUnits": "Custom villas and residential units",
+    "homeSystems": "Integration of smart home systems",
+    "offices": "Offices and administrative headquarters",
+    "workspaces": "Shared workspaces",
+    "commercial": "Fully equipped commercial facilities",
+    "premium": "Premium administrative finishes",
+    "factories": "Factories",
+    "lines": "Production lines",
+    "infrastructure": "Logistical infrastructure",
+    "laboratories": "Workshops and laboratories"
   },
   "items": {
     "residential": {
       "title": "Residential Development",
-      "body": "Custom turnkey villas, smart luxury compounds, and architectural masterpieces designed for premium generational living.",
+      "body": "We provide comprehensive solutions in residential construction, combining high-quality execution with modern design to create living spaces that offer both comfort and elegance, while meeting the aspirations of our clients.",
       "tag": "32 Section",
       "points": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales",
-        "Lorem ipsum dolor sit amet",
-        "consectetur adipiscing elit",
-        "Cras sodales"
+        "Construction and execution of residential buildings.",
+        "Construction of villas and residential units.",
+        "Interior and exterior finishing works.",
+        "Interior designs and decorations."
       ],
-      "body1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam. Sed sagittis sollicitudin",
-      "body2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales facilisis sapien, ac dapibus sapien pellentesque aliquam."
+      "body1": "We are committed to executing every project in accordance with its specific requirements, paying close attention to the finest engineering and architectural details, and selecting the appropriate materials to ensure the quality of the work.",
+      "body2": "We strive to transform our clients' visions into tangible reality through residential solutions that combine quality, functionality, and modern aesthetic touches."
     },
     "commercial": {
       "title": "Commercial & Administrative",
-      "body": "Turnkey grade-A corporate towers, modern workspaces, and corporate headquarters built for collaboration and energy efficiency.",
+      "body": "We provide comprehensive solutions for the development of commercial and administrative facilities—including retail stores, offices, and corporate headquarters—featuring functional designs and professional execution tailored to business needs and optimized for space efficiency.",
       "tag": "32 Section",
-      "points": ["...", "...", "...", "..."],
-      "body1": "...",
-      "body2": "..."
+      "points": ["Execution of retail shops and commercial showrooms for various types of businesses.", "Establishing and equipping offices and administrative premises.", "Interior and exterior finishing works for commercial spaces.", "Efficient use of space to create a functional work environment."],
+      "body1": "We execute commercial and administrative projects tailored to the specific nature and operational requirements of each business. We place a strong emphasis on architectural details, the quality of materials, and the strategic allocation of space, ensuring the creation of functional environments that reflect the brand’s identity while meeting the needs of both clients and staff.",
+      "body2": "“We are keen to organize the implementation stages and follow up the work carefully, starting with site preparation and construction work, through finishes and equipment, all the way to completing the project according to the agreed upon scope of work, with a focus on quality and efficiency of implementation.”"
     },
     "industrial": {
       "title": "Industrial & Logistics",
-      "body": "State-of-the-art warehouses, factories, and heavy infrastructure built to precise technical, logistics, and seismic load requirements.",
+      "body": "We provide comprehensive solutions for the execution of industrial and logistics facilities—including warehouses, factories, and storage and operational units—with a focus on design efficiency, construction quality, and meeting the specific technical and operational requirements of each project.",
       "tag": "32 Section",
-      "points": ["...", "...", "...", "..."],
-      "body1": "...",
-      "body2": "..."
+      "points": [
+        "Construction of warehouses and storage facilities for various uses.",
+        "Development and outfitting of industrial facilities and buildings.",
+        "Execution of construction works tailored to the specific requirements of the business activity.",
+        "Preparation of spaces to enhance operational efficiency and streamline workflow."
+      ],
+      "body1": "We execute industrial and logistics projects with careful consideration for the nature of the operations and their technical requirements from the allocation of space and the layout of work zones to the completion of construction and the installation of necessary equipment all designed to facilitate smooth movement and ensure the efficient use of space.",
+      "body2": "We are committed to organizing the execution phases and monitoring project details in accordance with the scope of work and approved specifications. We place a strong emphasis on the quality of materials, precision in execution, and coordination between the various stages, all to deliver facilities that meet the requirements of industrial and storage operations."
     }
   }
 }

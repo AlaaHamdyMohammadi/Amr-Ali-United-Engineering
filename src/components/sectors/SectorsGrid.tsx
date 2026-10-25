@@ -56,7 +56,7 @@ export default function SectorsGrid({
       </motion.h2>
 
       <motion.div
-        className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-5 sm:grid-cols-2"
         variants={gridVariants}
         initial="hidden"
         whileInView="show"

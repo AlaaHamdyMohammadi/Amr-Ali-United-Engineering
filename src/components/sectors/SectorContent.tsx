@@ -100,10 +100,10 @@ export default function SectorContent() {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-bold text-black text-sm sm:text-base">
+                <div className="flex items-center justify-end gap-4">
+                  {/* <span className="font-bold text-black text-sm sm:text-base">
                     {t(`items.${key}.tag`)}
-                  </span>
+                  </span> */}
                   <MainButton className="h-8! hover:bg-clay-700!" href={`/sectors/${key}`}>
                     {t("learnMore")}
                     <Arrow size={16} />

@@ -1,19 +1,10 @@
 
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import { sectorImages, type SectorId } from "@/lib/sectors";
+import { SECTOR_SECTIONS, sectorImages, type SectorId } from "@/lib/sectors";
 import { ArrowRight } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import SectorDetailIntro from "./SectorDetailIntro";
 import SectorsGrid from "./SectorsGrid";
-
-const SECTION_KEYS = [
-  "buildings",
-  "homeInteriors",
-  "apartments",
-  "villas1",
-  "villas2",
-  "villas3",
-] as const;
 
 export default async function SectorDetailContent({
   sectorId,
@@ -24,6 +15,7 @@ export default async function SectorDetailContent({
   const locale = await getLocale();
   const isRtl = locale === "ar";
   const points = t.raw(`items.${sectorId}.points`) as string[];
+  const sectionKeys: readonly string[] = SECTOR_SECTIONS[sectorId];
 
   return (
     <section className="section bg-mist-50">
@@ -41,7 +33,7 @@ export default async function SectorDetailContent({
 
         <SectorsGrid
           sectionsTitle={t("sectionsTitle")}
-          sections={SECTION_KEYS.map((key) => ({
+          sections={sectionKeys.map((key) => ({
             key,
             label: t(`sections.${key}`),
           }))}
