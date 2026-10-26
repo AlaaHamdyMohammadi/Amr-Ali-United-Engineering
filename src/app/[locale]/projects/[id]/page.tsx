@@ -1,12 +1,12 @@
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { PROJECT_TYPE_KEYS, isProjectTypeKey } from "@/data/projects";
-import ProjectDetailHero from "@/components/projects/ProjectDetailHero";
 import ProjectDetailContent from "@/components/projects/ProjectDetailContent";
+import ProjectDetailHero from "@/components/projects/ProjectDetailHero";
+import { PROJECT_SLUGS, getProjectBySlug } from "@/types/index";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    PROJECT_TYPE_KEYS.map((id) => ({ locale, id })),
+    PROJECT_SLUGS.map((id) => ({ locale, id })),
   );
 }
 
@@ -17,14 +17,13 @@ export default async function ProjectDetailPage({
 }) {
   const { id } = await params;
 
-  if (!isProjectTypeKey(id)) {
-    notFound();
-  }
+  const project = getProjectBySlug(id);
+  if (!project) notFound();
 
   return (
     <main className="flex flex-col gap-0">
-      <ProjectDetailHero id={id} />
-      <ProjectDetailContent id={id} />
+      <ProjectDetailHero project={project} />
+      <ProjectDetailContent project={project} />
     </main>
   );
 }

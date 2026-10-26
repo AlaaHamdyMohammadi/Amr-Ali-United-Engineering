@@ -1,39 +1,34 @@
 "use client";
 
-import apartmants from "@/assets/apartmants.png";
-import buildings from "@/assets/buildings.png";
-import interiors from "@/assets/home-interiors.png";
-import villas from "@/assets/villas.png";
 import {
-  getUniqueValues,
+  getFilterOptions,
   projects,
-  type ProjectTypeKey,
-} from "@/data/projects";
-import { Pagination, Select } from "antd";
+  type FilterKey,
+  type Locale,
+} from "@/data/projects-test";
+import { Select } from "antd";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import Breadcrumbs from "../ui/Breadcrumbs";
 import MainButton from "../ui/MainButton";
+import projectOne from "../../public/projects/fish-farm-foundations-port-said/1.jpg"
 
-const images: Record<ProjectTypeKey, StaticImageData> = {
-  buildings,
-  interiors,
-  apartments: apartmants,
-  villas,
-};
 
-const PAGE_SIZE = 4;
+const PAGE_SIZE = 7;
 
-interface Filters {
-  sector?: string;
-  section?: string;
-  location?: string;
-  year?: string;
-  status?: string;
-}
+// Filter values are the English strings (stable across languages)
+type Filters = Partial<Record<FilterKey, string>>;
+
+const FILTER_KEYS: FilterKey[] = [
+  "sector",
+  "section",
+  "location",
+  "year",
+  "status",
+];
 
 const filtersBarVariants: Variants = {
   hidden: { opacity: 0, y: -12 },
@@ -51,7 +46,7 @@ const gridVariants: Variants = {
   },
 };
 
-// Odd-index cards slide from left, even-index cards slide from right
+// Even-index cards slide from left, odd-index cards slide from right
 const cardVariantsLeft: Variants = {
   hidden: { opacity: 0, x: -80 },
   show: {
@@ -82,33 +77,31 @@ const cardVariantsRight: Variants = {
 
 export default function ProjectContent() {
   const t = useTranslations("projects");
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
   const Arrow = locale === "ar" ? ArrowLeft : ArrowRight;
 
   const [filters, setFilters] = useState<Filters>({});
   const [page, setPage] = useState(1);
 
-  const sectorOptions = useMemo(() => getUniqueValues("sector"), []);
-  const sectionOptions = useMemo(() => getUniqueValues("section"), []);
-  const locationOptions = useMemo(() => getUniqueValues("location"), []);
-  const yearOptions = useMemo(() => getUniqueValues("year"), []);
-  const statusOptions = useMemo(() => getUniqueValues("status"), []);
+  const options = useMemo(
+    () =>
+      Object.fromEntries(
+        FILTER_KEYS.map((k) => [k, getFilterOptions(k, locale)]),
+      ) as Record<FilterKey, { value: string; label: string }[]>,
+    [locale],
+  );
 
-  const filtered = useMemo(() => {
-    return projects.filter((p) => {
-      if (filters.sector && p.sector !== filters.sector) return false;
-      if (filters.section && p.section !== filters.section) return false;
-      if (filters.location && p.location !== filters.location) return false;
-      if (filters.year && p.year !== filters.year) return false;
-      if (filters.status && p.status !== filters.status) return false;
-      return true;
-    });
-  }, [filters]);
+  const filtered = useMemo(
+    () =>
+      projects.filter((p) =>
+        FILTER_KEYS.every((k) => !filters[k] || p[k].en === filters[k]),
+      ),
+    [filters],
+  );
 
   const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-  console.log("paged = ", paged);
 
-  function updateFilter<K extends keyof Filters>(key: K, value: Filters[K]) {
+  function updateFilter(key: FilterKey, value?: string) {
     setFilters((prev) => ({ ...prev, [key]: value }));
     setPage(1);
   }
@@ -134,46 +127,17 @@ export default function ProjectContent() {
           initial="hidden"
           animate="show"
         >
-          <Select
-            placeholder={t("filters.sector")}
-            allowClear
-            className={selectClassName}
-            value={filters.sector}
-            onChange={(v) => updateFilter("sector", v)}
-            options={sectorOptions.map((v) => ({ label: v, value: v }))}
-          />
-          <Select
-            placeholder={t("filters.section")}
-            allowClear
-            className={selectClassName}
-            value={filters.section}
-            onChange={(v) => updateFilter("section", v)}
-            options={sectionOptions.map((v) => ({ label: v, value: v }))}
-          />
-          <Select
-            placeholder={t("filters.location")}
-            allowClear
-            className={selectClassName}
-            value={filters.location}
-            onChange={(v) => updateFilter("location", v)}
-            options={locationOptions.map((v) => ({ label: v, value: v }))}
-          />
-          <Select
-            placeholder={t("filters.year")}
-            allowClear
-            className={selectClassName}
-            value={filters.year}
-            onChange={(v) => updateFilter("year", v)}
-            options={yearOptions.map((v) => ({ label: v, value: v }))}
-          />
-          <Select
-            placeholder={t("filters.status")}
-            allowClear
-            className={selectClassName}
-            value={filters.status}
-            onChange={(v) => updateFilter("status", v)}
-            options={statusOptions.map((v) => ({ label: v, value: v }))}
-          />
+          {FILTER_KEYS.map((key) => (
+            <Select
+              key={key}
+              placeholder={t(`filters.${key}`)}
+              allowClear
+              className={selectClassName}
+              value={filters[key]}
+              onChange={(v) => updateFilter(key, v)}
+              options={options[key]}
+            />
+          ))}
 
           <MainButton
             className="ms-auto hover:bg-clay-700!"
@@ -218,49 +182,39 @@ export default function ProjectContent() {
                   className="flex shrink-0 flex-col gap-6 rounded-3xl border border-gray-50 bg-white shadow-md shadow-navy-900/5"
                 >
                   <Image
-                    src={images[item.typeKey]}
-                    alt={item.typeKey}
+                    src={item.images[0]}
+                    alt={item.title[locale]}
+                    width={600}
+                    height={420}
+                    sizes="(min-width: 640px) 25vw, 100vw"
                     className="h-40 w-full rounded-3xl object-cover sm:h-52.25"
                   />
                   <div className="flex flex-col gap-8 px-6 pb-6">
                     <div className="flex flex-col gap-4">
-                      <h1 className="text-lg font-bold text-navy-750">
-                        {t(`items.${item.typeKey}.title`)}
-                      </h1>
+                      <h2 className="text-lg font-bold text-navy-750">
+                        {item.title[locale]}
+                      </h2>
                       <div className="grid grid-cols-2 gap-5">
-                        <div className="flex flex-col gap-3">
-                          <p className="font-bold text-gray-400">
-                            {t("sector")}
-                          </p>
-                          <p className="text-sm font-medium text-black">
-                            {item.sector}
-                          </p>
-                        </div>
-                        <div className="flex flex-col gap-3">
-                          <p className="font-bold text-gray-400">
-                            {t("section")}
-                          </p>
-                          <p className="text-sm font-medium text-black">
-                            {item.section}
-                          </p>
-                        </div>
-                        <div className="flex flex-col gap-3">
-                          <p className="font-bold text-gray-400">
-                            {t("location")}
-                          </p>
-                          <p className="text-sm font-medium text-black">
-                            {item.location}
-                          </p>
-                        </div>
-                        <div className="flex flex-col gap-3">
-                          <p className="font-bold text-gray-400">{t("year")}</p>
-                          <p className="text-sm font-medium text-black">
-                            {item.year}
-                          </p>
-                        </div>
+                        <Field
+                          label={t("sector")}
+                          value={item.sector[locale]}
+                        />
+                        <Field
+                          label={t("section")}
+                          value={item.section[locale]}
+                        />
+                        <Field
+                          label={t("location")}
+                          value={item.location[locale]}
+                        />
+                        <Field label={t("year")} value={item.year[locale]} />
                       </div>
                     </div>
-                    <MainButton preset="navLink" className="justify-start!" href={`/projects/${item.typeKey}`}>
+                    <MainButton
+                      preset="navLink"
+                      className="justify-start!"
+                      href={`/projects/${item.slug}`}
+                    >
                       <span>{t("seeProjects")}</span>
                       <Arrow size={16} />
                     </MainButton>
@@ -270,24 +224,16 @@ export default function ProjectContent() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Pagination */}
-        {/* {filtered.length > PAGE_SIZE && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-          >
-            <Pagination
-              current={page}
-              pageSize={PAGE_SIZE}
-              total={filtered.length}
-              onChange={setPage}
-              align="center"
-            />
-          </motion.div>
-        )} */}
       </div>
     </section>
+  );
+}
+
+function Field({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex flex-col gap-3">
+      <p className="font-bold text-gray-400">{label}</p>
+      <p className="text-sm font-medium text-black">{value}</p>
+    </div>
   );
 }

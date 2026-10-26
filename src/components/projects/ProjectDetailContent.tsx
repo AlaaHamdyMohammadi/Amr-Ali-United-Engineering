@@ -3,32 +3,14 @@
 import ShinyText from "@/components/TextAnimations/ShinyText";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import MainButton from "@/components/ui/MainButton";
-import { projectGalleries } from "@/data/projectDetails";
-import type { ProjectTypeKey } from "@/data/projects";
+import type { Locale, ProjectItem } from "@/types/projects";
 import { Share2 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import ProjectGallery from "./ProjectGallery";
 
-const TAB_IDS = ["challengesSolutions", "phases", "services"] as const;
-type TabId = (typeof TAB_IDS)[number];
-
-interface ProjectDetail {
-  title: string;
-  description: string;
-  sector: string;
-  section: string;
-  location: string;
-  year: string;
-  area: string;
-  duration: string;
-  status: string;
-  challenges: { title: string; body: string }[];
-  solutions: { title: string; body: string }[];
-  phases: { title: string; body: string }[];
-  services: string[];
-}
+type TabId = "challengesSolutions" | "phases" | "materials";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -70,12 +52,39 @@ const tabContentVariants = {
   exit: { opacity: 0, y: -10, transition: { duration: 0.2, ease: EASE } },
 };
 
-export default function ProjectDetailContent({ id }: { id: ProjectTypeKey }) {
+export default function ProjectDetailContent({
+  project,
+}: {
+  project: ProjectItem;
+}) {
   const t = useTranslations("projects");
-  const [activeTab, setActiveTab] = useState<TabId>("challengesSolutions");
+  const locale = useLocale() as Locale;
 
-  const detail = t.raw(`details.${id}`) as ProjectDetail;
-  const gallery = projectGalleries[id];
+  const title = project.title[locale];
+  const challenges = project.challenges[locale];
+  const phases = project.phases[locale];
+  const materials = project.materials[locale];
+
+  // Only show tabs that actually have content
+  const tabIds: TabId[] = [
+    ...(challenges.length ? (["challengesSolutions"] as const) : []),
+    ...(phases.length ? (["phases"] as const) : []),
+    ...(materials.length ? (["materials"] as const) : []),
+  ];
+
+  const [activeTab, setActiveTab] = useState<TabId | undefined>(tabIds[0]);
+
+  const unit = locale === "ar" ? "م²" : "m²";
+
+  const meta = [
+    ["sector", project.sector[locale]],
+    ["section", project.section[locale]],
+    ["location", project.location[locale]],
+    ["year", project.year[locale]],
+    ["area", `${project.area} ${unit}`],
+    ["duration", project.duration[locale]],
+    ["status", project.status[locale]],
+  ] as const;
 
   return (
     <section className="section container-page bg-mist-50 ">
@@ -91,7 +100,7 @@ export default function ProjectDetailContent({ id }: { id: ProjectTypeKey }) {
           variants={containerVariants}
         >
           <motion.div variants={galleryVariants}>
-            <ProjectGallery images={gallery} alt={detail.title} />
+            <ProjectGallery images={project.images} alt={title} />
           </motion.div>
 
           <motion.div
@@ -103,7 +112,7 @@ export default function ProjectDetailContent({ id }: { id: ProjectTypeKey }) {
               className="flex items-start justify-between gap-4"
             >
               <ShinyText
-                text={detail.title}
+                text={title}
                 speed={5}
                 delay={0}
                 color="#072469"
@@ -127,24 +136,14 @@ export default function ProjectDetailContent({ id }: { id: ProjectTypeKey }) {
               variants={itemVariants}
               className="text-lg font-semibold text-heading"
             >
-              {detail.description}
+              {project.description[locale]}
             </motion.p>
 
             <motion.div
               className="grid grid-cols-2 gap-x-22 gap-y-4 sm:grid-cols-4"
               variants={listContainerVariants}
             >
-              {(
-                [
-                  ["sector", detail.sector],
-                  ["section", detail.section],
-                  ["location", detail.location],
-                  ["year", detail.year],
-                  ["area", detail.area],
-                  ["duration", detail.duration],
-                  ["status", detail.status],
-                ] as const
-              ).map(([labelKey, value]) => (
+              {meta.map(([labelKey, value]) => (
                 <motion.div
                   key={labelKey}
                   variants={listItemVariants}
@@ -199,172 +198,185 @@ export default function ProjectDetailContent({ id }: { id: ProjectTypeKey }) {
         </motion.div>
 
         {/* Tabs */}
-        <motion.div
-          className="rounded-3xl border border-[#CDCDCD] p-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: EASE }}
-        >
-          <div className="flex gap-6 border-b border-[#CDCDCD]">
-            {TAB_IDS.map((tabId) => (
-              <button
-                key={tabId}
-                onClick={() => setActiveTab(tabId)}
-                className="relative pb-3 text-sm sm:text-lg font-bold transition-colors duration-300"
-                style={{
-                  color: activeTab === tabId ? "#041338" : "rgba(11,23,48,0.4)",
-                }}
-              >
-                {t(`tabs.${tabId}`)}
-                {activeTab === tabId && (
-                  <motion.span
-                    layoutId="activeTabUnderline"
-                    className="absolute inset-x-0 -bottom-px h-0.5 rounded-full bg-navy-900"
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-
-          <div className="pt-6">
-            <AnimatePresence mode="wait">
-              {activeTab === "challengesSolutions" && (
-                <motion.div
-                  key="challengesSolutions"
-                  variants={tabContentVariants}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  className="grid gap-10 sm:grid-cols-2"
+        {activeTab && (
+          <motion.div
+            className="rounded-3xl border border-[#CDCDCD] p-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: EASE }}
+          >
+            <div className="flex gap-6 border-b border-[#CDCDCD]">
+              {tabIds.map((tabId) => (
+                <button
+                  key={tabId}
+                  onClick={() => setActiveTab(tabId)}
+                  className="relative pb-3 text-sm sm:text-lg font-bold transition-colors duration-300"
+                  style={{
+                    color:
+                      activeTab === tabId ? "#041338" : "rgba(11,23,48,0.4)",
+                  }}
                 >
-                  <motion.div
-                    className="flex flex-col gap-6"
-                    variants={listContainerVariants}
-                    initial="hidden"
-                    animate="show"
-                  >
-                    <h3 className="text-2xl font-extrabold text-black">
-                      {t("challenges")}
-                    </h3>
-                    {detail.challenges.map((item, i) => (
-                      <motion.div
-                        key={i}
-                        variants={listItemVariants}
-                        className="flex gap-4 rounded-2xl bg-[#F6E7D5] border border-[#EAB97E] p-4"
-                      >
-                        <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#E8BE99] border border-[#D5984F] text-sm font-bold text-[#653A06]">
-                          {i + 1}
-                        </span>
-                        <div className="flex flex-col gap-4">
-                          <h4 className="font-bold text-navy-750">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-[#474747]">{item.body}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-
-                  <motion.div
-                    className="flex flex-col gap-6"
-                    variants={listContainerVariants}
-                    initial="hidden"
-                    animate="show"
-                  >
-                    <h3 className="text-2xl font-extrabold text-black">
-                      {t("solutions")}
-                    </h3>
-                    {detail.solutions.map((item, i) => (
-                      <motion.div
-                        key={i}
-                        variants={listItemVariants}
-                        className="flex gap-4 rounded-2xl bg-[#DEE8FF] border border-[#8EA4DA] p-4"
-                      >
-                        <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#CCDBFE] border border-[#5F81D2] text-sm font-bold text-navy-800">
-                          {i + 1}
-                        </span>
-                        <div className="flex flex-col gap-4">
-                          <h4 className="font-bold text-navy-750">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-[#474747]">{item.body}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </motion.div>
-              )}
-
-              {activeTab === "phases" && (
-                <motion.div
-                  key="phases"
-                  variants={tabContentVariants}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  className="flex flex-col gap-4"
-                >
-                  <motion.div
-                    className="flex flex-col gap-4"
-                    variants={listContainerVariants}
-                    initial="hidden"
-                    animate="show"
-                  >
-                    {detail.phases.map((item, i) => (
-                      <motion.div
-                        key={i}
-                        variants={listItemVariants}
-                        className="flex gap-4 rounded-2xl border border-[#EBEBEB] bg-white p-4"
-                      >
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-bold text-white">
-                          {i + 1}
-                        </span>
-                        <div className="flex flex-col gap-1">
-                          <h4 className="text-sm font-bold text-navy-900">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-navy-900/60">
-                            {item.body}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </motion.div>
-              )}
-
-              {activeTab === "services" && (
-                <motion.div
-                  key="services"
-                  variants={tabContentVariants}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  className="flex flex-wrap gap-3"
-                >
-                  {detail.services.map((service, i) => (
+                  {t(`tabs.${tabId}`)}
+                  {activeTab === tabId && (
                     <motion.span
-                      key={service}
-                      initial={{ opacity: 0, scale: 0.85 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      layoutId="activeTabUnderline"
+                      className="absolute inset-x-0 -bottom-px h-0.5 rounded-full bg-navy-900"
                       transition={{
-                        duration: 0.3,
-                        delay: i * 0.04,
-                        ease: EASE,
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 30,
                       }}
-                      whileHover={{ scale: 1.05 }}
-                      className="rounded-full border border-[#EBEBEB] bg-white px-4 py-2 text-sm font-medium text-navy-900"
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+
+            <div className="pt-6">
+              <AnimatePresence mode="wait">
+                {activeTab === "challengesSolutions" && (
+                  <motion.div
+                    key="challengesSolutions"
+                    variants={tabContentVariants}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                    className="grid gap-10 sm:grid-cols-2"
+                  >
+                    <motion.div
+                      className="flex flex-col gap-6"
+                      variants={listContainerVariants}
+                      initial="hidden"
+                      animate="show"
                     >
-                      {service}
-                    </motion.span>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </motion.div>
+                      <h3 className="text-2xl font-extrabold text-black">
+                        {t("challenges")}
+                      </h3>
+                      {challenges.map((item, i) => (
+                        <motion.div
+                          key={i}
+                          variants={listItemVariants}
+                          className="flex gap-4 rounded-2xl bg-[#F6E7D5] border border-[#EAB97E] p-4"
+                        >
+                          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#E8BE99] border border-[#D5984F] text-sm font-bold text-[#653A06]">
+                            {i + 1}
+                          </span>
+                          <div className="flex flex-col gap-4">
+                            <h4 className="font-bold text-navy-750">
+                              {item.title}
+                            </h4>
+                            <p className="text-sm text-[#474747]">
+                              {item.challenge}
+                            </p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+
+                    <motion.div
+                      className="flex flex-col gap-6"
+                      variants={listContainerVariants}
+                      initial="hidden"
+                      animate="show"
+                    >
+                      <h3 className="text-2xl font-extrabold text-black">
+                        {t("solutions")}
+                      </h3>
+                      {challenges.map((item, i) => (
+                        <motion.div
+                          key={i}
+                          variants={listItemVariants}
+                          className="flex gap-4 rounded-2xl bg-[#DEE8FF] border border-[#8EA4DA] p-4"
+                        >
+                          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#CCDBFE] border border-[#5F81D2] text-sm font-bold text-navy-800">
+                            {i + 1}
+                          </span>
+                          <div className="flex flex-col gap-4">
+                            <h4 className="font-bold text-navy-750">
+                              {item.title}
+                            </h4>
+                            <p className="text-sm text-[#474747]">
+                              {item.solution}
+                            </p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                )}
+
+                {activeTab === "phases" && (
+                  <motion.div
+                    key="phases"
+                    variants={tabContentVariants}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                    className="flex flex-col gap-4"
+                  >
+                    <motion.div
+                      className="flex flex-col gap-4"
+                      variants={listContainerVariants}
+                      initial="hidden"
+                      animate="show"
+                    >
+                      {phases.map((item, i) => (
+                        <motion.div
+                          key={i}
+                          variants={listItemVariants}
+                          className="flex gap-4 rounded-2xl border border-[#EBEBEB] bg-white p-4"
+                        >
+                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-bold text-white">
+                            {i + 1}
+                          </span>
+                          <div className="flex flex-col gap-2">
+                            <h4 className="text-sm font-bold text-navy-900">
+                              {item.title}
+                            </h4>
+                            <ul className="flex list-disc flex-col gap-1 ps-5 text-sm text-navy-900/60">
+                              {item.points.map((point, j) => (
+                                <li key={j}>{point}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                )}
+
+                {activeTab === "materials" && (
+                  <motion.div
+                    key="materials"
+                    variants={tabContentVariants}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                    className="flex flex-wrap gap-3"
+                  >
+                    {materials.map((material, i) => (
+                      <motion.span
+                        key={material}
+                        initial={{ opacity: 0, scale: 0.85 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          duration: 0.3,
+                          delay: i * 0.04,
+                          ease: EASE,
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        className="rounded-full border border-[#EBEBEB] bg-white px-4 py-2 text-sm font-medium text-navy-900"
+                      >
+                        {material}
+                      </motion.span>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

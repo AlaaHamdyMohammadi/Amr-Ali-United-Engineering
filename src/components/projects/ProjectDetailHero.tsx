@@ -1,19 +1,21 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
-import heroSectionImg from "@/assets/heroSection.png";
-import { projectsImages, type ProjectId } from "@/lib/projects";
+import { getLocale } from "next-intl/server";
+import type { Locale, ProjectItem } from "@/types/projects";
 import BlurText from "../TextAnimations/BlurText";
 
-export default async function ProjectDetailHero({ id }: { id: string }) {
-  const t = await getTranslations("projects");
-
-  console.log("id = ", id);
+export default async function ProjectDetailHero({
+  project,
+}: {
+  project: ProjectItem;
+}) {
+  const locale = (await getLocale()) as Locale;
+  const title = project.title[locale];
 
   return (
     <section className="section relative isolate overflow-hidden bg-navy-950">
       <Image
-        src={projectsImages[id as ProjectId]}
-        alt=""
+        src={project.images[0]}
+        alt={title}
         fill
         priority
         sizes="100vw"
@@ -27,7 +29,7 @@ export default async function ProjectDetailHero({ id }: { id: string }) {
 
       <div className="container-page relative flex min-h-[320px] flex-col justify-end pb-10 pt-36 lg:min-h-[460px]">
         <BlurText
-          text={t(`${id}`)}
+          text={title}
           delay={30}
           animateBy="words"
           direction="top"

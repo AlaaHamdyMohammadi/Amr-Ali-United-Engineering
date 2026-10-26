@@ -12,6 +12,7 @@ import { useLocale, useTranslations } from "next-intl";
 import BlurText from "../TextAnimations/BlurText";
 import ShinyText from "../TextAnimations/ShinyText";
 import ScrollReveal from "../TextAnimations/scrollRevealText";
+import { useRouter } from "@/i18n/navigation";
 
 const sectorKeys = ["residential", "commercial", "industrial"] as const;
 
@@ -26,6 +27,7 @@ const icons: Record<(typeof sectorKeys)[number], React.ElementType> = {
 export default function Sectors() {
   const t = useTranslations("home.sectors");
   const locale = useLocale();
+  const router = useRouter();
   const Arrow = locale === "ar" ? ArrowLeft : ArrowRight;
 
   const fadeCardVar: Variants = {
@@ -89,7 +91,7 @@ export default function Sectors() {
                     </li>
                   ))}
                 </ul>
-                <button className="inline-flex w-fit items-center gap-2 font-bold text-white">
+                <button type="button" aria-label={t("cta")} onClick={() => {router.push(`/sectors/${key}`)}} className="inline-flex w-fit items-center gap-2 font-bold text-white hover:cursor-pointer">
                   {t("cta")}
                   <Arrow size={16} className="text-white" />
                 </button>
