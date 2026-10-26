@@ -1,29 +1,16 @@
 "use client";
 
-import apartmants from "@/assets/apartmants.png";
-import pool from "@/assets/pool.png";
-import buildings from "@/assets/buildings.png";
-import interiors from "@/assets/home-interiors.png";
-import villas from "@/assets/villas.png";
-import office from "@/assets/officeimg.jpg";
+import { projects } from "@/data/projects-test"; // use the same import path as your ProjectContent
+import type { Locale } from "@/types/projects";
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import { useRef } from "react";
 import ShinyText from "../TextAnimations/ShinyText";
 import MainButton from "../ui/MainButton";
 
-const projectKeys = ["office", "pool", "interiors", "apartments", "villas", "buildings"] as const;
-
-const images: Record<(typeof projectKeys)[number], StaticImageData> = {
-  buildings,
-  interiors,
-  apartments: apartmants,
-  villas,
-  office,
-  pool,
-};
+const PLACEHOLDER = "/projects/placeholder.jpg";
 
 // Scroll-triggered entrance: parent staggers children in
 const containerVariants: Variants = {
@@ -59,7 +46,7 @@ const hoverLift: Variants = {
 
 export default function Projects() {
   const t = useTranslations("home.projects");
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
   const scrollerRef = useRef<HTMLDivElement>(null);
   const Arrow = locale === "ar" ? ArrowLeft : ArrowRight;
   const dir = locale === "ar" ? -1 : 1;
@@ -98,11 +85,11 @@ export default function Projects() {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {projectKeys.map((key) => (
+          {projects.map((item) => (
             <motion.div
-              key={key}
+              key={item.id}
               variants={cardVariants}
-              className="max-w-106 flex shrink-0 flex-col gap-6 border border-gray-50 rounded-3xl bg-white shadow-md shadow-navy-900/5"
+              className="max-w-106 flex shrink-0 flex-col gap-6 border border-gray-50 rounded-3xl bg-white shadow-md shadow-navy-900/5 sm:w-106"
               style={{ scrollSnapAlign: "start" }}
             >
               <motion.div
@@ -113,20 +100,23 @@ export default function Projects() {
                 variants={hoverLift}
               >
                 <Image
-                  src={images[key]}
-                  alt={key}
+                  src={item.images[0] ?? PLACEHOLDER}
+                  alt={item.title[locale]}
+                  width={600}
+                  height={420}
+                  sizes="(min-width: 640px) 424px, 100vw"
                   className="h-40 w-full rounded-3xl object-cover sm:h-52.25"
                 />
                 <div className="flex flex-col gap-8 px-6">
                   <div className="flex flex-col gap-4">
-                    <h1 className="text-navy-750 font-bold text-lg">
-                      {t(`items.${key}.title`)}
-                    </h1>
+                    <h3 className="text-navy-750 font-bold text-lg">
+                      {item.title[locale]}
+                    </h3>
                     <div className="grid grid-cols-2 gap-5">
                       <div className="flex flex-col gap-3">
                         <p className="text-gray-400 font-bold">{t("sector")}</p>
                         <p className="text-black font-medium text-sm">
-                          {t(`items.${key}.sectorTitle`)}
+                          {item.sector[locale]}
                         </p>
                       </div>
                       <div className="flex flex-col gap-3">
@@ -134,7 +124,7 @@ export default function Projects() {
                           {t("section")}
                         </p>
                         <p className="text-black font-medium text-sm">
-                          {t(`items.${key}.sectionTitle`)}
+                          {item.section[locale]}
                         </p>
                       </div>
                       <div className="flex flex-col gap-3">
@@ -142,13 +132,13 @@ export default function Projects() {
                           {t("location")}
                         </p>
                         <p className="text-black font-medium text-sm">
-                          {t(`items.${key}.locationTitle`)}
+                          {item.location[locale]}
                         </p>
                       </div>
                       <div className="flex flex-col gap-3">
                         <p className="text-gray-400 font-bold">{t("year")}</p>
                         <p className="text-black font-medium text-sm">
-                          {t(`items.${key}.yearTitle`)}
+                          {item.year[locale]}
                         </p>
                       </div>
                     </div>
@@ -156,9 +146,9 @@ export default function Projects() {
                   <MainButton
                     preset="Link"
                     className="justify-start!"
-                    href={`/projects`}
+                    href={`/projects/${item.slug}`}
                   >
-                    <span>See Projects</span>
+                    <span>{t("seeProjects")}</span>
                     <motion.span variants={arrowMove} className="inline-flex">
                       <Arrow size={16} />
                     </motion.span>
@@ -178,69 +168,46 @@ export default function Projects() {
           </a>
 
           <div className="hidden gap-2 sm:flex">
-            {locale === "en" ? (
-              <>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="inline-flex"
-                >
-                  <MainButton
-                    preset="toggle"
-                    className="!bg-white !shadow-sm"
-                    icon={<ChevronLeft size={16} />}
-                    onClick={() => scroll(-360)}
-                    aria-label="Previous"
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="inline-flex"
-                >
-                  <MainButton
-                    preset="toggle"
-                    className="!bg-white !shadow-sm"
-                    icon={<ChevronRight size={16} />}
-                    onClick={() => scroll(360)}
-                    aria-label="Next"
-                  />
-                </motion.div>{" "}
-              </>
-            ) : (
-              <>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="inline-flex"
-                >
-                  <MainButton
-                    preset="toggle"
-                    className="!bg-white !shadow-sm"
-                    icon={<ChevronRight size={16} />}
-                    onClick={() => scroll(-360)}
-                    aria-label="Previous"
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="inline-flex"
-                >
-                  <MainButton
-                    preset="toggle"
-                    className="!bg-white !shadow-sm"
-                    icon={<ChevronLeft size={16} />}
-                    onClick={() => scroll(360)}
-                    aria-label="Next"
-                  />
-                </motion.div>
-              </>
-            )}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="inline-flex"
+            >
+              <MainButton
+                preset="toggle"
+                className="!bg-white !shadow-sm"
+                icon={
+                  locale === "en" ? (
+                    <ChevronLeft size={16} />
+                  ) : (
+                    <ChevronRight size={16} />
+                  )
+                }
+                onClick={() => scroll(-360)}
+                aria-label="Previous"
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="inline-flex"
+            >
+              <MainButton
+                preset="toggle"
+                className="!bg-white !shadow-sm"
+                icon={
+                  locale === "en" ? (
+                    <ChevronRight size={16} />
+                  ) : (
+                    <ChevronLeft size={16} />
+                  )
+                }
+                onClick={() => scroll(360)}
+                aria-label="Next"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
