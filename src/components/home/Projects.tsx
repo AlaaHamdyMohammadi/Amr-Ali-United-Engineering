@@ -89,11 +89,11 @@ export default function Projects() {
             <motion.div
               key={item.id}
               variants={cardVariants}
-              className="max-w-106 flex shrink-0 flex-col gap-6 border border-gray-50 rounded-3xl bg-white shadow-md shadow-navy-900/5 sm:w-106"
+              className="max-w-106 flex shrink-0 flex-col border border-gray-50 rounded-3xl bg-white shadow-md shadow-navy-900/5 sm:w-106"
               style={{ scrollSnapAlign: "start" }}
             >
               <motion.div
-                className="flex flex-col gap-6"
+                className="flex flex-1 flex-col gap-6 pb-6"
                 initial="rest"
                 animate="rest"
                 whileHover="hover"
@@ -107,45 +107,38 @@ export default function Projects() {
                   sizes="(min-width: 640px) 424px, 100vw"
                   className="h-40 w-full rounded-3xl object-cover sm:h-52.25"
                 />
-                <div className="flex flex-col gap-8 px-6">
+
+                <div className="flex flex-1 flex-col gap-8 px-6">
                   <div className="flex flex-col gap-4">
-                    <h3 className="text-navy-750 font-bold text-lg">
+                    <h3 className="text-navy-750 min-h-14 line-clamp-2 text-lg font-bold">
                       {item.title[locale]}
                     </h3>
+
                     <div className="grid grid-cols-2 gap-5">
-                      <div className="flex flex-col gap-3">
-                        <p className="text-gray-400 font-bold">{t("sector")}</p>
-                        <p className="text-black font-medium text-sm">
-                          {item.sector[locale]}
-                        </p>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-gray-400 font-bold">
-                          {t("section")}
-                        </p>
-                        <p className="text-black font-medium text-sm">
-                          {item.section[locale]}
-                        </p>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-gray-400 font-bold">
-                          {t("location")}
-                        </p>
-                        <p className="text-black font-medium text-sm">
-                          {item.location[locale]}
-                        </p>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-gray-400 font-bold">{t("year")}</p>
-                        <p className="text-black font-medium text-sm">
-                          {item.year[locale]}
-                        </p>
-                      </div>
+                      {(
+                        [
+                          ["sector", item.sector[locale]],
+                          ["section", item.section[locale]],
+                          ["location", item.location[locale]],
+                          ["year", item.year[locale]],
+                        ] as const
+                      ).map(([key, value]) => (
+                        <div key={key} className="flex flex-col gap-3">
+                          <p className="text-gray-400 font-bold">{t(key)}</p>
+                          <p
+                            title={value}
+                            className="text-black min-h-10 line-clamp-2 text-sm font-medium"
+                          >
+                            {value}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
+
                   <MainButton
                     preset="Link"
-                    className="justify-start!"
+                    className="mt-auto justify-start!"
                     href={`/projects/${item.slug}`}
                   >
                     <span>{t("seeProjects")}</span>
