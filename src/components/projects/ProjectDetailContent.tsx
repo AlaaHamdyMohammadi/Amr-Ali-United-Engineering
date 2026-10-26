@@ -65,6 +65,11 @@ export default function ProjectDetailContent({
   const phases = project.phases[locale];
   const materials = project.materials[locale];
 
+  const WHATSAPP_NUMBER = "201500092233";
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    t("whatsappMessage"),
+  )}`;
+
   // Only show tabs that actually have content
   const tabIds: TabId[] = [
     ...(challenges.length ? (["challengesSolutions"] as const) : []),
@@ -168,7 +173,11 @@ export default function ProjectDetailContent({
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 350, damping: 22 }}
               >
-                <MainButton className="!bg-navy-900 hover:!bg-navy-800 h-14! text-base! font-bold! w-full">
+                <MainButton
+                  href={whatsappUrl}
+                  target="_blank"
+                  className="!bg-navy-900 hover:!bg-navy-800 h-14! text-base! font-bold! w-full"
+                >
                   {t("requestSimilar")}
                 </MainButton>
               </motion.div>
@@ -177,7 +186,10 @@ export default function ProjectDetailContent({
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 350, damping: 22 }}
               >
-                <MainButton className="hover:bg-clay-700! h-14! text-base! font-bold! w-full">
+                <MainButton
+                  className="hover:bg-clay-700! h-14! text-base! font-bold! w-full"
+                  href="/contact-us"
+                >
                   {t("scheduleMeeting")}
                 </MainButton>
               </motion.div>
@@ -188,6 +200,8 @@ export default function ProjectDetailContent({
               >
                 <MainButton
                   type="default"
+                  href={whatsappUrl}
+                  target="_blank"
                   className="!border-clay-600 !text-clay-700 hover:!bg-clay-50 h-14! text-base! font-bold! w-full"
                 >
                   {t("requestPrices")}

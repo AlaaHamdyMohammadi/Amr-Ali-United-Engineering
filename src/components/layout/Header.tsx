@@ -63,7 +63,7 @@ export default function Header() {
         aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
         className="flex size-11 items-center justify-center rounded-full bg-white text-sm font-bold text-navy-900 shadow-lg shadow-black/10"
       >
-        {locale === "en" ? "EN" : "Ar"}
+        {locale === "en" ? "Ar" : "En"}
       </button>
     );
   }
