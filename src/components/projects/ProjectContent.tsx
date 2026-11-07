@@ -100,6 +100,7 @@ export default function ProjectContent() {
   );
 
   const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  console.log("paged = ", paged)
 
   function updateFilter(key: FilterKey, value?: string) {
     setFilters((prev) => ({ ...prev, [key]: value }));

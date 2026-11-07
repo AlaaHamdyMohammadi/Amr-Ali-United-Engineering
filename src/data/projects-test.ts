@@ -42,12 +42,12 @@ function galleryOf(slug: string, count: number, ext = "jpg"): string[] {
 }
 
 const SECTORS = {
-  industrial: { en: "Industrial & Logistics", ar: "صناعي ولوجستي" },
+  residential: { en: "Residential Development", ar: "إنشاءات سكنية" },
   commercial: {
     en: "Commercial & Administrative",
     ar: "إنشاءات تجارية وإدارية",
   },
-  residential: { en: "Residential Development", ar: "إنشاءات سكنية" },
+  industrial: { en: "Industrial & Logistics", ar: "صناعي ولوجستي" },
 } satisfies Record<string, Localized>;
 
 const LOCATIONS = {
@@ -222,13 +222,30 @@ export type FilterKey = "sector" | "section" | "location" | "year" | "status";
  * Unique filter options for a field. `value` is always the English string
  * (stable across languages), `label` is shown in the current locale.
  */
+// Order the sector dropdown follows the order SECTORS is defined in
+const SECTOR_ORDER = Object.values(SECTORS).map((s) => s.en);
+
 export function getFilterOptions(key: FilterKey, locale: Locale) {
   const seen = new Map<string, string>();
   for (const p of projects) {
     const v = p[key];
     if (!seen.has(v.en)) seen.set(v.en, v[locale]);
   }
-  return Array.from(seen, ([value, label]) => ({ value, label }));
+
+  const options = Array.from(seen, ([value, label]) => ({ value, label }));
+
+  if (key === "sector") {
+    return options.sort(
+      (a, b) => SECTOR_ORDER.indexOf(a.value) - SECTOR_ORDER.indexOf(b.value),
+    );
+  }
+
+  if (key === "year") {
+    // newest first (it's currently 2024, 2020, 2022, 2025, which is scrambled too)
+    return options.sort((a, b) => Number(b.value) - Number(a.value));
+  }
+
+  return options;
 }
 
 export function getProjectBySlug(slug: string) {

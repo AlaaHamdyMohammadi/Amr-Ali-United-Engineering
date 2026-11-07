@@ -88,7 +88,7 @@ export default function About() {
             shineColor="#eef1fc"
             spread={120}
             direction="left"
-            className="text-sm font-bold uppercase tracking-wider text-navy-600"
+            className="text-xl font-bold uppercase tracking-wider text-navy-600"
           />
           <ShinyText
             text={t("title")}
