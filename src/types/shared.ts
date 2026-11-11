@@ -15,6 +15,16 @@ export const LOCATIONS = {
   cairo: { en: "Cairo", ar: "القاهرة" },
   northSinai: { en: "North Sinai", ar: "شمال سيناء" },
   newCairo: { en: "New Cairo", ar: "القاهرة الجديدة" },
+  alAshgar: { en: "Al Ashgar - 6th of October", ar: "حي الأشجار - 6 أكتوبر" },
+  fifthSettlement: {
+    en: "5th Settlement - New Cairo",
+    ar: "التجمع الخامس - القاهرة الجديدة",
+  },
+  maadi: { en: "Maadi", ar: "المعادي" },
+  sheikhZayed: { en: "Sheikh Zayed", ar: "الشيخ زايد" },
+  heliopolis: { en: "Heliopolis, Cairo", ar: "مصر الجديدة، القاهرة" },
+  nasrCity: { en: "Nasr City - Cairo", ar: "مدينة نصر - القاهرة" },
+  shorouk: { en: "Al Shorouk - Cairo", ar: "حي الشروق - القاهرة" },
 } satisfies Record<string, Localized>;
 
 export const STATUS = {

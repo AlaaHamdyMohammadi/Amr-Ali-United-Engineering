@@ -14,10 +14,9 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import Breadcrumbs from "../ui/Breadcrumbs";
 import MainButton from "../ui/MainButton";
-import projectOne from "../../public/projects/fish-farm-foundations-port-said/1.jpg"
 
 
-const PAGE_SIZE = 7;
+const PAGE_SIZE = 14;
 
 // Filter values are the English strings (stable across languages)
 type Filters = Partial<Record<FilterKey, string>>;

@@ -56,6 +56,16 @@ const LOCATIONS = {
   cairo: { en: "Cairo", ar: "القاهرة" },
   northSinai: { en: "North Sinai", ar: "شمال سيناء" },
   newCairo: { en: "New Cairo", ar: "القاهرة الجديدة" },
+  alAshgar: { en: "Al Ashgar - 6th of October", ar: "حي الأشجار - 6 أكتوبر" },
+  fifthSettlement: {
+    en: "5th Settlement - New Cairo",
+    ar: "التجمع الخامس - القاهرة الجديدة",
+  },
+  maadi: { en: "Maadi", ar: "المعادي" },
+  sheikhZayed: { en: "Sheikh Zayed", ar: "الشيخ زايد" },
+  heliopolis: { en: "Heliopolis, Cairo", ar: "مصر الجديدة، القاهرة" },
+  nasrCity: { en: "Nasr City - Cairo", ar: "مدينة نصر - القاهرة" },
+  shorouk: { en: "Al Shorouk - Cairo", ar: "حي الشروق - القاهرة" },
 } satisfies Record<string, Localized>;
 
 const STATUS = {
@@ -213,6 +223,153 @@ export const projects: ProjectItem[] = [
     area: 720,
     duration: { en: "14 months", ar: "14 شهراً" },
     images: galleryOf("border-guard-buildings-port-said", 13),
+  },
+  {
+    id: "project-8",
+    slug: "apartment-renovation-alashgar-6th-october",
+    typeKey: "apartments",
+    title: {
+      en: "Apartment Renovation & Finishing - Al Ashgar District",
+      ar: "ترميم وتشطيب شقة سكنية بحي الأشجار",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Integrated Renovation & Fit-Out",
+      ar: "تشطيبات وتجديدات معمارية متكاملة",
+    },
+    location: LOCATIONS.alAshgar,
+    year: both("2025"), // PLACEHOLDER: the year was not in your data, replace with the real one
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 220,
+    duration: { en: "3 months", ar: "3 أشهر" },
+    images: galleryOf("apartment-renovation-alashgar-6th-october", 5),
+  },
+  {
+    id: "project-9",
+    slug: "duplex-fit-out-5th-settlement",
+    typeKey: "apartments",
+    title: {
+      en: "Duplex Apartment Finishing - 5th Settlement",
+      ar: "تشطيب وتجهيز شقة دوبلكس بالتجمع الخامس",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Luxury Duplex Fit-Out & Concealed A/C",
+      ar: "تشطيبات فاخرة وتكييف مخفي",
+    },
+    location: LOCATIONS.fifthSettlement,
+    year: both("2022"), // PLACEHOLDER: replace with the real year
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 350,
+    duration: { en: "4 months", ar: "4 أشهر" },
+    images: galleryOf("duplex-fit-out-5th-settlement", 6),
+  },
+  {
+    id: "project-10",
+    slug: "apartment-renovation-maadi-tower",
+    typeKey: "apartments",
+    title: {
+      en: "Apartment Renovation - Residential Tower, Maadi",
+      ar: "تجديد وتعديل معماري لشقة ببرج سكني بالمعادي",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Interior Renovation & Architectural Leveling",
+      ar: "تجديدات داخلية وضبط مناسيب معمارية",
+    },
+    location: LOCATIONS.maadi,
+    year: both("2023"), // PLACEHOLDER: replace with the real year
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 180,
+    duration: { en: "2.5 months", ar: "شهران ونصف" },
+    images: galleryOf("apartment-renovation-maadi-tower", 6),
+  },
+  {
+    id: "project-11",
+    slug: "apartment-upgrade-sheikh-zayed",
+    typeKey: "apartments",
+    title: {
+      en: "Apartment Upgrade & Fit-Out - Sheikh Zayed",
+      ar: "ترقية وتجهيز شقة سكنية بالشيخ زايد",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Electromechanical Network Development & Wall Moisture Treatment",
+      ar: "تطوير شبكات كهروميكانيكية ومعالجة رطوبة الجدران",
+    },
+    location: LOCATIONS.sheikhZayed,
+    year: both("2024"), // PLACEHOLDER: replace with the real year
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 150,
+    duration: { en: "2 months", ar: "شهران" },
+    images: galleryOf("apartment-upgrade-sheikh-zayed", 6), // PLACEHOLDER: adjust the image count
+  },
+  {
+    id: "project-12",
+    slug: "porcelain-flooring-fit-out-heliopolis",
+    typeKey: "apartments",
+    title: {
+      en: "Porcelain Flooring & Decor Fit-Out - Heliopolis",
+      ar: "تشطيب أرضيات بورسلين وديكور شقة بمصر الجديدة",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Specialty Finishing for Large-Format Porcelain Slabs",
+      ar: "تشطيبات تخصصية لألواح البورسلين الضخمة",
+    },
+    location: LOCATIONS.heliopolis,
+    year: both("2024"), // PLACEHOLDER: replace with the real year
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 280,
+    duration: { en: "3.5 months", ar: "3 أشهر ونصف" },
+    images: galleryOf("porcelain-flooring-fit-out-heliopolis", 8),
+  },
+  {
+    id: "project-13",
+    slug: "apartment-structural-repair-nasr-city",
+    typeKey: "apartments",
+    title: {
+      en: "Structural Repair & Apartment Finishing - Nasr City",
+      ar: "معالجة إنشائية وتشطيب شقة سكنية بمدينة نصر",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Crack Reinforcement & Advanced Architectural Finishes",
+      ar: "تدعيم شروخ وتشطيبات معمارية متطورة",
+    },
+    location: LOCATIONS.nasrCity,
+    year: both("2025"), // PLACEHOLDER: replace with the real year
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 160,
+    duration: { en: "2 months", ar: "شهران" },
+    images: galleryOf("apartment-structural-repair-nasr-city", 5), // TODO: set the real image count
+  },
+  {
+    id: "project-14",
+    slug: "apartment-ceiling-window-sealing-shorouk",
+    typeKey: "apartments",
+    title: {
+      en: "Ceiling Leveling & Window Sealing - Al Shorouk",
+      ar: "ضبط المناسيب وعزل النوافذ لشقة بالشروق",
+    },
+    sector: SECTORS.residential,
+    section: {
+      en: "Suspended Ceilings & Facade Window Sealing",
+      ar: "تشطيبات أسقف معلقة وعزل الواجهات الخارجية",
+    },
+    location: LOCATIONS.shorouk,
+    year: both("2025"), // PLACEHOLDER: replace with the real year
+    status: STATUS.completed,
+    client: { en: "Private client", ar: "عميل خاص" },
+    area: 200,
+    duration: { en: "2.5 months", ar: "شهران ونصف" },
+    images: galleryOf("apartment-ceiling-window-sealing-shorouk", 6), // TODO: set the real image count
   },
 ];
 

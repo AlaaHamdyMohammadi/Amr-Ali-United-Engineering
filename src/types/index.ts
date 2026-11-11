@@ -1,12 +1,19 @@
 import type { FilterKey, Locale, ProjectItem } from "./projects";
 
-import { fishFarmFoundations } from "./project-one";
-import { shrimpFishingBuilding } from "./project-two";
-import { diceClothingStores } from "./project-three";
-import { healthyPharmacies } from "./project-four";
+import { apartmentRenovationAlAshgar } from "./project-eight";
+import { apartmentUpgradeSheikhZayed } from "./project-eleven";
 import { concreteFishFarms } from "./project-five";
-import { centralLabs } from "./project-six";
+import { healthyPharmacies } from "./project-four";
+import { duplexFitOut5thSettlement } from "./project-nine";
+import { fishFarmFoundations } from "./project-one";
 import { borderGuardBuildings } from "./project-seven";
+import { centralLabs } from "./project-six";
+import { apartmentRenovationMaadiTower } from "./project-ten";
+import { diceClothingStores } from "./project-three";
+import { shrimpFishingBuilding } from "./project-two";
+import { porcelainFlooringHeliopolis } from "./project-twelve";
+import { apartmentStructuralRepairNasrCity } from "./project-therteen";
+import { apartmentCeilingWindowSealingShorouk } from "./project-fourteen";
 
 export * from "./projects";
 
@@ -18,6 +25,13 @@ export const projects: ProjectItem[] = [
   concreteFishFarms,
   centralLabs,
   borderGuardBuildings,
+  apartmentRenovationAlAshgar,
+  duplexFitOut5thSettlement,
+  apartmentRenovationMaadiTower,
+  apartmentUpgradeSheikhZayed,
+  porcelainFlooringHeliopolis,
+  apartmentStructuralRepairNasrCity,
+  apartmentCeilingWindowSealingShorouk,
 ];
 
 /**
