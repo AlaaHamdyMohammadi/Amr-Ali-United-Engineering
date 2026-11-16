@@ -1,51 +1,48 @@
 "use client";
 
 import {
+  SECTORS,
   getFilterOptions,
   projects,
+  sectorIdFromValue,
+  sectorValueFromId,
   type FilterKey,
   type Locale,
 } from "@/data/projects-test";
-import { Select } from "antd";
+import {
+  SECTOR_IDS,
+  isSectionKey,
+  sectionsOf,
+  sectorIdOfSection,
+  type SectionKey,
+} from "@/lib/sectors";
+import { Select, type SelectProps } from "antd";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import Breadcrumbs from "../ui/Breadcrumbs";
 import MainButton from "../ui/MainButton";
 
-
 const PAGE_SIZE = 14;
 
-// Filter values are the English strings (stable across languages)
-type Filters = Partial<Record<FilterKey, string>>;
+// sector/location/year/status hold the English string; section holds its key
+type Filters = Partial<Record<FilterKey, string>> & { section?: SectionKey };
 
-const FILTER_KEYS: FilterKey[] = [
-  "sector",
-  "section",
-  "location",
-  "year",
-  "status",
-];
+const OTHER_FILTERS: FilterKey[] = ["location", "year", "status"];
 
 const filtersBarVariants: Variants = {
   hidden: { opacity: 0, y: -12 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 const gridVariants: Variants = {
   hidden: {},
-  show: {
-    transition: { staggerChildren: 0.08 },
-  },
+  show: { transition: { staggerChildren: 0.08 } },
 };
 
-// Even-index cards slide from left, odd-index cards slide from right
 const cardVariantsLeft: Variants = {
   hidden: { opacity: 0, x: -80 },
   show: {
@@ -53,11 +50,7 @@ const cardVariantsLeft: Variants = {
     x: 0,
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
-  exit: {
-    opacity: 0,
-    x: -40,
-    transition: { duration: 0.25, ease: "easeIn" },
-  },
+  exit: { opacity: 0, x: -40, transition: { duration: 0.25, ease: "easeIn" } },
 };
 
 const cardVariantsRight: Variants = {
@@ -67,41 +60,97 @@ const cardVariantsRight: Variants = {
     x: 0,
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
-  exit: {
-    opacity: 0,
-    x: 40,
-    transition: { duration: 0.25, ease: "easeIn" },
-  },
+  exit: { opacity: 0, x: 40, transition: { duration: 0.25, ease: "easeIn" } },
 };
 
 export default function ProjectContent() {
   const t = useTranslations("projects");
+  const ts = useTranslations("sectors");
   const locale = useLocale() as Locale;
   const Arrow = locale === "ar" ? ArrowLeft : ArrowRight;
+  const searchParams = useSearchParams();
 
-  const [filters, setFilters] = useState<Filters>({});
+  // Start from the URL: ?section=lines (sector is derived) or ?sector=industrial
+  const [filters, setFilters] = useState<Filters>(() => {
+    const sectionParam = searchParams.get("section") ?? "";
+    if (isSectionKey(sectionParam)) {
+      return {
+        section: sectionParam,
+        sector: SECTORS[sectorIdOfSection(sectionParam)].en,
+      };
+    }
+    const sector = sectorValueFromId(searchParams.get("sector") ?? "");
+    return sector ? { sector } : {};
+  });
   const [page, setPage] = useState(1);
 
   const options = useMemo(
     () =>
       Object.fromEntries(
-        FILTER_KEYS.map((k) => [k, getFilterOptions(k, locale)]),
+        (["sector", ...OTHER_FILTERS] as FilterKey[]).map((k) => [
+          k,
+          getFilterOptions(k, locale),
+        ]),
       ) as Record<FilterKey, { value: string; label: string }[]>,
     [locale],
   );
 
+  // Section options depend on the chosen sector. With no sector chosen,
+  // show all sections grouped under their sector name.
+  const activeSectorId = filters.sector
+    ? sectorIdFromValue(filters.sector)
+    : undefined;
+
+  const sectionOptions: NonNullable<SelectProps["options"]> = activeSectorId
+    ? sectionsOf(activeSectorId).map((key) => ({
+        value: key,
+        label: ts(`sections.${key}`),
+      }))
+    : SECTOR_IDS.map((id) => ({
+        label: SECTORS[id][locale],
+        options: sectionsOf(id).map((key) => ({
+          value: key,
+          label: ts(`sections.${key}`),
+        })),
+      }));
+
   const filtered = useMemo(
     () =>
-      projects.filter((p) =>
-        FILTER_KEYS.every((k) => !filters[k] || p[k].en === filters[k]),
+      projects.filter(
+        (p) =>
+          (!filters.sector || p.sector.en === filters.sector) &&
+          (!filters.section || p.sectionKey === filters.section) &&
+          OTHER_FILTERS.every((k) => !filters[k] || p[k].en === filters[k]),
       ),
     [filters],
   );
 
   const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-  console.log("paged = ", paged)
 
-  function updateFilter(key: FilterKey, value?: string) {
+  function changeSector(value?: string) {
+    setFilters((prev) => {
+      const next: Filters = { ...prev, sector: value };
+      const id = value ? sectorIdFromValue(value) : undefined;
+      // a section only makes sense inside its own sector
+      if (next.section && id && sectorIdOfSection(next.section) !== id) {
+        delete next.section;
+      }
+      return next;
+    });
+    setPage(1);
+  }
+
+  function changeSection(value?: SectionKey) {
+    setFilters((prev) => ({
+      ...prev,
+      section: value,
+      // picking a section also picks its sector, so the dropdowns stay in sync
+      ...(value ? { sector: SECTORS[sectorIdOfSection(value)].en } : {}),
+    }));
+    setPage(1);
+  }
+
+  function changeOther(key: FilterKey, value?: string) {
     setFilters((prev) => ({ ...prev, [key]: value }));
     setPage(1);
   }
@@ -127,14 +176,33 @@ export default function ProjectContent() {
           initial="hidden"
           animate="show"
         >
-          {FILTER_KEYS.map((key) => (
+          <Select
+            placeholder={t("filters.sector")}
+            allowClear
+            popupMatchSelectWidth={false}
+            className={selectClassName}
+            value={filters.sector}
+            onChange={changeSector}
+            options={options.sector}
+          />
+          <Select
+            placeholder={t("filters.section")}
+            allowClear
+            popupMatchSelectWidth={false}
+            className={selectClassName}
+            value={filters.section}
+            onChange={changeSection}
+            options={sectionOptions}
+          />
+          {OTHER_FILTERS.map((key) => (
             <Select
               key={key}
               placeholder={t(`filters.${key}`)}
               allowClear
+              popupMatchSelectWidth={false}
               className={selectClassName}
               value={filters[key]}
-              onChange={(v) => updateFilter(key, v)}
+              onChange={(v) => changeOther(key, v)}
               options={options[key]}
             />
           ))}

@@ -1,7 +1,12 @@
+import { SectionKey } from "@/lib/sectors";
+
 export type Locale = "en" | "ar";
 export type Localized<T = string> = Record<Locale, T>;
 
 export type FilterKey = "sector" | "section" | "location" | "year" | "status";
+// export function sectorIdFromValue(value: string): SectorId | undefined {
+//   return SECTOR_IDS.find((id) => SECTORS[id].en === value);
+// }
 
 /** One challenge and the solution that was applied to it */
 export interface ChallengeItem {
@@ -30,6 +35,7 @@ export interface ProjectItem {
   client: Localized;
   area: number; // m²
   duration: Localized;
+  sectionKey: SectionKey;
 
   // ── details page ──
   description: Localized;

@@ -39,6 +39,7 @@ export default async function SectorDetailContent({
           }))}
           seeProjects={t("seeProjects")}
           isRtl={isRtl}
+          sectorId={sectorId}
         />
       </div>
     </section>

@@ -36,11 +36,13 @@ export default function SectorsGrid({
   sections,
   seeProjects,
   isRtl,
+  sectorId,
 }: {
   sectionsTitle: string;
   sections: { key: string; label: string }[];
   seeProjects: string;
   isRtl: boolean;
+  sectorId: string;
 }) {
   const locale = useLocale();
   return (
@@ -78,7 +80,7 @@ export default function SectorsGrid({
 
             <span className="text-2xl font-bold text-navy-750">{label}</span>
             <a
-              href="/projects"
+              href={`/projects?section=${key}`}
               className="flex shrink-0 items-center gap-1.5 font-semibold text-clay-600 self-end"
             >
               {seeProjects}

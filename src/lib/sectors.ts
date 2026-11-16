@@ -26,10 +26,25 @@ export const SECTOR_SECTIONS = {
     "homeSystems",
   ],
   commercial: ["offices", "workspaces", "commercial", "premium"],
-  industrial: [
-    "factories",
-    "lines",
-    "infrastructure",
-    "laboratories",
-  ],
+  industrial: ["factories", "lines", "infrastructure", "laboratories"],
 } as const satisfies Record<SectorId, readonly string[]>;
+
+export type SectionKey = (typeof SECTOR_SECTIONS)[SectorId][number];
+
+export function isSectionKey(value: string): value is SectionKey {
+  return SECTOR_IDS.some((id) =>
+    (SECTOR_SECTIONS[id] as readonly string[]).includes(value),
+  );
+}
+
+// Which sector a section belongs to (every section key is unique across sectors)
+export function sectorIdOfSection(key: SectionKey): SectorId {
+  return SECTOR_IDS.find((id) =>
+    (SECTOR_SECTIONS[id] as readonly string[]).includes(key),
+  )!;
+}
+
+// Widened return type so .map() works instead of failing on a union of tuples
+export function sectionsOf(id: SectorId): readonly SectionKey[] {
+  return SECTOR_SECTIONS[id];
+}

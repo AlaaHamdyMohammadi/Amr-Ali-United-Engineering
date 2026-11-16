@@ -1,5 +1,7 @@
 export type Locale = "en" | "ar";
 export type Localized = Record<Locale, string>;
+import type { SectionKey, SectorId } from "@/lib/sectors";
+import { SECTOR_IDS } from "@/lib/sectors";
 
 /** Which of the existing images/categories a project card uses */
 export type ProjectTypeKey =
@@ -14,6 +16,7 @@ export interface ProjectItem {
   slug: string;
   /** only used to pick the card image */
   typeKey: ProjectTypeKey;
+  sectionKey?: SectionKey;
   title: Localized;
   sector: Localized;
   section: Localized;
@@ -41,7 +44,7 @@ function galleryOf(slug: string, count: number, ext = "jpg"): string[] {
   );
 }
 
-const SECTORS = {
+export const SECTORS = {
   residential: { en: "Residential Development", ar: "إنشاءات سكنية" },
   commercial: {
     en: "Commercial & Administrative",
@@ -49,6 +52,11 @@ const SECTORS = {
   },
   industrial: { en: "Industrial & Logistics", ar: "صناعي ولوجستي" },
 } satisfies Record<string, Localized>;
+
+// "industrial" -> "Industrial & Logistics" (the value the filters compare against)
+export function sectorValueFromId(id: string): string | undefined {
+  return (SECTORS as Record<string, Localized>)[id]?.en;
+}
 
 const LOCATIONS = {
   portSaid: { en: "Port Said", ar: "بورسعيد" },
@@ -78,6 +86,7 @@ export const projects: ProjectItem[] = [
     id: "project-1",
     slug: "fish-farm-foundations-port-said",
     typeKey: "buildings",
+    sectionKey: "lines",
     title: {
       en: "Fish Farm Foundations",
       ar: "أساسات مزارع سمكية",
@@ -99,6 +108,7 @@ export const projects: ProjectItem[] = [
     id: "project-2",
     slug: "shrimp-fishing-building-port-said",
     typeKey: "buildings",
+    sectionKey: "workspaces",
     title: {
       en: "Shrimp Fishing Building Finishing",
       ar: "تشطيب مبنى لصيد جمبري / صيد البحر",
@@ -120,6 +130,7 @@ export const projects: ProjectItem[] = [
     id: "project-3",
     slug: "dice-clothing-stores-alexandria",
     typeKey: "interiors",
+    sectionKey: "commercial",
     title: {
       en: "Dice Ready-to-Wear Stores",
       ar: "متاجر شركة دايس للملابس الجاهزة",
@@ -141,6 +152,7 @@ export const projects: ProjectItem[] = [
     id: "project-4",
     slug: "healthy-pharmacies-cairo",
     typeKey: "interiors",
+    sectionKey: "premium",
     title: {
       en: "Healthy Pharmacies",
       ar: "إنشاء صيدليات هيلثي",
@@ -162,6 +174,7 @@ export const projects: ProjectItem[] = [
     id: "project-5",
     slug: "concrete-fish-farms-north-sinai",
     typeKey: "buildings",
+    sectionKey: "lines",
     title: {
       en: "Concrete Fish Farms",
       ar: "إنشاء مزارع سمكية (أحواض خرسانية)",
@@ -183,6 +196,7 @@ export const projects: ProjectItem[] = [
     id: "project-6",
     slug: "central-labs-new-cairo",
     typeKey: "interiors",
+    sectionKey: "laboratories",
     title: {
       en: "Central Labs Finishing",
       ar: "تشطيبات المعامل المركزية لجهاز حماية وتنمية البحيرات والثروة السمكية",
@@ -207,6 +221,7 @@ export const projects: ProjectItem[] = [
     id: "project-7",
     slug: "border-guard-buildings-port-said",
     typeKey: "apartments",
+    sectionKey: "residentialFinishing",
     title: {
       en: "Border Guard Buildings",
       ar: "إنشاءات وتجهيزات مباني حرس الحدود",
@@ -374,6 +389,11 @@ export const projects: ProjectItem[] = [
 ];
 
 export type FilterKey = "sector" | "section" | "location" | "year" | "status";
+// export type FilterKey = "sector" | "location" | "year" | "status";
+
+export function sectorIdFromValue(value: string): SectorId | undefined {
+  return SECTOR_IDS.find((id) => SECTORS[id].en === value);
+}
 
 /**
  * Unique filter options for a field. `value` is always the English string
