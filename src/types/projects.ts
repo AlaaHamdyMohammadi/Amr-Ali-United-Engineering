@@ -35,7 +35,7 @@ export interface ProjectItem {
   client: Localized;
   area: number; // m²
   duration: Localized;
-  sectionKey: SectionKey;
+  sectionKey?: SectionKey;
 
   // ── details page ──
   description: Localized;
